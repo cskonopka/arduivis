@@ -6,15 +6,16 @@
   MaxMSP    :   arduivis_PWM.maxpat
   PureDate  :   arduivis_PWM.pd
 
-  This is an adaptation of the "Fading" tutorial from arduino.cc
-  http://arduino.cc/en/Tutorial/Fade
+  This example shows how to use a visual programming language to switch
+  between various cases on an Arduino microcontroller.
+
+  This is an adaptation of the "SwitchCase" tutorial from arduino.cc
+  http://arduino.cc/en/Tutorial/SwitchCase
 
   More information about Serial Communication
   http://cycling74.com/docs/max5/tutorials/max-tut/communicationschapter02.html
-
-
-  This example shows how to use a visual programming language to switch
-  between various cases on an Arduino microcontroller.
+  
+  [by Christopher Konopka]
 
   This example code is in the public domain.
 */

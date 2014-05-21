@@ -6,20 +6,17 @@
 	MaxMSP 		: 	arduivis_PWM.maxpat
 	PureDate	:	arduivis_PWM.pd
 
+	This example demonstrates how to control the brightness of an LED
+	by using a slider in a visual programming language such as 
+	MaxMSP or PureData.
+	
 	This is an adaptation of the "Fading" tutorial from arduino.cc
 	http://arduino.cc/en/Tutorial/Fade
 
 	More information about Serial Communication
 	http://cycling74.com/docs/max5/tutorials/max-tut/communicationschapter02.html
-
-	This sketch creates a Serial Communication connection between a 
-	visual programming language (MaxMSP and PureData) and an Arduino 
-	microcontroller. Upload this sketch to the Arduino and open 
-	the associated visual programming patch. Once opened, follow the 
-	directions in the patch to establish the connection between the 
-	two mediums. When the connection is complete, a slider within the 
-	example patch will send values to the Arduino, via Serial Communication, 
-	to control the analogWrite() function.
+	
+  	[by Christopher Konopka]
 
  	This example code is in the public domain.
 */
