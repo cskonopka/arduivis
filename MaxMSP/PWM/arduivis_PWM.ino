@@ -46,4 +46,6 @@ void loop()
 
 // Write buffer data to pin
   analogWrite(ledpin, input1);	//	(msg #1 to pin)
+
+  Serial.println(input1);  
 }
