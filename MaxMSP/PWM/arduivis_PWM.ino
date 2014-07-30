@@ -4,7 +4,6 @@
 
 	Arduino 	: 	arduivis_PWM.ino
 	MaxMSP 		: 	arduivis_PWM.maxpat
-	PureDate	:	arduivis_PWM.pd
 
 	This example demonstrates how to control the brightness of an LED
 	by using a slider in a visual programming language such as 

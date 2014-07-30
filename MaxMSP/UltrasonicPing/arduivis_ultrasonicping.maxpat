@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 4.0, 44.0, 922.0, 573.0 ],
+		"rect" : [ 827.0, 44.0, 922.0, 573.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -685,7 +685,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 387.275146, 334.516968, 525.974365, 102.0 ],
-					"text" : "1) serial ports: Updates the [serial] object and menu with availble ports.\n\n2) start: When enbaled, this will poll the [serial] object for data. \n\n3) output: Data from the arduino is printed, creating a data visualization.",
+					"text" : "1) serial ports: Updates the [serial] object and menu with availble ports.\n\n2) start: When enabled, this will poll the [serial] object for data. \n\n3) output: Data from the arduino is printed, creating a data visualization.",
 					"textjustification" : 1
 				}
 
@@ -990,7 +990,7 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.811765, 0.768627, 0.721569, 1.0 ],
+					"bgcolor" : [ 0.74902, 0.705882, 0.662745, 1.0 ],
 					"id" : "obj-19",
 					"maxclass" : "panel",
 					"numinlets" : 1,
@@ -1382,7 +1382,7 @@
 ,
 		"dependency_cache" : [ 			{
 				"name" : "arduivis_ultrasonicping.jpg",
-				"bootpath" : "/Volumes/subbase/-repo2-/arduivis/MaxMSP/UltrasonicPing",
+				"bootpath" : "/Users/csKonopka-Tower/Desktop/=Repository=/arduivis/MaxMSP/UltrasonicPing",
 				"patcherrelativepath" : ".",
 				"type" : "JPEG",
 				"implicit" : 1

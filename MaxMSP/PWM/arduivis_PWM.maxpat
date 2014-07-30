@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 7,
+			"revision" : 3,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 4.0, 44.0, 983.0, 576.0 ],
+		"rect" : [ 869.0, 93.0, 983.0, 576.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -56,7 +56,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 3,
 							"architecture" : "x86"
 						}
 ,
@@ -261,7 +261,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 3,
 							"architecture" : "x86"
 						}
 ,
@@ -642,8 +642,8 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 714.005554, 124.836456, 251.0, 274.0 ],
-					"text" : "1) serial ports: This will update the [serial] object and print the availble ports in the menu.\n\n2) start: When enbaled, this will poll the [serial] object for data. \n\n3) slider: Use the slider to control the LED brightness connected to the microcontroller.\n\n4) output: When open, the data from the serial monitor is print and sent to the output.\n",
+					"patching_rect" : [ 710.761597, 123.836456, 255.0, 274.0 ],
+					"text" : "1) serial ports: This will update the [serial] object and print the availble ports in the menu.\n\n2) start: When enabled, this will poll the [serial] object for data. \n\n3) slider: Use the slider to control the LED brightness connected to the microcontroller.\n\n4) output: When open, the data from the serial monitor is print and sent to the output.\n",
 					"textjustification" : 1
 				}
 
@@ -1445,14 +1445,14 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-70" : [ "live.toggle[3]", "live.toggle", 0 ],
 			"obj-66" : [ "live.toggle[1]", "live.toggle", 0 ],
-			"obj-1129" : [ "umenu", "umenu", 0 ]
+			"obj-1129" : [ "umenu", "umenu", 0 ],
+			"obj-70" : [ "live.toggle[3]", "live.toggle", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
 				"name" : "arduivis_PWM.jpg",
-				"bootpath" : "/Volumes/subbase/-repo2-/arduivis/PWM",
+				"bootpath" : "/Users/csKonopka-Tower/Desktop/=Repository=/arduivis/MaxMSP/PWM",
 				"patcherrelativepath" : ".",
 				"type" : "JPEG",
 				"implicit" : 1

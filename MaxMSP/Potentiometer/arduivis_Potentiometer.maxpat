@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 4.0, 44.0, 931.0, 567.0 ],
+		"rect" : [ 867.0, 116.0, 931.0, 567.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -614,8 +614,8 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 655.761597, 117.491913, 268.0, 198.0 ],
-					"text" : "1) serial ports: This will update the [serial] object and print the availble ports in the menu.\n\n2) start: When enbaled, this will poll the [serial] object for data. \n\n3) output: When open, the data from the serial monitor is printed and sent to the [multislider] object.",
+					"patching_rect" : [ 655.761597, 117.491913, 269.0, 198.0 ],
+					"text" : "1) serial ports: This will update the [serial] object and print the availble ports in the menu.\n\n2) start: When enabled, this will poll the [serial] object for data. \n\n3) output: When open, the data from the serial monitor is printed and sent to the [multislider] object.",
 					"textjustification" : 1
 				}
 
@@ -1281,7 +1281,7 @@
 ,
 		"dependency_cache" : [ 			{
 				"name" : "arduivis_Potentiometer.png",
-				"bootpath" : "/Volumes/subbase/-repo2-/arduivis/MaxMSP/Potentiometer",
+				"bootpath" : "/Users/csKonopka-Tower/Desktop/=Repository=/arduivis/MaxMSP/Potentiometer",
 				"patcherrelativepath" : ".",
 				"type" : "PNG ",
 				"implicit" : 1

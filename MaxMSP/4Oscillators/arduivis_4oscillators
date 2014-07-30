@@ -1,0 +1,56 @@
+/*
+	~ arduivis ~
+	[modular microcontroller programming]
+
+	Arduino 	: 	arduivis_4oscillators.ino
+	MaxMSP 		: 	arduivis_4oscillators.maxpat
+
+	This example demonstrates how to build an instrument template using 4 potentiometers
+	to control for oscillators in MaxMSP.
+
+	More information about Serial Communication
+	http://cycling74.com/docs/max5/tutorials/max-tut/communicationschapter02.html
+	
+  	[by Christopher Konopka]
+
+ 	This example code is in the public domain.
+*/
+
+// Available Transfer Speed
+// {1200, 2400, 4800, 9600, 19200, 38400}
+  int baudrate;	
+
+// Potentiometer
+  int pot1, pot2, pot3, pot4;
+
+void setup()
+{
+// Activate Serial Communication
+  baudrate = 9600;
+  Serial.begin(baudrate);			//	(Arduino <-> MaxMSP/PD)
+}
+
+void loop()
+{
+// Read potentiometer values
+	pot1 = analogRead(0)
+	pot2 = analogRead(1)
+	pot3 = analogRead(2)
+	pot4 = analogRead(3)	
+
+// Scale potentiometer values	
+	pot1 = map(pot1, 0, 1023, 0, 255);
+	pot2 = map(pot2, 0, 1023, 0, 255);
+	pot3 = map(pot3, 0, 1023, 0, 255);
+	pot4 = map(pot4, 0, 1023, 0, 255);			
+
+// Write/print values to serial buffer
+// These values will be used to control each oscillator individually
+	Serial.print(pot1);
+	Serial.print(" ");
+	Serial.print(pot2);
+	Serial.print(" ");
+	Serial.print(pot3);
+	Serial.print(" ");		
+	Serial.println(pot4);
+}

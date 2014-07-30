@@ -2,9 +2,8 @@
   ~ arduivis ~
   [modular microcontroller programming]
 
-  Arduino   :   arduivis_PWM.ino
-  MaxMSP    :   arduivis_PWM.maxpat
-  PureDate  :   arduivis_PWM.pd
+  Arduino   :   arduivis_switchCase.ino
+  MaxMSP    :   arduivis_switchCase.maxpat
 
   This example shows how to use a visual programming language to switch
   between various cases on an Arduino microcontroller.

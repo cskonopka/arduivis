@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 7,
+			"revision" : 3,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 4.0, 44.0, 1007.0, 566.0 ],
+		"rect" : [ 857.0, 172.0, 1007.0, 566.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -37,8 +37,8 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 738.761597, 103.491913, 258.0, 274.0 ],
-					"text" : "1) serial ports: This will update the [serial] object and print the availble ports in the menu.\n\n2) start: When enbaled, this will poll the [serial] object for data. \n\n3) numbers: Select a number to control the brightness of the LED via switch cases.\n\n4) output: When open, the data from the serial monitor is print and sent to the output.",
+					"patching_rect" : [ 738.761597, 103.491913, 260.0, 274.0 ],
+					"text" : "1) serial ports: This will update the [serial] object and print the availble ports in the menu.\n\n2) start: When enabled, this will poll the [serial] object for data. \n\n3) numbers: Select a number to control the brightness of the LED via switch cases.\n\n4) output: When open, the data from the serial monitor is print and sent to the output.",
 					"textjustification" : 1
 				}
 
@@ -60,7 +60,7 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.74902, 0.705882, 0.662745, 1.0 ],
+					"bgcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
 					"fontname" : "Arial",
 					"fontsize" : 24.0,
 					"id" : "obj-1",
@@ -75,7 +75,7 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.74902, 0.705882, 0.662745, 1.0 ],
+					"bgcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
 					"fontname" : "Arial",
 					"fontsize" : 24.0,
 					"id" : "obj-4",
@@ -90,7 +90,7 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.74902, 0.705882, 0.662745, 1.0 ],
+					"bgcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
 					"fontname" : "Arial",
 					"fontsize" : 24.0,
 					"id" : "obj-5",
@@ -105,7 +105,7 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.74902, 0.705882, 0.662745, 1.0 ],
+					"bgcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
 					"fontname" : "Arial",
 					"fontsize" : 24.0,
 					"id" : "obj-48",
@@ -127,7 +127,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 470.275146, 371.24707, 261.48645, 31.0 ],
+					"patching_rect" : [ 471.275146, 371.24707, 261.48645, 31.0 ],
 					"text" : "sketch: arduivis_switchCase.ino",
 					"textjustification" : 1
 				}
@@ -147,7 +147,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 3,
 							"architecture" : "x86"
 						}
 ,
@@ -346,13 +346,13 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
-					"outlettype" : [ "clear" ],
+					"outlettype" : [ "" ],
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 3,
 							"architecture" : "x86"
 						}
 ,
@@ -748,7 +748,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 391.059906, 9.665466, 74.999992, 72.0 ],
+					"patching_rect" : [ 391.059906, 9.665466, 80.0, 72.0 ],
 					"text" : "numbers \n(data to arduino)",
 					"textcolor" : [ 0.99024, 0.995289, 0.990099, 1.0 ],
 					"textjustification" : 1
@@ -1241,7 +1241,7 @@
 , 			{
 				"box" : 				{
 					"background" : 1,
-					"bgcolor" : [ 0.811765, 0.768627, 0.721569, 1.0 ],
+					"bgcolor" : [ 0.74902, 0.705882, 0.662745, 1.0 ],
 					"id" : "obj-11",
 					"maxclass" : "panel",
 					"numinlets" : 1,
@@ -1517,9 +1517,9 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-70" : [ "live.toggle[3]", "live.toggle", 0 ],
 			"obj-66" : [ "live.toggle[1]", "live.toggle", 0 ],
-			"obj-1129" : [ "umenu", "umenu", 0 ]
+			"obj-1129" : [ "umenu", "umenu", 0 ],
+			"obj-70" : [ "live.toggle[3]", "live.toggle", 0 ]
 		}
 ,
 		"dependency_cache" : [  ]

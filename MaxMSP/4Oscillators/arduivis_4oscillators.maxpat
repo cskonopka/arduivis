@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 231.0, 44.0, 903.0, 764.0 ],
+		"rect" : [ 172.0, 80.0, 903.0, 764.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -972,8 +972,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 418.761597, 196.593719, 175.0, 18.0 ],
-					"text" : "pic arduivis_4osc.png"
+					"patching_rect" : [ 418.761597, 196.593719, 161.0, 18.0 ],
+					"text" : "pic arduivis_4oscillators.png"
 				}
 
 			}
@@ -987,7 +987,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 406.761597, 141.026917, 480.0, 312.585815 ],
-					"pic" : "arduivis_4osc.png"
+					"pic" : "arduivis_4oscillators.png"
 				}
 
 			}
@@ -1001,8 +1001,8 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 659.761597, 467.0, 229.0, 236.0 ],
-					"text" : "1) serial ports: This will update the [serial] object and print the availble ports in the menu.\n\n2) start: When enbaled, this will poll the [serial] object for data. \n\n3) output: When open, the data from the serial monitor is printed and sent to the bank of 4 oscillators. Each potentiometer is routed to its own [cycle~] object.",
+					"patching_rect" : [ 659.761597, 467.0, 239.0, 236.0 ],
+					"text" : "1) serial ports: This will update the [serial] object and print the availble ports in the menu.\n\n2) start: When enabled, this will poll the [serial] object for data. \n\n3) output: When open, the data from the serial monitor is printed and sent to the bank of 4 oscillators. Each potentiometer is routed to its own [cycle~] object.",
 					"textjustification" : 1
 				}
 
@@ -1975,14 +1975,14 @@
  ],
 		"parameters" : 		{
 			"obj-66" : [ "live.toggle[1]", "live.toggle", 0 ],
-			"obj-27" : [ "live.gain~", "live.gain~", 0 ],
 			"obj-1129" : [ "umenu", "umenu", 0 ],
-			"obj-70" : [ "live.toggle[3]", "live.toggle", 0 ]
+			"obj-70" : [ "live.toggle[3]", "live.toggle", 0 ],
+			"obj-27" : [ "live.gain~", "live.gain~", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
-				"name" : "arduivis_4osc.png",
-				"bootpath" : "/Volumes/subbase/-repo2-/arduivis/MaxMSP/4Oscillators",
+				"name" : "arduivis_4oscillators.png",
+				"bootpath" : "/Users/csKonopka-Tower/Desktop/=Repository=/arduivis/MaxMSP/4Oscillators",
 				"patcherrelativepath" : ".",
 				"type" : "PNG ",
 				"implicit" : 1
