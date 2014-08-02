@@ -1,7 +1,5 @@
-arduivis 
-
-modular microcontroller programming for (visual) programming languages
-============================================================
+arduivis
+========
 
 
 :Languages:
