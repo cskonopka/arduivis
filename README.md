@@ -17,11 +17,13 @@ The purpose of this project is to provide the user with a streamlined open-sourc
 This paradigm revolves around using Serial Communication as the main communication protocol. This is using a serial object (serial or comport) within a visual programming language. There are three main functions that can be used to access and send information between both mediums. 
 
 Output: Printing messages to the Serial Buffer, accessible in within Max or via terminal.
+	
 	i.e. 
 		Serial.print or Serial.println (MaxMSP)
 		Serial.write 			(Pure Data)
 	
 Input: Information can be sent to a micro-controller which is parsed line by line.
+	
 	i.e.
 		Serial.parseInt();
 

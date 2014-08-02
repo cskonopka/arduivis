@@ -22,7 +22,7 @@
   int baudrate; 
     
 // Fading LED
-  int ledpin= 13;    
+  int ledpin= 1\1;    
 
 // Message #1 from incoming buffer
   int input1;  
@@ -41,7 +41,8 @@ void setup()
 
 void loop() 
 {
-  // Parse incoming data line by line 
+  // Input Mode
+  // Parse incoming data line by line from the Serial Buffer
   input1 = Serial.parseInt();
 
   // Write incoming data to PWM pin

@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 869.0, 93.0, 983.0, 576.0 ],
+		"rect" : [ 91.0, 48.0, 983.0, 576.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -36,8 +36,8 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 442.275146, 376.24707, 261.48645, 31.0 ],
-					"text" : "sketch: arduivis_PWM.ino",
+					"patching_rect" : [ 442.275146, 378.979706, 525.974365, 31.0 ],
+					"text" : "sketch: arduivis_model3_feedback.ino",
 					"textjustification" : 1
 				}
 
@@ -538,7 +538,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 442.275146, 428.33551, 525.974365, 129.0 ],
+					"patching_rect" : [ 442.275146, 418.33551, 525.974365, 129.0 ],
 					"text" : "Information about this project and other projects can be found on github at the following link: https://github.com/cskonopka\n\n~contact~\ncskonopka@gmail.com\ntwitter: @cskonopka",
 					"textjustification" : 1
 				}
@@ -627,7 +627,7 @@
 					"maxclass" : "fpic",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 445.761597, 111.593719, 258.0, 234.544067 ],
+					"patching_rect" : [ 447.018372, 121.219879, 258.0, 234.544067 ],
 					"pic" : "arduivis_PWM.jpg"
 				}
 
@@ -642,7 +642,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 710.761597, 123.836456, 255.0, 274.0 ],
+					"patching_rect" : [ 710.761597, 101.491913, 255.0, 274.0 ],
 					"text" : "1) serial ports: This will update the [serial] object and print the availble ports in the menu.\n\n2) start: When enabled, this will poll the [serial] object for data. \n\n3) slider: Use the slider to control the LED brightness connected to the microcontroller.\n\n4) output: When open, the data from the serial monitor is print and sent to the output.\n",
 					"textjustification" : 1
 				}
@@ -735,8 +735,8 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 167.769348, 468.347534, 74.806465, 39.0 ],
-					"text" : "54",
+					"patching_rect" : [ 188.962234, 467.347534, 74.806465, 39.0 ],
+					"text" : "91",
 					"textcolor" : [ 0.99024, 0.995289, 0.990099, 1.0 ],
 					"textjustification" : 1
 				}
@@ -827,7 +827,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 247.085449, 468.347534, 150.0, 50.0 ],
+					"patching_rect" : [ 288.007294, 467.347534, 150.0, 50.0 ],
 					"text" : "output \n(data from arduino)",
 					"textcolor" : [ 0.990094, 0.989905, 0.995022, 1.0 ],
 					"textjustification" : 1
@@ -975,7 +975,7 @@
 					"framecolor" : [ 0.74902, 0.705882, 0.662745, 1.0 ],
 					"hltcolor" : [ 0.215478, 0.440638, 0.918583, 1.0 ],
 					"id" : "obj-1129",
-					"items" : [ "Bluetooth-Serial-1", ",", "Bluetooth-Serial-2", ",", "Bluetooth-PDA-Sync", ",", "csKonopkasiPhone-Wirele", ",", "K-BOW-03e8-AMP-SPP", ",", "Bluetooth-Modem", ",", "I-CubeXWi-microDig0300-" ],
+					"items" : [ "csKonopkasiPhone-Wirele", ",", "AdafruitEZ-Link15b9-SPP", ",", "Bluetooth-Modem", ",", "Bluetooth-Incoming-Port", ",", "usbmodem5d11" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -1024,7 +1024,7 @@
 					"maxclass" : "panel",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 442.275146, 101.491913, 264.486481, 258.86496 ],
+					"patching_rect" : [ 442.275146, 101.491913, 267.486481, 274.0 ],
 					"rounded" : 10
 				}
 
@@ -1039,7 +1039,7 @@
 					"maxclass" : "panel",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 710.761597, 101.491913, 257.487915, 320.0 ],
+					"patching_rect" : [ 710.761597, 101.491913, 255.0, 274.0 ],
 					"rounded" : 10
 				}
 
@@ -1069,7 +1069,7 @@
 					"maxclass" : "panel",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 442.275146, 424.058258, 525.974365, 137.554474 ],
+					"patching_rect" : [ 442.275146, 414.058258, 525.974365, 137.554474 ],
 					"rounded" : 10
 				}
 
@@ -1116,7 +1116,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 14.72364, 467.347534, 380.897888, 93.26519 ],
+					"patching_rect" : [ 14.72364, 467.347534, 423.283661, 84.265198 ],
 					"setminmax" : [ 0.0, 255.0 ],
 					"setstyle" : 3,
 					"slidercolor" : [ 0.111217, 0.229505, 0.50659, 1.0 ]
@@ -1195,7 +1195,7 @@
 					"maxclass" : "panel",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 442.275146, 362.002197, 264.486481, 59.489716 ],
+					"patching_rect" : [ 442.275146, 378.979706, 525.974365, 31.0 ],
 					"rounded" : 10
 				}
 
@@ -1206,7 +1206,7 @@
 					"destination" : [ "obj-108", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 43.128189, 462.266785, 177.269348, 462.266785 ],
+					"midpoints" : [ 43.128189, 462.266785, 198.462234, 462.266785 ],
 					"source" : [ "obj-110", 0 ]
 				}
 

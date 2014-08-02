@@ -22,7 +22,7 @@
   int baudrate; 
     
 // Fading LED
-  int ledpin= 13;    
+  int ledpin= 11;    
 
 // Message #1 from incoming buffer
   int input1;  

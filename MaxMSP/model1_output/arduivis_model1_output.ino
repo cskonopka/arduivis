@@ -38,11 +38,16 @@ void setup()
 
 void loop() 
 {
-  Serial.println("ON");			// Print to Serial Buffer
-  digitalWrite(ledpin, HIGH);   // turn the LED on (HIGH is the voltage level)
-  delay(1000);               	// wait for a second
+  
+// Output Mode
+  Serial.println("ON");			    // Print to Serial Buffer
 
-  Serial.println("OFF");		// Print to Serial Buffer
+  digitalWrite(ledpin, HIGH);   // turn the LED on (HIGH is the voltage level)
+  delay(1000);               	  // wait for a second
+
+// Output Mode
+  Serial.println("OFF");		    // Print to Serial Buffer
+  
   digitalWrite(ledpin, LOW);    // turn the LED off by making the voltage LOW1
-  delay(1000);					// wait for a second
+  delay(1000);					   // wait for a second
 }
