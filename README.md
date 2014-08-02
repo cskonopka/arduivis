@@ -2,6 +2,11 @@ arduivis
 ========
 
 
+What is this?
+=============
+
+This is a compilation of sketchs that demonstrates the connectivity of a (visual) programming language with an Arduino micro-controller. The word visual is in parenthesis because technically, since this works using Serial Communication, many other languages with Serial support could use the GUI patches for prototyping.
+
 :Languages:
 - MaxMSP
 - Max-For-Live
@@ -9,6 +14,9 @@ arduivis
 
 :Microcontroller:
 - Arduino (any type, pins may change based on board kind)
+
+Why?
+====
 
 The purpose of this project is to provide the user with a streamlined open-source paradigm for integrating micro-contollers, such as an Arduino, into a project without 3rd party libraries or externals. The patches are built in such a way that the user can copy/paste the small patch and integrate it into any project of their choosing without any caveats. And since all of the objects are stock, it ensures that when a language is updated the user will not lose their work unless an object is deprecated entirely. The patches are an amalgamation of tutorials from MaxMSP and various Arduino Serial examples.
 
