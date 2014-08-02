@@ -5,6 +5,8 @@ arduivis
 What is this?
 =============
 
+modular microcontroller programming for (visual) programming languages
+
 This is a compilation of sketchs that demonstrates the connectivity of a (visual) programming language with an Arduino micro-controller. The word visual is in parenthesis because technically, since this works using Serial Communication, many other languages with Serial support could use the GUI patches for prototyping.
 
 :Languages:
