@@ -5,7 +5,9 @@
   Arduino   :   arduivis_model1_output.ino
   MaxMSP    :   arduivis_model1_output.maxpat
 
-  This is a basic model of how to implement the output functionality. This is a small adaptation of the "Blink" example.
+  This is a basic model of how to implement the output functionality. 
+
+  The output mode is when data is sent from an Arduino and is printed in a visual programming language. 
 
   Blink example
   http://arduino.cc/en/tutorial/blink
