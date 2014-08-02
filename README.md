@@ -1,7 +1,6 @@
 arduivis
 
-modular microcontroller programming for (visual) programming languages
-============================================================
+
 
 :Languages:
 - MaxMSP
