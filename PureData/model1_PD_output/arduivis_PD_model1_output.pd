@@ -738,6 +738,11 @@
 #X floatatom 18 98 5 0 0 0 - - -;
 #X obj 18 77 unpack f;
 #X obj 18 56 repack 1;
+#X msg 133 212 \; pd dsp \$1;
+#X msg 133 187 1;
+#X msg 163 187 0;
+#X obj 133 145 loadbang;
+#X obj 133 166 delay 2000;
 #X connect 0 0 2 0;
 #X connect 1 0 2 0;
 #X connect 2 0 15 0;
@@ -752,3 +757,7 @@
 #X connect 13 0 7 0;
 #X connect 14 0 13 0;
 #X connect 15 0 14 0;
+#X connect 17 0 16 0;
+#X connect 18 0 16 0;
+#X connect 19 0 20 0;
+#X connect 20 0 17 0;
