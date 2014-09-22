@@ -1,0 +1,41 @@
+#N canvas 666 41 383 514 16;
+#X msg 22 57 devices;
+#X msg 52 137 close;
+#X obj 22 169 comport 9600;
+#X floatatom 33 84 5 0 0 0 - - -;
+#X msg 33 110 open \$1;
+#X text 180 55 find Arduino board;
+#X text 180 135 close serial buffer;
+#X text 180 83 define board number;
+#X text 180 107 open defined board;
+#X floatatom 22 249 5 0 0 0 - - -;
+#X floatatom 67 276 5 0 0 0 - - -;
+#X floatatom 113 302 5 0 0 0 - - -;
+#X floatatom 159 329 5 0 0 0 - - -;
+#X obj 22 365 vsl 15 128 0 255 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 1395 1;
+#X obj 67 365 vsl 15 128 0 255 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 4333 1;
+#X obj 113 365 vsl 15 128 0 255 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 3685 1;
+#X obj 159 365 vsl 15 128 0 255 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 6674 1;
+#X obj 22 222 unpack 0 0 0 0;
+#X obj 22 196 repack 4;
+#X text 11 11 arduivis - model #4 - multipleOutputs;
+#X text 180 193 repack message to parse;
+#X text 180 219 unpack message;
+#X connect 0 0 2 0;
+#X connect 1 0 2 0;
+#X connect 2 0 18 0;
+#X connect 3 0 4 0;
+#X connect 4 0 2 0;
+#X connect 9 0 13 0;
+#X connect 10 0 14 0;
+#X connect 11 0 15 0;
+#X connect 12 0 16 0;
+#X connect 17 0 9 0;
+#X connect 17 1 10 0;
+#X connect 17 2 11 0;
+#X connect 17 3 12 0;
+#X connect 18 0 17 0;
