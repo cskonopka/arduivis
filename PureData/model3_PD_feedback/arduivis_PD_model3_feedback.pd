@@ -1,41 +1,41 @@
 #N canvas 460 22 610 806 16;
-#X floatatom -63 -83 5 0 255 0 - - -;
-#X obj -63 -53 spell;
-#X obj -63 9 prepend set;
-#X msg -63 74 48;
-#X obj -63 167 prepend;
-#X obj -63 198 prepend set;
-#X obj -63 40 t b a;
-#X obj -63 105 t b a;
-#X msg -63 264 48 32;
-#X obj -63 -22 thresh 0.9;
-#X msg -63 136 32;
-#X obj -63 229 t b a;
-#X obj -60 -139 hsl 128 20 0 255 0 0 empty empty empty -2 -8 0 10 -262144
+#X floatatom -23 -73 5 0 255 0 - - -;
+#X obj -23 -43 spell;
+#X obj -23 19 prepend set;
+#X msg -23 84 48;
+#X obj -23 177 prepend;
+#X obj -23 208 prepend set;
+#X obj -23 50 t b a;
+#X obj -23 115 t b a;
+#X msg -23 274 48 32;
+#X obj -23 -12 thresh 0.9;
+#X msg -23 146 32;
+#X obj -23 239 t b a;
+#X obj -20 -129 hsl 128 20 0 255 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 0 1;
-#X obj -63 -114 list-round;
-#X text 74 -143 data to Arduino;
-#X text 73 -86 round float to int;
-#X text 73 134 add ASCII stop byte;
-#X text 73 -55 convert to ASCII;
-#X text 73 -25 combine fast numbers;
-#X text 73 70 data from slider;
-#X text 73 263 finished message;
-#X obj -159 -139 tgl 50 0 empty empty empty 17 7 0 10 -262144 -1 -1
+#X obj -23 -104 list-round;
+#X text 114 -133 data to Arduino;
+#X text 113 -76 round float to int;
+#X text 113 144 add ASCII stop byte;
+#X text 113 -45 convert to ASCII;
+#X text 113 -15 combine fast numbers;
+#X text 113 80 data from slider;
+#X text 113 273 finished message;
+#X obj -119 -129 tgl 50 0 empty empty empty 17 7 0 10 -262144 -1 -1
 0 1;
-#X obj -159 147 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj -119 157 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj -159 106 metro 50;
-#X text -154 -127 poll;
-#X obj -148 74 s metro;
-#X msg -197 -251 devices;
-#X msg -167 -171 close;
-#X obj -139 460 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-1 1;
-#X obj -197 433 sig~;
-#X obj -197 511 tabwrite~ output1;
-#X obj -197 354 maxlib/scale 0 255 -1 1;
-#X floatatom -197 407 5 0 0 0 - - -;
+#X obj -119 116 metro 50;
+#X text -114 -117 poll;
+#X obj -108 84 s metro;
+#X msg -157 -241 devices;
+#X msg -127 -161 close;
+#X obj -99 470 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj -157 443 sig~;
+#X obj -157 521 tabwrite~ output1;
+#X obj -157 364 maxlib/scale 0 255 -1 1;
+#X floatatom -157 417 5 0 0 0 - - -;
 #N canvas 0 22 450 278 (subpatch) 0;
 #X array output1 5000 float 5;
 #A 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
@@ -189,27 +189,27 @@
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 #X coords 0 1 4999 -1 200 140 1 0 0;
-#X restore 97 394 graph;
-#X obj -139 479 metro 120;
-#X obj -139 406 loadbang;
-#X msg -139 433 1;
-#X floatatom -197 328 5 0 0 0 - - -;
-#X msg -18 492 \; pd dsp \$1;
-#X msg -18 461 1;
-#X msg 25 461 0;
-#X obj -18 406 loadbang;
-#X obj -18 433 delay 2000;
-#X text -139 327 raw data from Arduino;
-#X text 96 350 visualization of data from Arduino;
-#X obj -197 301 comport 9600;
-#X floatatom -186 -224 5 0 0 0 - - -;
-#X msg -186 -198 open \$1;
-#X text -189 379 scale data for visualization;
-#X text -99 -253 find Arduino board;
-#X text -99 -173 close serial buffer;
-#X text -99 -225 define board number;
-#X text -99 -201 open defined board;
-#X text 101 -255 arduivis - model #3 - feedback;
+#X restore 137 404 graph;
+#X obj -99 489 metro 120;
+#X obj -99 416 loadbang;
+#X msg -99 443 1;
+#X floatatom -157 338 5 0 0 0 - - -;
+#X msg 22 502 \; pd dsp \$1;
+#X msg 22 471 1;
+#X msg 65 471 0;
+#X obj 22 416 loadbang;
+#X obj 22 443 delay 2000;
+#X text -99 337 raw data from Arduino;
+#X text 136 360 visualization of data from Arduino;
+#X obj -157 311 comport 9600;
+#X floatatom -146 -214 5 0 0 0 - - -;
+#X msg -146 -188 open \$1;
+#X text -149 389 scale data for visualization;
+#X text -59 -243 find Arduino board;
+#X text -59 -163 close serial buffer;
+#X text -59 -215 define board number;
+#X text -59 -191 open defined board;
+#X text 141 -245 arduivis - model #3 - feedback;
 #X connect 0 0 1 0;
 #X connect 1 0 9 0;
 #X connect 2 0 6 0;
