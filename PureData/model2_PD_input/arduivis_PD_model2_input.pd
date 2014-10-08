@@ -28,7 +28,7 @@
 #X obj 42 250 metro 50;
 #X obj 4 442 comport 9600;
 #X text 47 17 poll;
-#X text 11 -143 arduivis - model #2 - input;
+#X text 121 -143 arduivis - model #2 - input;
 #X msg 4 -108 devices;
 #X msg 34 -28 close;
 #X floatatom 15 -81 5 0 0 0 - - -;

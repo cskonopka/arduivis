@@ -10,14 +10,18 @@ void loop()
         
   for(lp = 0; lp<=255; lp++)         // Create incremental loop
   {
+   
     analogWrite(13,lp);
-    Serial.write(lp);            // Print looping numbers
+    Serial.write(lp);            
     delay(10);
   }
   for(lp = 255; lp>=0; lp--)    // Create decremental loop
   {
-    analogWrite(13,lp);    
-    Serial.write(lp);     // Print looping numbers
+    analogWrite(13,lp);   
+
+   
+    Serial.write(lp);  
+
     delay(10);
   }
 }
