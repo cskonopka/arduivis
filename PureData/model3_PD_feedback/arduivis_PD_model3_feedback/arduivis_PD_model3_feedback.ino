@@ -34,7 +34,7 @@ void loop()
 int pdSlider;
 
 // Feedback from Pure Data (original output from Arduino)
-int feedback;
+int feedbackFromPD;
 
 // Parse incoming Pure Data slider values
 // from Pure Data, to Arduino	
@@ -47,7 +47,7 @@ Serial.write(pdSlider);
 
 // Parse incoming Pure Data (feedback) values
 // from Pure Data (feedback), to Arduino 
-feedback = Serial.parseInt();
+feedbackFromPD = Serial.parseInt();
 
 // Write parsed values to LEDs
 // Fading LED

@@ -19,7 +19,11 @@ This example code is in the public domain.
 void setup() 
 {
   // Create/open serial port
-  Serial.begin(9600);       
+  Serial.begin(9600);  
+
+  // Define LED mode 
+  // PWM LED  
+  pinMode(3, OUTPUT);     
 }
 
 void loop() 
@@ -54,6 +58,7 @@ int loopSystem(int startIncrement, int incrementLoopRange, int startDecrement, i
 {
   int lp;
 
+  // Loop #1
   // Incremental Loop
   for(lp = startIncrement; lp < incrementLoopRange; lp++)         
   {
@@ -72,27 +77,20 @@ int loopSystem(int startIncrement, int incrementLoopRange, int startDecrement, i
     delay(10);
   }
 
+  // Loop #2
   // Decremental Loop
   for(lp = startDecrement; lp > decrementLoopRange; lp--)    
   {
     // Deremental loop values to LED
     // Controls fade  
-    analogWrite(13,lp);    
+    analogWrite(3,lp);    
 
       // Decremental loop values to serial buffer
       // [comport] object
       // to Pure Data, from Arduino  
-
-      // value #1
       Serial.write(lp);    
-
-      // value #2      
       Serial.write(lp - 13);
-
-      // value #3
       Serial.write(lp + 47);
-
-      // value #4
       Serial.write(lp - 60);
    // Serial.write(lp);     // Print looping numbers
     delay(10);
