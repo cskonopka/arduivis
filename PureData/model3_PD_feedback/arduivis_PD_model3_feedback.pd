@@ -1,48 +1,49 @@
-#N canvas 460 22 503 715 16;
-#X floatatom 7 47 5 0 255 0 - - -;
-#X obj 7 77 spell;
-#X obj 7 139 prepend set;
-#X msg 7 204 48;
-#X obj 7 297 prepend;
-#X obj 7 328 prepend set;
-#X obj 7 170 t b a;
-#X obj 7 235 t b a;
-#X msg 7 394 48 32;
-#X obj 7 108 thresh 0.9;
-#X msg 7 266 32;
-#X obj 7 359 t b a;
-#X obj 10 -9 hsl 128 20 0 255 0 0 empty empty empty -2 -8 0 10 -262144
+#N canvas 460 22 453 692 16;
+#X floatatom 17 57 5 0 255 0 - - -;
+#X obj 17 87 spell;
+#X obj 17 149 prepend set;
+#X msg 17 214 48;
+#X obj 17 307 prepend;
+#X obj 17 338 prepend set;
+#X obj 17 180 t b a;
+#X obj 17 245 t b a;
+#X msg 17 404 48 32;
+#X obj 17 118 thresh 0.9;
+#X msg 17 276 32;
+#X obj 17 369 t b a;
+#X obj 20 1 hsl 128 20 0 255 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 0 1;
-#X obj 7 16 list-round;
-#X text 144 -13 data to Arduino;
-#X text 143 44 round float to int;
-#X text 143 264 add ASCII stop byte;
-#X text 143 75 convert to ASCII;
-#X text 143 105 combine fast numbers;
-#X text 143 200 data from slider;
-#X text 143 393 finished message;
-#X obj -89 -9 tgl 50 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj -89 277 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 17 26 list-round;
+#X text 154 -3 data to Arduino;
+#X text 153 54 round float to int;
+#X text 153 274 add ASCII stop byte;
+#X text 153 85 convert to ASCII;
+#X text 153 115 combine fast numbers;
+#X text 153 210 data from slider;
+#X text 153 403 finished message;
+#X obj -79 1 tgl 50 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj -79 287 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj -89 236 metro 50;
-#X text -84 3 poll;
-#X obj -78 204 s metro;
-#X msg -127 -121 devices;
-#X msg -97 -41 close;
-#X floatatom -127 458 5 0 0 0 - - -;
-#X obj -127 431 comport 9600;
-#X floatatom -116 -94 5 0 0 0 - - -;
-#X msg -116 -68 open \$1;
-#X text -29 -123 find Arduino board;
-#X text -29 -43 close serial buffer;
-#X text -29 -95 define board number;
-#X text -29 -71 open defined board;
-#X text -25 -178 arduivis - model #3 - feedback;
-#X obj -124 485 hsl 128 15 0 255 0 0 empty empty empty -2 -8 0 10 -262144
+#X obj -79 246 metro 50;
+#X text -74 13 poll;
+#X obj -68 214 s metro;
+#X msg -117 -111 devices;
+#X msg -87 -31 close;
+#X floatatom -117 468 5 0 0 0 - - -;
+#X obj -117 441 comport 9600;
+#X floatatom -106 -84 5 0 0 0 - - -;
+#X msg -106 -58 open \$1;
+#X text -19 -113 find Arduino board;
+#X text -19 -33 close serial buffer;
+#X text -19 -85 define board number;
+#X text -19 -61 open defined board;
+#X text -15 -168 arduivis - model #3 - feedback;
+#X obj -114 495 hsl 128 15 0 255 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 0 1;
-#X text -72 458 raw data from Arduino;
-#X text 25 480 data visualization;
+#X text -62 468 raw data from Arduino;
+#X text 35 490 data visualization;
+#X text -53 -148 sketch: arduivis_PD_model3_feedback.ino;
 #X connect 0 0 1 0;
 #X connect 1 0 9 0;
 #X connect 2 0 6 0;
