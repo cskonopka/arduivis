@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 4.0, 44.0, 1436.0, 810.0 ],
+		"rect" : [ 4.0, 44.0, 427.0, 479.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -120,7 +120,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 917.250244, 195.715271, 58.0, 20.0 ],
+					"patching_rect" : [ 902.250244, 172.715271, 58.0, 20.0 ],
 					"text" : "r output4"
 				}
 
@@ -135,7 +135,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 917.250244, 219.579285, 127.0, 20.0 ],
+					"patching_rect" : [ 902.250244, 196.579285, 127.0, 20.0 ],
 					"text" : "prepend set output #4"
 				}
 
@@ -149,10 +149,10 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 917.250244, 245.199097, 136.0, 28.0 ],
+					"patching_rect" : [ 902.250244, 222.199097, 136.0, 28.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 91.084358, 445.028198, 120.189796, 28.0 ],
-					"text" : "output #4 1023",
+					"text" : "output #4 198",
 					"textcolor" : [ 0.99024, 0.995289, 0.990099, 1.0 ]
 				}
 
@@ -166,7 +166,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 681.250366, 195.715332, 58.0, 20.0 ],
+					"patching_rect" : [ 666.250366, 172.715332, 58.0, 20.0 ],
 					"text" : "r output3"
 				}
 
@@ -181,7 +181,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 681.250366, 219.579346, 127.0, 20.0 ],
+					"patching_rect" : [ 666.250366, 196.579346, 127.0, 20.0 ],
 					"text" : "prepend set output #3"
 				}
 
@@ -195,10 +195,10 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 681.250366, 245.199219, 136.0, 28.0 ],
+					"patching_rect" : [ 666.250366, 222.199219, 136.0, 28.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 91.084358, 359.028198, 120.189796, 28.0 ],
-					"text" : "output #3 1023",
+					"text" : "output #3 198",
 					"textcolor" : [ 0.99024, 0.995289, 0.990099, 1.0 ]
 				}
 
@@ -212,7 +212,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 917.250244, 30.715271, 58.0, 20.0 ],
+					"patching_rect" : [ 902.250244, 7.715271, 58.0, 20.0 ],
 					"text" : "r output2"
 				}
 
@@ -227,7 +227,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 917.250244, 54.579285, 127.0, 20.0 ],
+					"patching_rect" : [ 902.250244, 31.579285, 127.0, 20.0 ],
 					"text" : "prepend set output #2"
 				}
 
@@ -241,10 +241,10 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 917.250244, 80.199097, 136.0, 28.0 ],
+					"patching_rect" : [ 902.250244, 57.199097, 136.0, 28.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 91.084358, 273.028198, 120.189796, 28.0 ],
-					"text" : "output #2 1023",
+					"text" : "output #2 198",
 					"textcolor" : [ 0.99024, 0.995289, 0.990099, 1.0 ]
 				}
 
@@ -258,7 +258,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 681.250366, 30.715332, 58.0, 20.0 ],
+					"patching_rect" : [ 666.250366, 7.715332, 58.0, 20.0 ],
 					"text" : "r output1"
 				}
 
@@ -273,7 +273,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 681.250366, 54.579346, 127.0, 20.0 ],
+					"patching_rect" : [ 666.250366, 31.579346, 127.0, 20.0 ],
 					"text" : "prepend set output #1"
 				}
 
@@ -287,10 +287,10 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 681.250366, 80.199188, 136.0, 28.0 ],
+					"patching_rect" : [ 666.250366, 57.199188, 136.0, 28.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 91.084358, 187.028198, 120.189842, 28.0 ],
-					"text" : "output #1 1023",
+					"text" : "output #1 198",
 					"textcolor" : [ 0.99024, 0.995289, 0.990099, 1.0 ]
 				}
 
@@ -1779,10 +1779,10 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 681.250366, 80.199097, 229.62085, 108.793373 ],
+					"patching_rect" : [ 666.250366, 57.199097, 229.62085, 108.793373 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 5.513412, 132.850922, 205.760788, 82.177277 ],
-					"setminmax" : [ 0.0, 1023.0 ],
+					"setminmax" : [ 0.0, 255.0 ],
 					"setstyle" : 3,
 					"slidercolor" : [ 0.111217, 0.229505, 0.50659, 1.0 ]
 				}
@@ -1799,10 +1799,10 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 917.250244, 80.199097, 229.62085, 108.793373 ],
+					"patching_rect" : [ 902.250244, 57.199097, 229.62085, 108.793373 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 5.21228, 218.850922, 206.061874, 82.177277 ],
-					"setminmax" : [ 0.0, 1023.0 ],
+					"setminmax" : [ 0.0, 255.0 ],
 					"setstyle" : 3,
 					"slidercolor" : [ 0.111217, 0.229505, 0.50659, 1.0 ]
 				}
@@ -1819,10 +1819,10 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 681.250366, 245.199097, 229.62085, 108.793373 ],
+					"patching_rect" : [ 666.250366, 222.199097, 229.62085, 108.793373 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 5.21228, 304.850922, 206.061874, 82.177277 ],
-					"setminmax" : [ 0.0, 1023.0 ],
+					"setminmax" : [ 0.0, 255.0 ],
 					"setstyle" : 3,
 					"slidercolor" : [ 0.111217, 0.229505, 0.50659, 1.0 ]
 				}
@@ -1839,10 +1839,10 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 917.250244, 245.199097, 229.62085, 108.793373 ],
+					"patching_rect" : [ 902.250244, 222.199097, 229.62085, 108.793373 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 5.21228, 390.850922, 206.061874, 82.177277 ],
-					"setminmax" : [ 0.0, 1023.0 ],
+					"setminmax" : [ 0.0, 255.0 ],
 					"setstyle" : 3,
 					"slidercolor" : [ 0.111217, 0.229505, 0.50659, 1.0 ]
 				}
