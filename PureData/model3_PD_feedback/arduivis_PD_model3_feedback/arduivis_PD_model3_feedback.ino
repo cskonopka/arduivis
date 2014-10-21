@@ -29,28 +29,33 @@ void setup()
 
 void loop() 
 {
-
-// Slider from Pure Data
-int pdSlider;
-
-// Feedback from Pure Data (original output from Arduino)
-int feedbackFromPD;
-
-// Parse incoming Pure Data slider values
-// from Pure Data, to Arduino	
-pdSlider = Serial.parseInt();		
- 
-// Write parsed slider values to serial buffer
-// [comport] object
-// to Pure Data, from Arduino
-Serial.write(pdSlider);		
-
-// Parse incoming Pure Data (feedback) values
-// from Pure Data (feedback), to Arduino 
-feedbackFromPD = Serial.parseInt();
-
-// Write parsed values to LEDs
-// Fading LED
-// from Pure Data (feedback), to Arduino
-analogWrite(3, feedbackFromPD);	
+	// Slider from Pure Data
+	int pdSlider;
+	
+	// Feedback from Pure Data (original output from Arduino)
+	int feedbackFromPD;
+	
+	// Parse incoming Pure Data slider values
+	// from Pure Data, to Arduino	
+	pdSlider = Serial.parseInt();		
+	 
+	// Write parsed slider values to serial buffer
+	// [comport] object
+	// to Pure Data, from Arduino
+	Serial.write(pdSlider);		
+	
+	// Parse incoming Pure Data (feedback) values
+	// from Pure Data (feedback), to Arduino 
+	feedbackFromPD = Serial.parseInt();
+	
+	// Write parsed values to LEDs
+	// Fading LED
+	// from Pure Data (feedback), to Arduino
+	analogWrite(3, feedbackFromPD);	
+	
+	// Write feedback values to serial buffer
+	// [comport] object
+	// to Pure Data, from Arduino
+	// This is useful for debugging
+	Serial.write(feedbackFromPD);
 }
