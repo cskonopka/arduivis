@@ -63,8 +63,11 @@ int loopSystem(int startIncrement, int incrementLoopRange, int startDecrement, i
   for(lp = startIncrement; lp < incrementLoopRange; lp++)         
   {
     // Incremental loop values to LED
-    // Controls fade
-    analogWrite(13,lp);
+    // Controls fade of 4 LEDs
+    analogWrite(3, lp);    
+    analogWrite(5, lp - 13);
+    analogWrite(6, lp + 47);
+    analogWrite(9, lp - 60);
 
       // Incremental loop values to serial buffer
       // [comport] object
@@ -82,8 +85,11 @@ int loopSystem(int startIncrement, int incrementLoopRange, int startDecrement, i
   for(lp = startDecrement; lp > decrementLoopRange; lp--)    
   {
     // Deremental loop values to LED
-    // Controls fade  
-    analogWrite(3,lp);    
+    // Controls fade of 4 LEDs
+    analogWrite(3, lp);    
+    analogWrite(5, lp - 13);
+    analogWrite(6, lp + 47);
+    analogWrite(9, lp - 60);
 
       // Decremental loop values to serial buffer
       // [comport] object

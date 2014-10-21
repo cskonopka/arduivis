@@ -1,4 +1,4 @@
-#N canvas 666 41 409 525 16;
+#N canvas 666 41 396 524 16;
 #X msg 22 67 devices;
 #X msg 52 147 close;
 #X obj 22 179 comport 9600;
@@ -12,13 +12,13 @@
 #X floatatom 67 286 5 0 0 0 - - -;
 #X floatatom 113 312 5 0 0 0 - - -;
 #X floatatom 159 339 5 0 0 0 - - -;
-#X obj 22 375 vsl 15 128 0 255 0 0 empty empty empty 0 -9 0 10 -262144
+#X obj 22 375 vsl 30 128 0 255 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
-#X obj 67 375 vsl 15 128 0 255 0 0 empty empty empty 0 -9 0 10 -262144
+#X obj 67 375 vsl 30 128 0 255 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
-#X obj 113 375 vsl 15 128 0 255 0 0 empty empty empty 0 -9 0 10 -262144
+#X obj 113 375 vsl 30 128 0 255 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
-#X obj 159 375 vsl 15 128 0 255 0 0 empty empty empty 0 -9 0 10 -262144
+#X obj 159 375 vsl 30 128 0 255 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
 #X obj 22 232 unpack 0 0 0 0;
 #X obj 22 206 repack 4;
