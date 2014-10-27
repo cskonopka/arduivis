@@ -75,58 +75,153 @@ These two functions work together to first initialize the necessary variables, m
 <h3>
 <a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>void setup()</h3>
 
+
 <p>There is one vital line of code that is necessary for each example within this project:</p>
   
   <ul><b>Serial.begin(baud);</b></ul>
 
 <p>This function creates and opens a serial port on the Arduino so your computer can communicate with the program on the microcontroller. The information is speed is dictated by the baud which is the data rate in bits per second. For this project I chose to stick with 9600 as my standard baud since Pure Data and MaxMSP default to these bauds when using their respective objects.</p>
 
-<p>ex.</p>
-<p>void setup()</p>
-<p>{</p>
-<p>// Available baud rates
-<p>// 300, 600, 1200, 2400, 4800, 9600, 14400, 19200, 28800, 38400, 57600, or 115200</p>
-  <p>Serial.begin(9600);  </p>
-<p>}</p>
+<pre><code>void setup()
+{
+  // Available baud rates
+  // 300, 600, 1200, 2400, 4800, 9600, 14400, 19200, 28800
+  // 38400, 57600, or 115200
 
-<p>http://arduino.cc/en/Reference/Setup</p>
-<p>http://arduino.cc/en/Serial/begin</p>
+  // Create/open serial port  
+  Serial.begin(9600);  
+}
+</code></pre>
 
-<!-- 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p> -->
+<p><em>http://arduino.cc/en/Reference/Setup</em></p>
+<p><em>http://arduino.cc/en/Serial/begin</em></p>
 
-
-<!-- <h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Getting Started</h3>
-
-  <ul>
-    <li>Download a visual programming language</li>
-      <ul>
-        <li> <a href="http://cycling74.com/downloads/">MaxMSP</a></li>
-        <li> <a href="http://puredata.info/downloads/pd-extended">PD-Extended</a></li>
-      </ul>
-  </ul>
-
-  <ul>
-    <li>Download the Arduino IDE</li>
-      <ul>
-        <li> <a href="http://arduino.cc/en/Main/Software">Arduino IDE</a></li>
-      </ul>
-  </ul>  
-
-  <ul>
- -->
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Author</h3>
-
-
-<p> Christopher Konopka (<a href="https://github.com/cskonopka" class="user-mention">@cskonopka</a>)</p>
-<!-- <p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p> -->
 
 <h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>void loop()</h3>
+<p>In this function, there are two main lines of code that dictate how information is read by the Arduino and how it is then sent out to a visual programming language. First, to send information to the Arduino, the function below needs to be initialized within the loop.</p>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+  <ul><b>Serial.parseInt();</b></ul>
+
+<p>After a serial port has been opened in the setup function, this Serial.parseInt() function is used to read the incoming information from the serial buffer. It is important to note that to properly utilize this function, the data being sent to the serial buffer must be converted from an ASCii value to an integer. Along with that, an ASCii stop byte must be added to the end of the converted message so it can be read correctly by the Arduino.</p>
+
+<p>Next, to send out information from the Arduino to a programming environment, it must be written to the buffer. Note that MaxMSP and Pure Data each handle this operation differently and if mixed up the buffer will not write the data properly.</p> 
+
+  <ul><b>Serial.print(); or Serial.println();  [MaxMSP]</b></ul>
+  <ul><b>Serial.write();       [Pure Data]</b></ul>
+
+<p>These main two functions will write data from the Arduino that can be captured within a visual programming language. MaxMSP and Pure Data each have their own way of handling this data and this will be explain in detail in an upcoming section.</p>
+
+<pre><code>void loop() 
+{
+  // Parse incoming MaxMSP slider values
+  // from MaxMSP, to Arduino
+    input1 = Serial.parseInt();
+
+  // Print values of input1 to serial buffer
+  // Good for debuggin
+  // from Arduino, to MaxMSP
+    Serial.println(input1);
+
+  // Write parsed values to LEDs
+  // Fading LED
+  // from MaxMSP, to Arduino
+    analogWrite(ledpin, input1);
+}  
+</code></pre>
+
+<p><em>http://arduino.cc/en/Reference/ParseInt</em></p>
+
+<h3>
+<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Arduino + MaxMSP</h3>
+
+<p>This sketch is an example of an Arduino sketch that is for MaxMSP</p>
+
+<pre><code>/*
+  ~ arduivis ~
+  [modular microcontroller programming]
+
+  This example code is in the public domain.
+*/
+    
+// Fading LED
+  int ledpin= 3;    
+
+// Message #1 from incoming buffer
+  int input1;  
+
+void setup() 
+{
+  // Create/open serial port
+    Serial.begin(9600);     
+
+  // LED Output Mode
+    pinMode(ledpin, OUTPUT);     
+}
+
+void loop() 
+{
+  // Parse incoming MaxMSP slider values
+  // from MaxMSP, to Arduino
+    input1 = Serial.parseInt();
+
+  // Print values of input1 to serial buffer
+  // Good for debuggin
+  // from Arduino, to MaxMSP
+    Serial.println(input1);
+
+  // Write parsed values to LEDs
+  // Fading LED
+  // from MaxMSP, to Arduino
+    analogWrite(ledpin, input1);
+}  
+</code></pre>
+
+<h3>
+<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Arduino + Pure Data</h3>
+
+<p>This sketch is an example of an Arduino sketch that is for Pure Data</p>
+
+<pre><code>/*
+  ~ arduivis ~
+  [modular microcontroller programming]
+
+  This example code is in the public domain.
+*/
+    
+// Fading LED
+  int ledpin= 3;    
+
+// Message #1 from incoming buffer
+  int input1;  
+
+void setup() 
+{
+  // Create/open serial port
+    Serial.begin(9600);     
+
+  // LED Output Mode
+    pinMode(ledpin, OUTPUT);     
+}
+
+void loop() 
+{
+  // Parse incoming Pure Data slider values
+  // from Pure Data, to Arduino
+    input1 = Serial.parseInt();
+
+  // Print values of input1 to serial buffer
+  // Good for debuggin
+  // from Arduino, to Pure Data
+    Serial.write(input1);
+
+  // Write parsed values to LEDs
+  // Fading LED
+  // from Pure Data, to Arduino
+    analogWrite(ledpin, input1);
+}  
+</code></pre>
+
       </section>
       <footer>
         
