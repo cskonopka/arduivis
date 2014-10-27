@@ -52,9 +52,6 @@
 
       <section>
         <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>About</h3>
-
-<p>This is a compilation of sketches that provide a simplified way of connecting a visual programming (MaxMSP/Pure Data) language with an Arduino without any third-party externals or libraries. Instead of creating specialized examples of this connectivity idea, arduivis provides a modular solution by using design models that can be easily duplicated and implemented into many projects.</p>
 
 <!-- <pre><code>$ cd cskonopka/arduivis
 $ git fetch origin
@@ -64,63 +61,40 @@ $ git checkout gh-pages
 <p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
  -->
 
-       <img src="http://cskonopka.github.io/arduivis/arduivis_MaxMSP_model1_output.png" alt="some_text">
-
-       <ul></ul>
+ 
 <h3>
 
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Requirements</h3>
+<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Abstract</h3>
+
+<p>Within the Arduino environment, there are two main functions that are necessary for any Arduino sketch:</p>
+
+<ul><b>void setup()</b> & <b>void loop()</b></ul>
+
+These two functions work together to first initialize the necessary variables, modes, messages, etc. at the start of the program. After the setup function runs once, a continuous loop starts, allowing the user to actively control programmed events in the loop function. For this project, I will first work through the two main functions of the Arduino environment and specify lines of code that will be necessary for each sketch going forward. In this section I will layout the basis of how to establish, send and receive information from a serial port. After I have done that, I will delve deeper into how MaxMSP and Pure Data each handle this process individually. </p>
+
+<h3>
+<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>void setup()</h3>
+
+<p>There is one vital line of code that is necessary for each example within this project:</p>
+  
+  <ul><b>Serial.begin(baud);</b></ul>
+
+<p>This function creates and opens a serial port on the Arduino so your computer can communicate with the program on the microcontroller. The information is speed is dictated by the baud which is the data rate in bits per second. For this project I chose to stick with 9600 as my standard baud since Pure Data and MaxMSP default to these bauds when using their respective objects.</p>
+
+<p>ex.</p>
+<p>void setup()</p>
+<p>{</p>
+<p>// Available baud rates
+<p>// 300, 600, 1200, 2400, 4800, 9600, 14400, 19200, 28800, 38400, 57600, or 115200</p>
+  <p>Serial.begin(9600);  </p>
+<p>}</p>
+
+<p>http://arduino.cc/en/Reference/Setup</p>
+<p>http://arduino.cc/en/Serial/begin</p>
+
 <!-- 
 <p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p> -->
-<ul>
-  <li> Microcontroller (any type of Arduino)</li>
-    <ul>
-      <li>Arduino</li>
-      <ul>
-        <li>UNO, Leonardo, Mega 2560, Micro, Adafruit Trinket 5v, Adafruit Trinket Pro 5v</li>
-      </ul>
-    </ul>
-  <li>Visual Programming Language</li>
-    <ul>
-      <li>MaxMSP</li>
-      <li>Max-For-Live</li>
-      <li>Pure Data Extended</li>
-    </ul>
-  </ul>
 
-<ul></ul>
-
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Software</h3>
-
-  <ul>
-    <li>Download a visual programming language</li>
-      <ul>
-        <li> <a href="http://cycling74.com/downloads/">MaxMSP</a></li>
-        <li> <a href="http://puredata.info/downloads/pd-extended">PD-Extended</a></li>
-      </ul>
-  </ul>
-
-  <ul>
-    <li>Download the Arduino IDE</li>
-      <ul>
-        <li> <a href="http://arduino.cc/en/Main/Software">Arduino IDE</a></li>
-      </ul>
-  </ul>  
-
-  <ul>
-    <li>Download arduivis repository</li>
-      <ul>
-        <li> <a href="http://github.com/cskonopka/arduivis">arduivis</a></li>
-      </ul>
-  </ul>
-
-  <ul>
-    <li>Connect the Arduino to the computer via a USB cable</li>
-      <ul>
-        <li>Double check the Arduino is working properly by uploading the blink sketch</li>
-  </ul>
-  </ul>
 
 <!-- <h3>
 <a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Getting Started</h3>
