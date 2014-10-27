@@ -37,13 +37,11 @@
           <li><a href="https://github.com/cskonopka/arduivis">View On <strong>GitHub</strong></a></li>
         </ul>
 
-          <p>(<a href="https://github.com/cskonopka" class="user-mention">@cskonopka</a>)</p>
+          <p><a href="http://cskonopka.github.io/arduivis/gettingstarted" class="user-mention">Getting Started</a></p>
       </header>
       <section>
         <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>About</h3>
 
-<p>This is a compilation of sketches that provide a simplified way of connecting a visual programming (MaxMSP/Pure Data) language with an Arduino without any third-party externals or libraries.</p>
 
 <!-- <pre><code>$ cd cskonopka/arduivis
 $ git fetch origin
@@ -53,33 +51,94 @@ $ git checkout gh-pages
 <p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
  -->
 
-<h3>
 
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Requirements</h3>
-<!-- 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p> -->
-<ul>
-  <li> Microcontroller (any type of Arduino)</li>
-    <ul>
-      <li>Arduino</li>
-      <ul>
-        <li>UNO, Leonardo, Mega 2560, Micro, Adafruit Trinket 5v, Adafruit Trinket Pro 5v</li>
-      </ul>
-    </ul>
-  <li>Visual Programming Language</li>
-    <ul>
-      <li>MaxMSP</li>
-      <li>Max-For-Live</li>
-      <li>Pure Data Extended</li>
-    </ul>
-  </ul>
 
-<ul></ul>
+
+<!-- <a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Methodology</h3>
+
+<p>Each model represents a way to interact with an Arduino via a visual programming language. 
+
+Currently there are 6 models that make up arduivis.</p>
+  <ul>
+    <li>model #1: output</li>
+    <li>model #2: input</li>
+    <li>model #3: feedback</li>
+    <li>model #4: multiple ouputs</li>
+    <li>model #5: multiple inputs</li>
+    <li>model #6: multiple feedbacks</li>
+  </ul> -->
 
 <h3>
 <a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Getting Started</h3>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+  <ul>
+    <li>Download a visual programming language</li>
+      <ul>
+        <li> <a href="http://cycling74.com/downloads/">MaxMSP</a></li>
+        <li> <a href="http://puredata.info/downloads/pd-extended">PD-Extended</a></li>
+      </ul>
+  </ul>
+
+  <ul>
+    <li>Download the Arduino IDE</li>
+      <ul>
+        <li> <a href="http://arduino.cc/en/Main/Software">Arduino IDE</a></li>
+      </ul>
+  </ul>  
+
+  <ul>
+    <li>Download arduivis repository</li>
+      <ul>
+        <li> <a href="http://github.com/cskonopka/arduivis">arduivis</a></li>
+      </ul>
+  </ul>
+
+  <ul>
+    <li>Connect the Arduino to the computer via a USB cable</li>
+      <ul>
+        <li>Double check the Arduino is working properly by uploading the blink sketch</li>
+  </ul>
+  </ul>
+
+<h3>
+<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>MaxMSP Setup</h3>
+
+  <ul>
+    <li>MaxMSP</li>
+      <ul>
+        <li>Find the arduivis root folder and select the MaxMSP folder</li>
+        <li>Open the folder named "model1_output"</li>
+        <li>Within this folder, open the dedicated MaxMSP patch (arduivis_MaxMSP_model1_output.maxpat)</li>
+        <li>Open the Arduino sketch in its dedicated IDE and upload it to the Arduino board</li>   
+
+
+
+  </ul>
+ 
+
+<!--   <ul>
+    <li>Next, open the folder named "model1_output"</li>
+      <ul>
+        <li> arduivis > MaxMSP > model1_output</li>
+        <li> arduivis > PD > model1_output</li>
+      </ul>
+  </ul>  
+
+  <ul>
+    <li>Inside "model1_output" there will be a patch for the VPL and a folder containing the Arduino sketch for this example</li>
+      <ul>
+        <li>Open the sketch "arduivis_MaxMSP_model1_output.ino" in the Arduino IDE</li>
+        <li>Upload the sketch to the Arduino</li>
+      </ul>
+  </ul>     -->
+
+<!-- 
+  <ul>
+    <li>For MaxMSP, find the folder model #1</li>
+      <ul>
+        <li> arduivis > MaxMSP > model1_output</li>
+      </ul>
+  </ul> -->
 
 <h3>
 <a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Author</h3>
