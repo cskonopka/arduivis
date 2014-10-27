@@ -3,7 +3,7 @@
 ~~~~~~~ arduivis - MaxMSP ~~~~~~~
 ~~~~~~~~ model#2: input ~~~~~~~~~
 
-maxmsp patch: arduivis_model2_MaxMSP_input.maxmsp
+MaxMSP: arduivis_model2_MaxMSP_input.maxpat
 
 This is an example of how to read a slider from 
 MaxMSP and write the values to a PWM LED connected
@@ -16,27 +16,27 @@ This example code is in the public domain.
 */
 
 void setup() 
-{	
+{ 
   //  Create/open serial port
-  Serial.begin(9600);	 	
+    Serial.begin(9600);   
 
   // Define LED mode 
-  // PWM LED	
-  pinMode(ledpin, OUTPUT);
+  // PWM LED  
+    pinMode(ledpin, OUTPUT);
 }
 
 void loop() 
 {
 
-  // Slider from MaxMSP	
-  int maxmspSlider;
+  // Slider from MaxMSP 
+    int maxmspSlider;
 
   // Parse incoming MaxMSP slider values
-  // from MaxMSP, to Arduino	  
-  maxmspSlider = Serial.parseInt();  
+  // from MaxMSP, to Arduino    
+    maxmspSlider = Serial.parseInt();  
 
   // Write parsed values to LEDs
   // Fading LED
-  // from MaxMSP, to Arduino 		
-  analogWrite(3, maxmspSlider);
+  // from MaxMSP, to Arduino    
+    analogWrite(3, maxmspSlider);
 }

@@ -3,7 +3,7 @@
 ~~~~~~~ arduivis - Pure Data ~~~~~~~
 ~~~~~~~~~ model#1: output ~~~~~~~~~~
 
-pd patch: arduivis_model1_PD_output.pd
+PD: arduivis_model1_PD_output.pd
 
 This is an example of how to send data from
 an Arduino and read it in Pure Data via 
@@ -18,17 +18,17 @@ This example code is in the public domain.
 void setup() 
 {
   // Create/open serial port  
-  Serial.begin(9600);      
+    Serial.begin(9600);      
 
   // Define LED mode 
   // PWM LED    
-  pinMode(3, OUTPUT);
+    pinMode(3, OUTPUT);
 }
 
 void loop() 
 { 
   // Loop variables  
-  int lp = 0; 
+    int lp = 0; 
   
   // Loop #1  
   // Incremental Loop
@@ -36,12 +36,12 @@ void loop()
   {
     // Incremental loop values to LED
     // Controls PWM fade
-    analogWrite(3,lp);
+      analogWrite(3,lp);
 
     // Incremental loop values to serial buffer
     // [comport] object
     // to Pure Data, from Arduino    
-    Serial.write(lp); 
+      Serial.write(lp); 
 
     delay(10);
   }
@@ -52,12 +52,12 @@ void loop()
   {
     // Deremental loop values to LED
     // Controls PWM fade      
-    analogWrite(3,lp);   
+      analogWrite(3,lp);   
 
     // Decremental loop values to serial buffer
     // [comport] object
     // to Pure Data, from Arduino     
-    Serial.write(lp);  
+      Serial.write(lp);  
 
     delay(10);
   }

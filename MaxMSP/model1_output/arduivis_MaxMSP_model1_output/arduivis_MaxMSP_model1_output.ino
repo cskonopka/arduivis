@@ -3,7 +3,7 @@
 ~~~~~~~ arduivis - MaxMSP ~~~~~~~
 ~~~~~~~~ model#1: output ~~~~~~~~
 
-maxmsp patch: arduivis_model1_MaxMSP_output.pd
+MaxMSP: arduivis_model1_MaxMSP_output.maxpat
 
 This is an example of how to send data from
 an Arduino and read it in MaxMSP via 

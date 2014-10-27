@@ -2,57 +2,55 @@
   ~ arduivis ~
   [modular microcontroller programming]
 
-  Arduino   :   arduivis_model3_feedback.ino
-  MaxMSP    :   arduivis_model3_feedback.maxpat
-
-  This is a basic model of how to implement the feedback functionality. 
+  MaxMSP: arduivis_model3_feedback.maxpat
 
   The goal of the feedback loop is to simultaneously send information from the Arduino (output), through a visual programming language, and back to the Arduino (input). 
 
-  More information about Serial Communication
-  http://cycling74.com/docs/max5/tutorials/max-tut/communicationschapter02.html
-  
   [by Christopher Konopka]
 
   This example code is in the public domain.
 */
 
-// Available Transfer Speed
-// {1200, 2400, 4800, 9600, 19200, 38400}
-  int baudrate; 
-    
-// Fading LED
-  int ledpin= 3;    
-
-// Message #1 from incoming buffer
-  int input1;  
-  int feedbackInput;
-
 void setup() 
 {
-  // Activate Serial Communication
-  baudrate = 9600;
+  // Create/open serial port  
+  Serial.begin(9600);      
 
-  // (Arduino <-> MaxMSP/PD)
-  Serial.begin(baudrate);     
-
-  // LED Output Mode
-  pinMode(ledpin, OUTPUT);     
+  // Define LED mode 
+  // PWM LED    
+  pinMode(3, OUTPUT);    
 }
 
 void loop() 
 {
-  // Input Mode
-  // Parse incoming data line by line from the Serial Buffer
-  input1 = Serial.parseInt();
 
-  // Output Mode
-  // Print the messages to the Serial Buffer
-  Serial.println(input1);
+  // Slider from MaxMSP 
+    int maxmspSlider;
+    
+  // Feedback input from MaxMSP
+    int feedbackInput;
+
+  // Parse incoming MaxMSP slider values
+  // from MaxMSP, to Arduino    
+    maxmspSlider = Serial.parseInt();  
+
+  // MaxMSP Slider values to serial buffer
+  // [serial] object
+  // to MaxMSP, from Arduino       
+    Serial.print(maxmspSlider); 
+    Serial.print(" ");
 
   // Feedback Input
-  feedbackInput = Serial.parseInt();
+  // From MaxMSP
+    feedbackInput = Serial.parseInt();
 
-  // Write incoming feedback data to PWM pin
-  analogWrite(ledpin,feedbackInput);
+  // Write parsed feedback values to LEDs
+  // Fading LED
+  // from MaxMSP, to Arduino    
+    analogWrite(3, feedbackInput);
+
+  // MaxMSP feedback values to serial buffer
+  // [serial] object
+  // to MaxMSP, from Arduino       
+    Serial.println(feedbackInput);    
 }

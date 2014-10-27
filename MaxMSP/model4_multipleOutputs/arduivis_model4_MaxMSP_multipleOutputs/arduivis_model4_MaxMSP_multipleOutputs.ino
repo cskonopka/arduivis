@@ -3,7 +3,7 @@
 ~~~~~~~ arduivis - MaxMSP ~~~~~~~~
 ~~~~~ model#4: multiple outputs ~~~~~
 
-MaxMSP patch: arduivis_model4_MaxMSP_multipleOutputs.pd
+MaxMSP: arduivis_model4_MaxMSP_multipleOutputs.maxpat
 
 This is an example of how to use a loop to write
 several streams of data to MaxMSP, from an Arduino.
@@ -17,7 +17,7 @@ This example code is in the public domain.
 */
 
 void setup() 
-{
+{ 
   // Create/open serial port
   Serial.begin(9600);  
 
@@ -55,20 +55,20 @@ int loopSystem(int startIncrement, int incrementLoopRange, int startDecrement, i
     // Incremental loop values to LED
     // Controls fade of 4 LEDs
     analogWrite(3, lp);    
-    analogWrite(5, lp - 13);
-    analogWrite(6, lp + 47);
-    analogWrite(9, lp - 60);
+    analogWrite(5, lp);
+    analogWrite(6, lp);
+    analogWrite(9, lp);
 
       // Incremental loop values to serial buffer
       // [serial] object
       // to MaxMSP, from Arduino
       Serial.print(lp);
       Serial.print(" ");
-      Serial.print(lp - 13);
+      Serial.print(lp);
       Serial.print(" ");
-      Serial.print(lp + 47);
+      Serial.print(lp);
       Serial.print(" ");
-      Serial.println(lp - 60);
+      Serial.println(lp);
 
         delay(10);
   }
@@ -80,20 +80,20 @@ int loopSystem(int startIncrement, int incrementLoopRange, int startDecrement, i
     // Deremental loop values to LED
     // Controls fade of 4 LEDs
     analogWrite(3, lp);    
-    analogWrite(5, lp - 13);
-    analogWrite(6, lp + 47);
-    analogWrite(9, lp - 60);
+    analogWrite(5, lp);
+    analogWrite(6, lp);
+    analogWrite(9, lp);
 
       // Decremental loop values to serial buffer
       // [serial] object
       // to MaxMSP, from Arduino  
       Serial.print(lp);    
       Serial.print(" ");      
-      Serial.print(lp - 13);
+      Serial.print(lp);
       Serial.print(" ");      
-      Serial.print(lp + 47);
+      Serial.print(lp);
       Serial.print(" ");      
-      Serial.println(lp - 60);
+      Serial.println(lp);
 
         delay(10);
   }
