@@ -1,4 +1,4 @@
-#N canvas 227 22 1076 641 16;
+#N canvas 227 22 1083 783 16;
 #X obj 8 512 comport 9600;
 #X msg 8 -14 devices;
 #X msg 38 66 close;
@@ -8,8 +8,8 @@
 #X text 106 64 close serial buffer;
 #X text 106 12 define board number;
 #X text 106 36 open defined board;
-#X msg 170 476 52 52 32 49 50 32 49 55 55 32 49 48 51 10;
-#X obj 81 154 tgl 47 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X msg 170 476 54 57 32 49 48 50 32 55 52 32 49 56 54 10;
+#X obj 81 154 tgl 47 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 81 240 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
@@ -17,10 +17,10 @@
 #X obj 937 183 spell;
 #X obj 937 210 thresh 0.9;
 #X obj 940 105 hsl 128 20 0 255 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 5478 1;
+-1 -1 9278 1;
 #X obj 937 130 list-round;
 #X obj 830 264 prepend set;
-#X msg 830 326 49 48 51 10;
+#X msg 830 326 49 56 54 10;
 #X obj 830 296 t b a;
 #X msg 950 237 loadbang;
 #X obj 950 264 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -37,10 +37,10 @@
 #X obj 717 183 spell;
 #X obj 717 210 thresh 0.9;
 #X obj 720 105 hsl 128 20 0 255 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 9463 1;
+-1 -1 5163 1;
 #X obj 717 130 list-round;
 #X obj 610 264 prepend set;
-#X msg 610 326 49 55 55 32;
+#X msg 610 326 55 52 32;
 #X obj 610 296 t b a;
 #X msg 730 237 loadbang;
 #X obj 730 264 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -52,10 +52,10 @@
 #X obj 497 183 spell;
 #X obj 497 210 thresh 0.9;
 #X obj 500 105 hsl 128 20 0 255 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 647 0;
+-1 -1 5200 0;
 #X obj 497 130 list-round;
 #X obj 390 264 prepend set;
-#X msg 390 326 49 50 32;
+#X msg 390 326 49 48 50 32;
 #X obj 390 296 t b a;
 #X msg 510 237 loadbang;
 #X obj 510 264 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -67,10 +67,10 @@
 #X obj 277 183 spell;
 #X obj 277 210 thresh 0.9;
 #X obj 280 105 hsl 128 20 0 255 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 2341 1;
+-1 -1 5941 1;
 #X obj 277 130 list-round;
 #X obj 170 264 prepend set;
-#X msg 170 326 52 52 32;
+#X msg 170 326 54 57 32;
 #X obj 170 296 t b a;
 #X msg 290 237 loadbang;
 #X obj 290 264 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -102,6 +102,13 @@
 #X text 392 -89 arduivis - model #5 - multipleInputs;
 #X text 358 -65 sketch: arduivis_PD_model5_multipleinputs.ino;
 #X text 86 166 poll;
+#X obj 18 580 unpack 0 0 0 0;
+#X floatatom 23 628 5 0 0 0 - - -;
+#X floatatom 63 628 5 0 0 0 - - -;
+#X obj 8 540 repack 4;
+#X floatatom 234 605 5 0 0 0 - - -;
+#X floatatom 146 633 5 0 0 0 - - -;
+#X connect 0 0 92 0;
 #X connect 1 0 0 0;
 #X connect 2 0 0 0;
 #X connect 3 0 4 0;
@@ -193,3 +200,8 @@
 #X connect 79 0 73 0;
 #X connect 80 0 75 0;
 #X connect 81 0 77 0;
+#X connect 89 0 90 0;
+#X connect 89 1 91 0;
+#X connect 89 2 94 0;
+#X connect 89 3 93 0;
+#X connect 92 0 89 0;

@@ -39,12 +39,19 @@ void loop()
   pdSlider3 = Serial.parseInt(); 
   pdSlider4 = Serial.parseInt(); 
 
+  // Print output of slider to serial buffer
+  // This is mainly for debugging
+  Serial.write(pdSlider1);
+  Serial.write(pdSlider2);
+  Serial.write(pdSlider3);
+  Serial.write(pdSlider4); 
+  
   // Write parsed values to LEDs
   // Fading LED
   // from Pure Data, to Arduino
   analogWrite(3, pdSlider1);
   analogWrite(5, pdSlider2);    
   analogWrite(6, pdSlider3);     
-  analogWrite(9, pdSlider4);  
+  analogWrite(9, pdSlider4);   
 }
 

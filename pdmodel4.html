@@ -74,19 +74,20 @@ Currently there are 6 models that make up arduivis.</p>
  -->
 
  <h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Pure Data Model #1: Output</h3>
+<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>MaxMSP Model #1: Output</h3>
 
 <p><b>Arduino</b></p>
  <pre><code>/* 
 
-~~~~~~~ arduivis - Pure Data ~~~~~~~
-~~~~~ model#2: input ~~~~~
+~~~~~~~ arduivis - Pure Data ~~~~~~~~
+~~~~~ model#4: multiple outputs ~~~~~
 
-PD: arduivis_model2_PD_input.pd
+pd patch: arduivis_model4_PD_multipleOutputs.pd
 
-This is an example of how to read a slider from 
-Pure Data and write the values to a PWM LED connected
-to an Arduino.
+This is an example of how to use a loop to write
+several streams of data to Pure Data, from an Arduino.
+A fading LED is used to provide visual feedback for
+this process.
 
 synthesized by Christopher Konopka
 
@@ -95,40 +96,83 @@ This example code is in the public domain.
 */
 
 void setup() 
-{ 
-  //  Create/open serial port
-    Serial.begin(9600);   
+{
+  // Create/open serial port
+  Serial.begin(9600);  
 
   // Define LED mode 
   // PWM LED  
-    pinMode(3, OUTPUT);
+  pinMode(3, OUTPUT);     
 }
 
 void loop() 
+{ 
+  // Loop variables
+    int lp = 0;
+  
+    int startIncrement = 0; 
+    int incrementLoopRange = 255; 
+    int startDecrement = 255;
+    int decrementLoopRange = 0;
+        
+
+  // Loop Function        
+    lp = loopSystem(startIncrement, incrementLoopRange, startDecrement, decrementLoopRange);
+}
+
+int loopSystem(int startIncrement, int incrementLoopRange, int startDecrement, int decrementLoopRange)
 {
+  int lp;
 
-  // Slider from Pure Data  
-    int pdSlider;
+  // Loop #1
+  // Incremental Loop
+  for(lp = startIncrement; lp < incrementLoopRange; lp++)         
+  {
+    // Incremental loop values to LED
+    // Controls fade of 4 LEDs
+      analogWrite(3, lp);    
+      analogWrite(5, lp - 13);
+      analogWrite(6, lp + 47);
+      analogWrite(9, lp - 60);
 
-  // Parse incoming Pure Data slider values
-  // from Pure Data, to Arduino   
-    pdSlider = Serial.parseInt();  
+      // Incremental loop values to serial buffer
+      // [comport] object
+      // to Pure Data, from Arduino
+        Serial.write(lp);
+        Serial.write(lp - 13);
+        Serial.write(lp + 47);
+        Serial.write(lp - 60);
+              
+    delay(10);
+  }
 
-  // Write parsed values to LEDs
-  // Fading LED
-  // from Pure Data, to Arduino     
-    analogWrite(3, pdSlider);
+  // Loop #2
+  // Decremental Loop
+  for(lp = startDecrement; lp > decrementLoopRange; lp--)    
+  {
+    // Deremental loop values to LED
+    // Controls fade of 4 LEDs
+      analogWrite(3, lp);    
+      analogWrite(5, lp - 13);
+      analogWrite(6, lp + 47);
+      analogWrite(9, lp - 60);
 
-  // Pure Data Slider values to serial buffer
-  // [comport] object
-  // to Pure Data, from Arduino       
-    Serial.write(pdSlider);  
+      // Decremental loop values to serial buffer
+      // [comport] object
+      // to Pure Data, from Arduino  
+        Serial.write(lp);    
+        Serial.write(lp - 13);
+        Serial.write(lp + 47);
+        Serial.write(lp - 60);
+  
+    delay(10);
+  }
 }
 </code></pre>
 
 <p><b>PD-Extended</b></p>
 
-       <img src="http://cskonopka.github.io/arduivis/arduivis_PD_model2_input.png" alt="some_text">
+       <img src="http://cskonopka.github.io/arduivis/arduivis_PD_model4_multipleOutputs.png" alt="some_text">
 
 
 <!--   <ul>

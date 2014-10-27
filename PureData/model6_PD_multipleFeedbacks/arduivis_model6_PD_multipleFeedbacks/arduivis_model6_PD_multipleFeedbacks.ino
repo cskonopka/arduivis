@@ -62,6 +62,15 @@ void loop()
   feedbackFromPD3 = Serial.parseInt();
   feedbackFromPD4 = Serial.parseInt(); 
 
+  // Write parsed slider values to serial buffer
+  // [comport] object
+  // to Pure Data, from Arduino
+  Serial.write(feedbackFromPD1);
+  Serial.write(feedbackFromPD2);
+  Serial.write(feedbackFromPD3);
+  Serial.write(feedbackFromPD4);
+
+
   // Write parsed values to LEDs
   // Fading LED
   // from Pure Data (feedback), to Arduino
