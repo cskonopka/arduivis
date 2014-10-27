@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 4.0, 44.0, 425.0, 606.0 ],
+		"rect" : [ 4.0, 44.0, 1436.0, 810.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -32,12 +32,11 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-32",
-					"linecount" : 5,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 352.945465, 733.49646, 64.780273, 72.0 ],
+					"patching_rect" : [ 352.945465, 727.49646, 276.780273, 18.0 ],
 					"text" : "http://www.github.com/cskonopka/arduivis"
 				}
 
@@ -52,7 +51,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 352.945465, 814.290161, 69.0, 27.0 ],
+					"patching_rect" : [ 352.945465, 745.572388, 69.0, 27.0 ],
 					"text" : "prepend launchbrowser"
 				}
 
@@ -65,7 +64,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 352.945465, 846.519287, 69.0, 17.0 ],
+					"patching_rect" : [ 352.945465, 771.519287, 69.0, 17.0 ],
 					"text" : "forward max"
 				}
 
@@ -1035,8 +1034,8 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 427.585327, 472.794952, 136.0, 28.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 299.721344, 444.028198, 120.189796, 28.0 ],
-					"text" : "output #4 175",
+					"presentation_rect" : [ 305.721344, 444.028198, 114.189789, 28.0 ],
+					"text" : "output #4 144",
 					"textcolor" : [ 0.99024, 0.995289, 0.990099, 1.0 ]
 				}
 
@@ -1081,8 +1080,8 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 191.585449, 472.795074, 136.0, 28.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 299.721344, 358.028198, 120.189796, 28.0 ],
-					"text" : "output #3 175",
+					"presentation_rect" : [ 305.721344, 358.028198, 114.189789, 28.0 ],
+					"text" : "output #3 144",
 					"textcolor" : [ 0.99024, 0.995289, 0.990099, 1.0 ]
 				}
 
@@ -1127,8 +1126,8 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 427.585327, 307.794952, 136.0, 28.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 299.721344, 272.028198, 120.189796, 28.0 ],
-					"text" : "output #2 175",
+					"presentation_rect" : [ 305.721344, 272.028198, 114.189789, 28.0 ],
+					"text" : "output #2 144",
 					"textcolor" : [ 0.99024, 0.995289, 0.990099, 1.0 ]
 				}
 
@@ -1173,8 +1172,8 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 191.585449, 307.795044, 136.0, 28.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 299.721344, 186.028198, 120.189842, 28.0 ],
-					"text" : "output #1 175",
+					"presentation_rect" : [ 305.721344, 186.028198, 114.18985, 28.0 ],
+					"text" : "output #1 144",
 					"textcolor" : [ 0.99024, 0.995289, 0.990099, 1.0 ]
 				}
 
@@ -1725,9 +1724,9 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 4,
-					"outlettype" : [ "float", "float", "float", "float" ],
+					"outlettype" : [ "int", "int", "int", "int" ],
 					"patching_rect" : [ 14.723633, 387.519287, 103.0, 20.0 ],
-					"text" : "unpack 0. 0. 0. 0."
+					"text" : "unpack 0 0 0 0"
 				}
 
 			}
@@ -1855,7 +1854,7 @@
 					"framecolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"hltcolor" : [ 0.215478, 0.440638, 0.918583, 1.0 ],
 					"id" : "obj-1129",
-					"items" : [ "AdafruitEZ-Link15b9-SPP", ",", "AdafruitEZ-Link2a86-SPP", ",", "Bluetooth-Modem", ",", "Bluetooth-Incoming-Port" ],
+					"items" : [ "csKonopkasiPhone-Wirele", ",", "AdafruitEZ-Link15b9-SPP", ",", "AdafruitEZ-Link2a86-SPP", ",", "Bluetooth-Modem", ",", "Bluetooth-Incoming-Port", ",", "usbmodemfd121" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
