@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 132.0, 88.0, 428.0, 350.0 ],
+		"rect" : [ 4.0, 44.0, 1436.0, 810.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -32,12 +32,11 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-32",
-					"linecount" : 5,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 352.945465, 643.49646, 64.780273, 72.0 ],
+					"patching_rect" : [ 352.945465, 632.572388, 259.780273, 18.0 ],
 					"text" : "http://www.github.com/cskonopka/arduivis"
 				}
 
@@ -52,7 +51,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 352.945465, 724.290161, 69.0, 27.0 ],
+					"patching_rect" : [ 352.945465, 650.572388, 69.0, 27.0 ],
 					"text" : "prepend launchbrowser"
 				}
 
@@ -65,7 +64,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 352.945465, 756.519287, 69.0, 17.0 ],
+					"patching_rect" : [ 352.945465, 680.019165, 69.0, 17.0 ],
 					"text" : "forward max"
 				}
 
@@ -484,7 +483,6 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 9.0,
-					"hidden" : 1,
 					"id" : "obj-17",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -499,7 +497,6 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 9.0,
-					"hidden" : 1,
 					"id" : "obj-38",
 					"maxclass" : "message",
 					"numinlets" : 2,
@@ -514,7 +511,6 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 9.0,
-					"hidden" : 1,
 					"id" : "obj-19",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -809,7 +805,6 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 9.0,
-					"hidden" : 1,
 					"id" : "obj-39",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -824,7 +819,6 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 9.0,
-					"hidden" : 1,
 					"id" : "obj-41",
 					"maxclass" : "message",
 					"numinlets" : 2,
@@ -839,7 +833,6 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 9.0,
-					"hidden" : 1,
 					"id" : "obj-42",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -1088,10 +1081,10 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 406.723633, 376.795044, 136.0, 28.0 ],
+					"patching_rect" : [ 377.250366, 377.795044, 136.0, 28.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 315.064606, 189.028198, 105.846558, 28.0 ],
-					"text" : "feedback 135",
+					"text" : "feedback 183",
 					"textcolor" : [ 0.99024, 0.995289, 0.990099, 1.0 ],
 					"textjustification" : 2
 				}
@@ -1163,10 +1156,10 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 169.723633, 376.795044, 136.0, 28.0 ],
+					"patching_rect" : [ 121.329865, 376.794952, 136.0, 28.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 123.869003, 189.028198, 87.405197, 28.0 ],
-					"text" : "output 135",
+					"text" : "output 183",
 					"textcolor" : [ 0.99024, 0.995289, 0.990099, 1.0 ],
 					"textjustification" : 2
 				}

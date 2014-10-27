@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 4.0, 44.0, 427.0, 619.0 ],
+		"rect" : [ 4.0, 44.0, 1436.0, 810.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -32,12 +32,11 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-1",
-					"linecount" : 5,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 352.945465, 781.49646, 64.780273, 72.0 ],
+					"patching_rect" : [ 352.945465, 781.49646, 244.780273, 18.0 ],
 					"text" : "http://www.github.com/cskonopka/arduivis"
 				}
 
@@ -52,7 +51,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 352.945465, 862.290161, 69.0, 27.0 ],
+					"patching_rect" : [ 352.945465, 788.572388, 69.0, 27.0 ],
 					"text" : "prepend launchbrowser"
 				}
 
@@ -65,7 +64,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 352.945465, 894.519287, 69.0, 17.0 ],
+					"patching_rect" : [ 352.945465, 818.019165, 69.0, 17.0 ],
 					"text" : "forward max"
 				}
 
@@ -1019,8 +1018,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 445.250244, 497.175171, 143.0, 20.0 ],
-					"text" : "prepend set feedback #4"
+					"patching_rect" : [ 445.250244, 497.175171, 120.0, 20.0 ],
+					"text" : "prepend set input #4"
 				}
 
 			}
@@ -1033,10 +1032,10 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 445.250244, 524.414795, 136.0, 28.0 ],
+					"patching_rect" : [ 408.250244, 522.795044, 136.0, 28.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 291.159119, 458.028198, 129.751984, 28.0 ],
-					"text" : "feedback #4 162",
+					"text" : "input #4 46",
 					"textcolor" : [ 0.99024, 0.995289, 0.990099, 1.0 ],
 					"textjustification" : 2
 				}
@@ -1066,8 +1065,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 209.250366, 497.175171, 143.0, 20.0 ],
-					"text" : "prepend set feedback #3"
+					"patching_rect" : [ 209.250366, 497.175171, 120.0, 20.0 ],
+					"text" : "prepend set input #3"
 				}
 
 			}
@@ -1080,10 +1079,10 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 209.250366, 524.414917, 136.0, 28.0 ],
+					"patching_rect" : [ 175.250366, 522.795044, 136.0, 28.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 291.159119, 370.028198, 129.751984, 28.0 ],
-					"text" : "feedback #3 162",
+					"text" : "input #3 80",
 					"textcolor" : [ 0.99024, 0.995289, 0.990099, 1.0 ],
 					"textjustification" : 2
 				}
@@ -1113,8 +1112,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 445.250244, 332.175201, 143.0, 20.0 ],
-					"text" : "prepend set feedback #2"
+					"patching_rect" : [ 445.250244, 332.175201, 120.0, 20.0 ],
+					"text" : "prepend set input #2"
 				}
 
 			}
@@ -1127,10 +1126,10 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 445.250244, 359.414764, 136.0, 28.0 ],
+					"patching_rect" : [ 408.250244, 359.414764, 136.0, 28.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 291.159119, 282.028198, 129.751984, 28.0 ],
-					"text" : "feedback #2 162",
+					"text" : "input #2 171",
 					"textcolor" : [ 0.99024, 0.995289, 0.990099, 1.0 ],
 					"textjustification" : 2
 				}
@@ -1160,8 +1159,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 209.250366, 332.175201, 143.0, 20.0 ],
-					"text" : "prepend set feedback #1"
+					"patching_rect" : [ 209.250366, 332.175201, 120.0, 20.0 ],
+					"text" : "prepend set input #1"
 				}
 
 			}
@@ -1174,10 +1173,10 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 209.250366, 359.414856, 136.0, 28.0 ],
+					"patching_rect" : [ 175.250366, 359.414856, 136.0, 28.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 291.159119, 194.028198, 129.752029, 28.0 ],
-					"text" : "feedback #1 162",
+					"text" : "input #1 133",
 					"textcolor" : [ 0.99024, 0.995289, 0.990099, 1.0 ],
 					"textjustification" : 2
 				}
@@ -2014,9 +2013,9 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 4,
-					"outlettype" : [ "float", "float", "float", "" ],
-					"patching_rect" : [ 14.723633, 437.519287, 104.551697, 20.0 ],
-					"text" : "unpack 0. 0. 0. 0\\,"
+					"outlettype" : [ "int", "int", "int", "int" ],
+					"patching_rect" : [ 14.723633, 437.519287, 104.551689, 20.0 ],
+					"text" : "unpack 0 0 0 0"
 				}
 
 			}
@@ -2144,7 +2143,7 @@
 					"framecolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"hltcolor" : [ 0.215478, 0.440638, 0.918583, 1.0 ],
 					"id" : "obj-1129",
-					"items" : [ "AdafruitEZ-Link15b9-SPP", ",", "AdafruitEZ-Link2a86-SPP", ",", "Bluetooth-Modem", ",", "Bluetooth-Incoming-Port" ],
+					"items" : [ "csKonopkasiPhone-Wirele", ",", "AdafruitEZ-Link15b9-SPP", ",", "AdafruitEZ-Link2a86-SPP", ",", "Bluetooth-Modem", ",", "Bluetooth-Incoming-Port", ",", "usbmodemfa131" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,

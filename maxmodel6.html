@@ -78,15 +78,18 @@ Currently there are 6 models that make up arduivis.</p>
 <p><b>Arduino</b></p>
  <pre><code>/* 
 
-~~~~~~~ arduivis - MaxMSP ~~~~~~~~
-~~~~~ model#4: multiple outputs ~~~~~
+~~~~~~~ arduivis - MaxMSP ~~~~~~~
+~~~~ model#6: multiple feedbacks ~~~
 
-MaxMSP: arduivis_model4_MaxMSP_multipleOutputs.maxpat
+MaxMSP patch: arduivis_model6_multipleFeedbacks.maxpat
 
-This is an example of how to use a loop to write
-several streams of data to MaxMSP, from an Arduino.
-A fading LED is used to provide visual feedback for
-this process.
+This is an example of to read sliders from MaxMSP. 
+An Arduino reads and parses this data, sending
+it from the Arduino and back into MaxmSP. This 
+feedback data is then sent back to the Arduino
+from MaxMSP, controlling the PWM of a LED. 
+This is done with several streams of data in 
+this example.
 
 synthesized by Christopher Konopka
 
@@ -96,85 +99,68 @@ This example code is in the public domain.
 
 void setup() 
 {
-  // Create/open serial port
-  Serial.begin(9600);  
+  //  Create/open serial port    
+    Serial.begin(9600);       
 
   // Define LED mode 
-  // PWM LED  
-  pinMode(3, OUTPUT);     
-  pinMode(5, OUTPUT);     
-  pinMode(6, OUTPUT);     
-  pinMode(9, OUTPUT);     
+  // PWM LED
+    pinMode(3, OUTPUT);
+    pinMode(5, OUTPUT);  
+    pinMode(6, OUTPUT);
+    pinMode(9, OUTPUT);  
 }
 
 void loop() 
 { 
-  // Loop variables
-  int lp;
-  int startIncrement = 0; 
-  int incrementLoopRange = 255; 
-  int startDecrement = 255;
-  int decrementLoopRange = 0;
-        
+  // Sliders from MaxMSP
+    int maxmspSlider1, maxmspSlider2, maxmspSlider3, maxmspSlider4;
 
-  // Loop Function        
-  lp = loopSystem(startIncrement, incrementLoopRange, startDecrement, decrementLoopRange);
+  // Feedback from MaxMSP (original output from Arduino)
+    int feedbackFromMaxMSP1, feedbackFromMaxMSP2, feedbackFromMaxMSP3,  feedbackFromMaxMSP4;
 
-}
+  // Parse incoming MaxMSP slider values
+  // from MaxMSP, to Arduino
+    maxmspSlider1 = Serial.parseInt();
+    maxmspSlider2 = Serial.parseInt();
+    maxmspSlider3 = Serial.parseInt();
+    maxmspSlider4 = Serial.parseInt(); 
 
-int loopSystem(int startIncrement, int incrementLoopRange, int startDecrement, int decrementLoopRange)
-{
-  int lp;
+  // Write parsed slider values to serial buffer
+  // [comport] object
+  // to MaxMSP, from Arduino
+    Serial.print(maxmspSlider1);
+    Serial.print(" ");
+    Serial.print(maxmspSlider2);
+    Serial.print(" ");
+    Serial.print(maxmspSlider3);
+    Serial.print(" ");
+    Serial.print(maxmspSlider4);
+    Serial.print(" ");
 
-  // Loop #1
-  // Incremental Loop
-  for(lp = startIncrement; lp < incrementLoopRange; lp++)         
-  {
-    // Incremental loop values to LED
-    // Controls fade of 4 LEDs
-    analogWrite(3, lp);    
-    analogWrite(5, lp);
-    analogWrite(6, lp);
-    analogWrite(9, lp);
+  // Parse incoming MaxMSP (feedback) values
+  // from MaxMSP (feedback), to Arduino 
+    feedbackFromMaxMSP1 = Serial.parseInt();
+    feedbackFromMaxMSP2 = Serial.parseInt();
+    feedbackFromMaxMSP3 = Serial.parseInt();
+    feedbackFromMaxMSP4 = Serial.parseInt(); 
 
-      // Incremental loop values to serial buffer
-      // [serial] object
-      // to MaxMSP, from Arduino
-      Serial.print(lp);
-      Serial.print(" ");
-      Serial.print(lp);
-      Serial.print(" ");
-      Serial.print(lp);
-      Serial.print(" ");
-      Serial.println(lp);
+  // Write parsed values to LEDs
+  // Fading LED
+  // from MaxMSP (feedback), to Arduino
+    analogWrite(3, feedbackFromMaxMSP1);
+    analogWrite(5, feedbackFromMaxMSP2);
+    analogWrite(6, feedbackFromMaxMSP3);    
+    analogWrite(9, feedbackFromMaxMSP4);
 
-        delay(10);
-  }
-
-  // Loop #2
-  // Decremental Loop
-  for(lp = startDecrement; lp > decrementLoopRange; lp--)    
-  {
-    // Deremental loop values to LED
-    // Controls fade of 4 LEDs
-    analogWrite(3, lp);    
-    analogWrite(5, lp);
-    analogWrite(6, lp);
-    analogWrite(9, lp);
-
-      // Decremental loop values to serial buffer
-      // [serial] object
-      // to MaxMSP, from Arduino  
-      Serial.print(lp);    
-      Serial.print(" ");      
-      Serial.print(lp);
-      Serial.print(" ");      
-      Serial.print(lp);
-      Serial.print(" ");      
-      Serial.println(lp);
-
-        delay(10);
-  }
+    Serial.print(feedbackFromMaxMSP1);
+    Serial.print(" ");
+    Serial.print(feedbackFromMaxMSP2);
+    Serial.print(" ");
+    Serial.print(feedbackFromMaxMSP3);
+    Serial.print(" ");
+    Serial.println(feedbackFromMaxMSP4);
+    
+      delay(2);
 }
 </code></pre>
 
@@ -190,10 +176,10 @@ int loopSystem(int startIncrement, int incrementLoopRange, int startDecrement, i
 <p><b>MaxMSP</b></p>
 
 <p><em>Presentation Mode</em></p>
-       <img src="http://cskonopka.github.io/arduivis/arduivis_MaxMSP_model4_multipleOutputs.png" alt="some_text">
+       <img src="http://cskonopka.github.io/arduivis/arduivis_MaxMSP_model6_multipleFeedback.png" alt="some_text">
 
 <p><em>Edit Mode</em></p>
-       <img src="http://cskonopka.github.io/arduivis/arduivis_MaxMSP_model4_multipleOutputs_inside.png" alt="some_text">
+       <img src="http://cskonopka.github.io/arduivis/arduivis_MaxMSP_model6_multipleFeedback_inside.png" alt="some_text">
 
 
 

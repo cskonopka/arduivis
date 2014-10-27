@@ -34,15 +34,9 @@ void loop()
   // Parse incoming MaxMSP slider values
   // from MaxMSP, to Arduino	  
   maxmspSlider = Serial.parseInt();  
-
-  // Write parsed values to LEDs
-  // Fading LED
-  // from MaxMSP, to Arduino 		
-  analogWrite(3, maxmspSlider);
   
   // MaxMSP Slider values to serial buffer
   // [serial] object
   // to MaxMSP, from Arduino       
   Serial.println(maxmspSlider);
-  
 }
