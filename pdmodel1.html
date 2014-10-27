@@ -1,0 +1,184 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>arduivis by cskonopka</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-56095763-1', 'auto');
+  ga('send', 'pageview');
+
+</script>    
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><a href="http://cskonopka.github.io/arduivis/">arduivis</h1>
+        <p>modular microcontroller programming for visual programming languages</p>
+
+ 
+        <p class="view"><a href="https://github.com/cskonopka/arduivis">View this Project on GitHub </a></p>
+        
+          
+           <ul>
+          <li><a href="http://cskonopka.github.io/arduivis/arduinomodels">Examples<strong>Arduino</strong></a></li>            
+              <li><a href="http://cskonopka.github.io/arduivis/maxmodels">Models<strong>MaxMSP</strong></a></li>
+              <li><a href="http://cskonopka.github.io/arduivis/pdmodels">Models<strong>PureData</strong></a></li>
+            </ul>
+   
+      </header>
+      <section>
+<!--         <h3>
+ -->
+
+<!-- <pre><code>$ cd cskonopka/arduivis
+$ git fetch origin
+$ git checkout gh-pages
+</code></pre>
+
+<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+ -->
+
+
+
+
+<!-- <a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Methodology</h3>
+
+<p>Each model represents a way to interact with an Arduino via a visual programming language. 
+
+Currently there are 6 models that make up arduivis.</p>
+  <ul>
+    <li>model #1: output</li>
+    <li>model #2: input</li>
+    <li>model #3: feedback</li>
+    <li>model #4: multiple ouputs</li>
+    <li>model #5: multiple inputs</li>
+    <li>model #6: multiple feedbacks</li>
+  </ul> -->
+<!-- 
+<h3>
+<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Getting Started</h3>
+
+ -->
+
+ <h3>
+<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>MaxMSP Model #1: Output</h3>
+
+<p><b>Arduino</b></p>
+ <pre><code>/* 
+
+~~~~~~~ arduivis - Pure Data ~~~~~~~
+~~~~~~~~~ model#1: output ~~~~~~~~~~
+
+PD: arduivis_model1_PD_output.pd
+
+This is an example of how to send data from
+an Arduino and read it in Pure Data via 
+a serial buffer.
+
+synthesized by Christopher Konopka
+
+This example code is in the public domain.
+
+*/
+
+void setup() 
+{
+  // Create/open serial port  
+  Serial.begin(9600);      
+
+  // Define LED mode 
+  // PWM LED    
+  pinMode(3, OUTPUT);
+}
+
+void loop() 
+{ 
+  // Loop variables  
+  int lp = 0; 
+  
+  // Loop #1  
+  // Incremental Loop
+  for(lp = 0; lp<=255; lp++)         // Create incremental loop
+  {
+    // Incremental loop values to LED
+    // Controls PWM fade
+    analogWrite(3,lp);
+
+    // Incremental loop values to serial buffer
+    // [comport] object
+    // to Pure Data, from Arduino    
+    Serial.write(lp); 
+
+    delay(10);
+  }
+
+  // Loop #2
+  // Decremental Loop  
+  for(lp = 255; lp>=0; lp--)    // Create decremental loop
+  {
+    // Deremental loop values to LED
+    // Controls PWM fade      
+    analogWrite(3,lp);   
+
+    // Decremental loop values to serial buffer
+    // [comport] object
+    // to Pure Data, from Arduino     
+    Serial.write(lp);  
+
+    delay(10);
+  }
+}
+</code></pre>
+
+<p><b>PD-Extended</b></p>
+
+       <img src="http://cskonopka.github.io/arduivis/arduivis_PD_model1_output.png" alt="some_text">
+
+
+<!--   <ul>
+    <li>Next, open the folder named "model1_output"</li>
+      <ul>
+        <li> arduivis > MaxMSP > model1_output</li>
+        <li> arduivis > PD > model1_output</li>
+      </ul>
+  </ul>  
+
+  <ul>
+    <li>Inside "model1_output" there will be a patch for the VPL and a folder containing the Arduino sketch for this example</li>
+      <ul>
+        <li>Open the sketch "arduivis_MaxMSP_model1_output.ino" in the Arduino IDE</li>
+        <li>Upload the sketch to the Arduino</li>
+      </ul>
+  </ul>     -->
+
+<!-- 
+  <ul>
+    <li>For MaxMSP, find the folder model #1</li>
+      <ul>
+        <li> arduivis > MaxMSP > model1_output</li>
+      </ul>
+  </ul> -->
+
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/cskonopka">cskonopka</a></p>
+   <!--      <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+ -->      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>

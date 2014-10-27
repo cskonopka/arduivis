@@ -1,18 +1,17 @@
-#N canvas 4 22 452 640 16;
+#N canvas 535 22 452 692 16;
 #X floatatom 138 81 5 0 255 0 - - -;
 #X obj 138 111 spell;
 #X obj 138 173 prepend set;
-#X msg 138 238 52 56;
+#X msg 138 238 56 56;
 #X obj 138 331 prepend;
 #X obj 138 362 prepend set;
 #X obj 138 204 t b a;
 #X obj 138 269 t b a;
-#X msg 138 428 52 56 32;
+#X msg 138 428 56 56 10;
 #X obj 138 142 thresh 0.9;
-#X msg 138 300 32;
 #X obj 138 393 t b a;
 #X obj 141 25 hsl 128 20 0 255 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
+-1 -1 4400 1;
 #X obj 138 50 list-round;
 #X text 275 19 data to Arduino;
 #X text 274 78 round float to int;
@@ -21,7 +20,7 @@
 #X text 274 139 combine fast numbers;
 #X text 274 234 data from slider;
 #X text 274 427 finished message;
-#X obj 42 25 tgl 50 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+#X obj 42 25 tgl 50 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
 ;
 #X obj 42 311 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
@@ -38,27 +37,33 @@
 #X text 102 -62 define board number;
 #X text 102 -38 open defined board;
 #X text 81 -123 sketch: arduivis_PD_model2_input.ino;
+#X msg 138 300 10;
+#X floatatom 4 492 5 0 0 0 - - -;
+#X obj 7 521 hsl 128 20 0 255 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 4383 1;
 #X connect 0 0 1 0;
 #X connect 1 0 9 0;
 #X connect 2 0 6 0;
 #X connect 3 0 7 0;
 #X connect 4 0 5 0;
-#X connect 5 0 11 0;
+#X connect 5 0 10 0;
 #X connect 6 0 3 0;
 #X connect 6 1 3 0;
-#X connect 7 0 10 0;
+#X connect 7 0 35 0;
 #X connect 7 1 4 1;
-#X connect 8 0 24 0;
+#X connect 8 0 23 0;
 #X connect 9 0 2 0;
-#X connect 10 0 4 0;
-#X connect 11 0 8 0;
-#X connect 11 1 8 0;
-#X connect 12 0 13 0;
-#X connect 13 0 0 0;
-#X connect 21 0 23 0;
-#X connect 22 0 8 0;
-#X connect 23 0 22 0;
-#X connect 27 0 24 0;
-#X connect 28 0 24 0;
-#X connect 29 0 30 0;
-#X connect 30 0 24 0;
+#X connect 10 0 8 0;
+#X connect 10 1 8 0;
+#X connect 11 0 12 0;
+#X connect 12 0 0 0;
+#X connect 20 0 22 0;
+#X connect 21 0 8 0;
+#X connect 22 0 21 0;
+#X connect 23 0 36 0;
+#X connect 26 0 23 0;
+#X connect 27 0 23 0;
+#X connect 28 0 29 0;
+#X connect 29 0 23 0;
+#X connect 35 0 4 0;
+#X connect 36 0 37 0;

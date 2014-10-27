@@ -22,7 +22,7 @@ void setup()
 
   // Define LED mode 
   // PWM LED	
-  pinMode(ledpin, OUTPUT);
+  pinMode(3, OUTPUT);
 }
 
 void loop() 
@@ -39,4 +39,9 @@ void loop()
   // Fading LED
   // from Pure Data, to Arduino 		
   analogWrite(3, pdSlider);
+
+  // Pure Data Slider values to serial buffer
+  // [comport] object
+  // to Pure Data, from Arduino       
+  Serial.write(pdSlider);  
 }
