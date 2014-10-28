@@ -70,6 +70,15 @@ void loop()
   analogWrite(6, feedbackFromPD3);    
   analogWrite(9, feedbackFromPD4);
   
+  // Write feedback values to serial buffer
+  // [comport] object
+  // to Pure Data, from Arduino
+  // This is useful for debugging
+  Serial.write(feedbackFromPD1); 
+  Serial.write(feedbackFromPD2);   
+  Serial.write(feedbackFromPD3); 
+  Serial.write(feedbackFromPD4); 
+  
   delay(2);
 }
 
