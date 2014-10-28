@@ -87,7 +87,22 @@ Currently there are 6 models that make up arduivis.</p>
 <ul></ul>
 
 <h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Sketch Breakdown</h3>
+<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>How To Run A Patch</h3>
+
+<ol>
+  <li>Upload the sketch to the Arduino with the same name as the patch. The names should be the same.</li>
+  <li>Update serial ports. This will refresh the serial buffer if it is ever clogged or acting strangely.</li>
+  <li>Select the Arduino that is connected. A Mac and a PC are labeled differently and the two common prefixes are listed below. They only different if you use Bluetooth or FTDI chips.</li>
+    <ul>
+      <li>Mac: usbmodem</li>
+      <li>PC: COM</li>
+    </ul>
+  <li>Wait 2-3 seconds, this ensures that the connection has been made. Starting too soon can sometimes stop the buffer and no information will be transferred. If this happens, just updated the serial ports and select the board again.</li>
+    <li>Press start. If everything has worked correctly, the data will be visualized via the [multislider] object labeled output.</li>
+  </ol>
+
+<h3>
+<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Model Breakdown</h3>
 
 <p>There are two main pieces of code that are essential for MaxMSP and an Arduino to communicate properly. The two environments communicate via the serial buffer but each language has a different way of handling the information that goes in and out of the serial buffer.</p>
 
@@ -145,32 +160,45 @@ Currently there are 6 models that make up arduivis.</p>
 <p>Otherwise, if there are multiple messages are sent from the Arduino and to MaxMSP, a space is preferred to make it easier to parse. Using commas will only create problems and spaces have proven to be the most stable. Other symbols have proven to be disruptive. The placement of these methods is solely up to the user, although there can be unpredictable results when creating complex functions and parsing incoming information. When these messages are sent to the MaxMSP from the Arduino, they must be converted..</p>
 
 
-<div align="center"><img src="http://cskonopka.github.io/arduivis/arduivis_MaxMSP_outputmodel.png" alt="image description">Output conversion from Arduino, to MaxMSP</div>
+<div align="center"><img src="http://cskonopka.github.io/arduivis/arduivis_MaxMSP_outputmodel.png" alt="image description">Output conversion</div>
 
+<ul></ul>
 <p>First, lets look at the [serial] object. This is a visual representation of the serial buffer and it handles all of the communication between the Arduino and MaxMSP. 
 
+<ul></ul>
+<div align="center"><img src="http://cskonopka.github.io/arduivis/arduivis_MaxMSP_outputmodel_serial.png" alt="image description">Output of [serial] object</div>
 
-<div align="center"><img src="http://cskonopka.github.io/arduivis/arduivis_MaxMSP_outputmodel_serial.png" alt="image description">Output of [serial] object (from Arduino)</div>
-
+<ul></ul>
 <p>The messages that come from the output of the [serial] object are in ASCII format. Seen in the diagram, the messages for this example, number 47, are represented in a group of 5 numbers. In this case, the first 3 numbers are ASCII printable characters that represent the out of the Arduino. The last two numbers are ASCII control characters, one being a carriage return (13) and one being a linefeed or newline (10). The carriage return control character (13) is created by <em>Serial.println()</em> since it creates a return carriage after each printed message.</p>
 
-<div align="center"><img src="http://cskonopka.github.io/arduivis/arduivis_MaxMSP_outputmodel_select.png" alt="image description">Output of [select] object, outlet #2</div>
+<ul></ul>
+<div align="center"><img src="http://cskonopka.github.io/arduivis/arduivis_MaxMSP_outputmodel_select.png" alt="image description">Output of [select] object</div>
 
-
+<ul></ul>
 <p>This message is then sent to a [select] object. The purpose of this object if to route the list of ASCII values and when the carriage return (13) is selected, the message is sent to the next object. The next step is to group these messages.</p>
 
+<ul></ul>
 <div align="center"><img src="http://cskonopka.github.io/arduivis/
-arduivis_MaxMSP_outputmodel_zlgroup.png" alt="image description">Output of [zl group], grouping of messages</div>
+arduivis_MaxMSP_outputmodel_zlgroup.png" alt="image description">Output of [zl group]</div>
 
+<ul></ul>
 <p>By using one of the versatile [zl] objects, more specifically [zl group], the filtered messages are grouped into a single message. This makes it easier to proceed to the next step which is using the [itoa] to convert the integers to UTF-8 (Unicode) characters. </p>
-
+<ul></ul>
 <div align="center"><img src="http://cskonopka.github.io/arduivis/
-arduivis_MaxMSP_outputmodel_itoa.png" alt="image description">Output of [atoi], converted message</div>
+arduivis_MaxMSP_outputmodel_itoa.png" alt="image description">Output of [atoi]</div>
+<ul></ul>
+<p>Now, at this point, the ASCII characters that came from the Arduino have been succesfully converted. But, there is a quark. The output of the [atoi] object prints correctly in the Max Window but when the output of the object looks different. The output of the [itoa] object is a symbol.
 
-<p>Now, at this point, the ASCII characters that came from the Arduino have been succesfully converted. But, there is a quark. The output of the [atoi] object prints correctly in the Max Window but when the output of the object looks different. The output of the [itoa] object is a symbol. This symbol can not be unpacked and sent to an integer or float, there will be error messages. Handling this message is easy. Route the output of the [atoi] object to the inlet of the [fromsymbol] object. [fromsymbol] will 
+<div align="center"><img src="http://cskonopka.github.io/arduivis/arduivis_MaxMSP_outputmodel_symbol.png" alt="image description">Symbol output form [itoa]</div>
+
+ This symbol can not be unpacked and sent to an integer or float, there will be error messages. Handling this message is easy. Route the output of the [atoi] object to the inlet of the [fromsymbol] object. 
+
+ <div align="center"><img src="http://cskonopka.github.io/arduivis/arduivis_MaxMSP_outputmodel_fromsymbol.png" alt="image description">Converting symbol to message</div>
+
+ [fromsymbol] will convert this symbol into a message. This new message can then be unpacked, therefore allowing the user to use integers from the Arduino.</p>
 
 
-
+<ul></ul>
 <h3>
 <a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Serial Buffer Observations</h3>
 <ul>
@@ -182,12 +210,10 @@ arduivis_MaxMSP_outputmodel_itoa.png" alt="image description">Output of [atoi], 
   <li>When working with larger projects, sometimes the latter is the case. For example if there are upwards of 20+ active serial messages going from MaxMSP to the Arduino at startup, waiting too long to start the polling metronome can overload the buffer. This being said, sometimes there is a sweet spot of turning on the polling metronome. Not sure why, this is what I have come across through various projects.
 </ul>
 
+<h3>
+<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Complete Example (Arduino + MaxMSP)</h3>
 
-
-<p>This means the polling metronome would need to be stopped, then update the serial buffer, select the Arduino board. Wait a few seconds to ensure the connection is made and then press start.</p>
-
-
-
+<p><b>Arduino</b></p>
 <pre><code>
   /*
   ~ arduivis ~
@@ -229,9 +255,14 @@ void loop()
 }  
 </code></pre>
  
+<p><b>MaxMSP Presentation Mode</b></p>
 
+<div align="center"><img src="http://cskonopka.github.io/arduivis/
+arduivis_MaxMSP_model2_output.png" alt="image description"></div>
 
-
+<p><b>MaxMSP Edit Mode</b></p>
+<div align="center"><img src="http://cskonopka.github.io/arduivis/
+arduivis_MaxMSP_model2_output_inside.png" alt="image description"></div>
 
       </section>
       <footer>
