@@ -29,29 +29,16 @@ void setup()
 void loop() 
 { 
   // Loop variables
-  int lp = 0;
-
-  int startIncrement = 0; 
-  int incrementLoopRange = 255; 
-  int startDecrement = 255;
-  int decrementLoopRange = 0;
+    int lp = 0;
+  
+    int startIncrement = 0; 
+    int incrementLoopRange = 255; 
+    int startDecrement = 255;
+    int decrementLoopRange = 0;
         
 
   // Loop Function        
-
-  lp = loopSystem(startIncrement, incrementLoopRange, startDecrement, decrementLoopRange);
-
-//  Serial.write(lp);
-//  Serial.write(" ");
-//  lp2 =  loopSystem(255, 0, 0, 255);
-//  Serial.write(lp2);
-//  Serial.write(" ");
-//  lp3 =  loopSystem(180, 0, 0, 180);
-//  Serial.write(lp3);
-//  Serial.write(" ");
-//  lp4 =  loopSystem(0, 180, 180, 0);
-//  Serial.write(lp4);
-
+    lp = loopSystem(startIncrement, incrementLoopRange, startDecrement, decrementLoopRange);
 }
 
 int loopSystem(int startIncrement, int incrementLoopRange, int startDecrement, int decrementLoopRange)
@@ -64,19 +51,19 @@ int loopSystem(int startIncrement, int incrementLoopRange, int startDecrement, i
   {
     // Incremental loop values to LED
     // Controls fade of 4 LEDs
-    analogWrite(3, lp);    
-    analogWrite(5, lp - 13);
-    analogWrite(6, lp + 47);
-    analogWrite(9, lp - 60);
+      analogWrite(3, lp);    
+      analogWrite(5, lp - 13);
+      analogWrite(6, lp + 47);
+      analogWrite(9, lp - 60);
 
       // Incremental loop values to serial buffer
       // [comport] object
       // to Pure Data, from Arduino
-      Serial.write(lp);
-      Serial.write(lp - 13);
-      Serial.write(lp + 47);
-      Serial.write(lp - 60);
-    //Serial.write(lp);            
+        Serial.write(lp);
+        Serial.write(lp - 13);
+        Serial.write(lp + 47);
+        Serial.write(lp - 60);
+              
     delay(10);
   }
 
@@ -86,19 +73,19 @@ int loopSystem(int startIncrement, int incrementLoopRange, int startDecrement, i
   {
     // Deremental loop values to LED
     // Controls fade of 4 LEDs
-    analogWrite(3, lp);    
-    analogWrite(5, lp - 13);
-    analogWrite(6, lp + 47);
-    analogWrite(9, lp - 60);
+      analogWrite(3, lp);    
+      analogWrite(5, lp - 13);
+      analogWrite(6, lp + 47);
+      analogWrite(9, lp - 60);
 
       // Decremental loop values to serial buffer
       // [comport] object
       // to Pure Data, from Arduino  
-      Serial.write(lp);    
-      Serial.write(lp - 13);
-      Serial.write(lp + 47);
-      Serial.write(lp - 60);
-   // Serial.write(lp);     // Print looping numbers
+        Serial.write(lp);    
+        Serial.write(lp - 13);
+        Serial.write(lp + 47);
+        Serial.write(lp - 60);
+  
     delay(10);
   }
 }

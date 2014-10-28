@@ -3,7 +3,7 @@
 ~~~~~~~ arduivis - Pure Data ~~~~~~~
 ~~~~~ model#3: feedback ~~~~~
 
-pd patch: arduivis_model3_PD_feedback.pd
+PD: arduivis_model3_PD_feedback.pd
 
 This is an example of to read sliders from PD. 
 An Arduino reads and parses this data, sending
