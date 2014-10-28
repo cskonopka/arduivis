@@ -188,15 +188,15 @@ arduivis_MaxMSP_outputmodel_zlgroup.png" alt="image description">Output of [zl g
 arduivis_MaxMSP_outputmodel_itoa.png" alt="image description">Output of [atoi]</div>
 <ul></ul>
 <p>Now, at this point, the ASCII characters that came from the Arduino have been succesfully converted. But, there is a quark. The output of the [atoi] object prints correctly in the Max Window but when the output of the object looks different. The output of the [itoa] object is a symbol.
-
+<ul></ul>
 <div align="center"><img src="http://cskonopka.github.io/arduivis/arduivis_MaxMSP_outputmodel_symbol.png" alt="image description">Symbol output form [itoa]</div>
-
+<ul></ul>
  This symbol can not be unpacked and sent to an integer or float, there will be error messages. Handling this message is easy. Route the output of the [atoi] object to the inlet of the [fromsymbol] object. 
-
+<ul></ul>
  <div align="center"><img src="http://cskonopka.github.io/arduivis/arduivis_MaxMSP_outputmodel_fromsymbol.png" alt="image description">Converting symbol to message</div>
-
+<ul></ul>
  [fromsymbol] will convert this symbol into a message. This new message can then be unpacked, therefore allowing the user to use integers from the Arduino.</p>
-
+<ul></ul>
 
 <ul></ul>
 <h3>
