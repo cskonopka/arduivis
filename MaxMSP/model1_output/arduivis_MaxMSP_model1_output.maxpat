@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 884.0, 44.0, 426.0, 351.0 ],
+		"rect" : [ 4.0, 44.0, 1436.0, 810.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -985,20 +985,6 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
-					"id" : "obj-114",
-					"maxclass" : "number",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "int", "bang" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 120.723633, 385.519287, 50.0, 20.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
 					"id" : "obj-107",
 					"maxclass" : "newobj",
 					"numinlets" : 0,
@@ -1043,13 +1029,14 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.74902, 0.705882, 0.662745, 1.0 ],
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-5",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 14.723633, 414.67157, 60.0, 20.0 ],
+					"patching_rect" : [ 14.723633, 409.67157, 60.0, 20.0 ],
 					"text" : "s output1"
 				}
 
@@ -1706,14 +1693,14 @@
 , 			{
 				"box" : 				{
 					"color" : [ 0.74902, 0.705882, 0.662745, 1.0 ],
-					"fontname" : "Avenir Book",
+					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-25",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "int", "" ],
-					"patching_rect" : [ 14.723633, 258.311188, 156.0, 23.0 ],
+					"patching_rect" : [ 14.723633, 259.311188, 155.0, 20.0 ],
 					"text" : "serial portA 9600"
 				}
 
@@ -1938,16 +1925,6 @@
 					"hidden" : 0,
 					"midpoints" : [ 132.154541, 215.694916, 24.223633, 215.694916 ],
 					"source" : [ "obj-1129", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-5", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"midpoints" : [ 130.223633, 410.095428, 24.223633, 410.095428 ],
-					"source" : [ "obj-114", 0 ]
 				}
 
 			}
@@ -2229,12 +2206,12 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-20" : [ "live.toggle[6]", "live.toggle", 0 ],
+			"obj-66" : [ "live.toggle[1]", "live.toggle", 0 ],
+			"obj-1129" : [ "umenu", "umenu", 0 ],
 			"obj-70" : [ "live.toggle[3]", "live.toggle", 0 ],
 			"obj-15" : [ "live.toggle[7]", "live.toggle", 0 ],
 			"obj-26" : [ "live.toggle[8]", "live.toggle", 0 ],
-			"obj-1129" : [ "umenu", "umenu", 0 ],
-			"obj-66" : [ "live.toggle[1]", "live.toggle", 0 ]
+			"obj-20" : [ "live.toggle[6]", "live.toggle", 0 ]
 		}
 ,
 		"dependency_cache" : [  ]
