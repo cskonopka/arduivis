@@ -74,15 +74,15 @@ Currently there are 6 models that make up arduivis.</p>
  -->
 
  <h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Pure Data Model #5: Multiple Inputs</h3>
+<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Pure Data Model #6: Multiple Feedbacks</h3>
 
 <p><b>Arduino</b></p>
  <pre><code>/* 
 
 ~~~~~~~ arduivis - Pure Data ~~~~~~~
-~~~~~ model#5: multiple inputs ~~~~~
+~~~~~ model#6: multiple feedbacks ~~~~~
 
-PD: arduivis_model5_PD_multipleInputs.pd
+PD: arduivis_model6_PD_multipleFeedbacks.pd
 
 This is an example of to read sliders from PD. 
 An Arduino reads and parses this data, sending
@@ -100,7 +100,7 @@ This example code is in the public domain.
 
 void setup() 
 {
-  // Create/open serial port    
+  //  Create/open serial port    
     Serial.begin(9600);       
 
   // Define LED mode 
@@ -158,14 +158,15 @@ void loop()
     Serial.write(feedbackFromPD3); 
     Serial.write(feedbackFromPD4); 
   
-      delay(2);
+  delay(2);
 }
+
 
 </code></pre>
 
 <p><b>PD-Extended</b></p>
 
-       <img src="http://cskonopka.github.io/arduivis/arduivis_PD_model5_multipleInputs.png" alt="some_text">
+       <img src="http://cskonopka.github.io/arduivis/arduivis_PD_model6_multipleFeedbacks.png" alt="some_text">
 
 
 <!--   <ul>

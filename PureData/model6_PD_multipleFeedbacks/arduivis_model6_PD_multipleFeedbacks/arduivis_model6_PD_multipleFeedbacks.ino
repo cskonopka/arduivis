@@ -1,9 +1,9 @@
 /* 
 
 ~~~~~~~ arduivis - Pure Data ~~~~~~~
-~~~~~ model#5: multiple inputs ~~~~~
+~~~~~ model#6: multiple feedbacks ~~~~~
 
-pd patch: arduivis_model5_PD_multipleInputs.pd
+PD: arduivis_model6_PD_multipleFeedbacks.pd
 
 This is an example of to read sliders from PD. 
 An Arduino reads and parses this data, sending
