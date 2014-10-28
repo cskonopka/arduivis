@@ -1,27 +1,27 @@
-#N canvas 4 22 1007 847 16;
+#N canvas 24 22 1007 847 16;
 #X obj 8 672 comport 9600;
 #X msg 8 -14 devices;
 #X msg 38 66 close;
-#X floatatom 19 13 5 0 0 0 - - -, f 5;
+#X floatatom 19 13 5 0 0 0 - - -;
 #X msg 19 39 open \$1;
 #X text 106 -16 find Arduino board;
 #X text 106 64 close serial buffer;
 #X text 106 12 define board number;
 #X text 106 36 open defined board;
-#X obj 195 167 tgl 47 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 185 167 tgl 47 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 195 253 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 185 253 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 277 -14 loadbang;
 #X obj 277 50 line;
-#X floatatom 277 78 5 0 0 0 - - -, f 5;
+#X floatatom 277 78 5 0 0 0 - - -;
 #X msg 277 22 47 300;
 #X obj 456 48 line;
-#X floatatom 456 76 5 0 0 0 - - -, f 5;
+#X floatatom 456 76 5 0 0 0 - - -;
 #X obj 636 48 line;
-#X floatatom 636 76 5 0 0 0 - - -, f 5;
+#X floatatom 636 76 5 0 0 0 - - -;
 #X obj 816 48 line;
-#X floatatom 816 76 5 0 0 0 - - -, f 5;
+#X floatatom 816 76 5 0 0 0 - - -;
 #X msg 456 20 13 300;
 #X msg 636 20 190 300;
 #X msg 816 20 110 300;
@@ -31,37 +31,37 @@
 #X text 875 79 slider #4;
 #X text 596 714 arduivis - model #5 - multipleInputs;
 #X text 562 738 sketch: arduivis_PD_model5_multipleinputs.ino;
-#X text 200 179 poll;
+#X text 190 179 poll;
 #X obj 8 702 repack 4;
 #X obj 8 731 unpack 0 0 0 0;
-#X floatatom 8 768 5 0 0 0 - - -, f 5;
+#X floatatom 8 768 5 0 0 0 - - -;
 #X obj 11 795 hsl 128 24 0 255 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
-#X floatatom 148 768 5 0 0 0 - - -, f 5;
+-1 -1 5827 1;
+#X floatatom 148 768 5 0 0 0 - - -;
 #X obj 151 795 hsl 128 24 0 255 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
-#X floatatom 288 768 5 0 0 0 - - -, f 5;
+-1 -1 647 1;
+#X floatatom 288 768 5 0 0 0 - - -;
 #X obj 291 795 hsl 128 24 0 255 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
-#X floatatom 428 768 5 0 0 0 - - -, f 5;
+-1 -1 6973 1;
+#X floatatom 428 768 5 0 0 0 - - -;
 #X obj 431 795 hsl 128 24 0 255 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
-#X floatatom 816 162 5 0 255 0 - - -, f 5;
+-1 -1 4084 1;
+#X floatatom 816 162 5 0 255 0 - - -;
 #X obj 816 192 spell;
 #X obj 816 254 prepend set;
-#X msg 816 319 49 51 55;
+#X msg 816 319 56 50;
 #X obj 816 412 prepend;
 #X obj 816 443 prepend set;
 #X obj 816 285 t b a;
 #X obj 816 350 t b a;
-#X msg 816 509 49 51 55 32;
+#X msg 816 509 56 50 32;
 #X obj 816 223 thresh 0.9;
 #X msg 816 381 32;
 #X obj 816 474 t b a;
 #X obj 819 106 hsl 128 20 0 255 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 5478 1;
+-1 -1 4078 1;
 #X obj 816 131 list-round;
-#X msg 276 658 49 54 53 32 49 48 48 32 49 49 56 32 49 51 55 32;
+#X msg 276 658 49 49 55 32 49 51 32 49 52 48 32 56 50 32;
 #X obj 276 629 prepend set;
 #X obj 276 540 zl join;
 #X obj 276 570 zl join;
@@ -69,33 +69,33 @@
 #X msg 898 381 loadbang;
 #X obj 898 412 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X floatatom 636 162 5 0 255 0 - - -, f 5;
+#X floatatom 636 162 5 0 255 0 - - -;
 #X obj 636 192 spell;
 #X obj 636 254 prepend set;
-#X msg 636 319 49 49 56;
+#X msg 636 319 49 52 48;
 #X obj 636 412 prepend;
 #X obj 636 443 prepend set;
 #X obj 636 285 t b a;
 #X obj 636 350 t b a;
-#X msg 636 509 49 49 56 32;
+#X msg 636 509 49 52 48 32;
 #X obj 636 223 thresh 0.9;
 #X msg 636 381 32;
 #X obj 636 474 t b a;
 #X obj 639 106 hsl 128 20 0 255 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 9463 1;
+-1 -1 6963 1;
 #X obj 636 131 list-round;
 #X msg 718 381 loadbang;
 #X obj 718 412 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X floatatom 456 162 5 0 255 0 - - -, f 5;
+#X floatatom 456 162 5 0 255 0 - - -;
 #X obj 456 192 spell;
 #X obj 456 254 prepend set;
-#X msg 456 319 49 48 48;
+#X msg 456 319 49 51;
 #X obj 456 412 prepend;
 #X obj 456 443 prepend set;
 #X obj 456 285 t b a;
 #X obj 456 350 t b a;
-#X msg 456 509 49 48 48 32;
+#X msg 456 509 49 51 32;
 #X obj 456 223 thresh 0.9;
 #X msg 456 381 32;
 #X obj 456 474 t b a;
@@ -105,35 +105,35 @@
 #X msg 538 381 loadbang;
 #X obj 538 412 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X floatatom 276 162 5 0 255 0 - - -, f 5;
+#X floatatom 276 162 5 0 255 0 - - -;
 #X obj 276 192 spell;
 #X obj 276 254 prepend set;
-#X msg 276 319 49 54 53;
+#X msg 276 319 49 49 55;
 #X obj 276 412 prepend;
 #X obj 276 443 prepend set;
 #X obj 276 285 t b a;
 #X obj 276 350 t b a;
-#X msg 276 509 49 54 53 32;
+#X msg 276 509 49 49 55 32;
 #X obj 276 223 thresh 0.9;
 #X msg 276 381 32;
 #X obj 276 474 t b a;
 #X obj 279 106 hsl 128 20 0 255 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 2341 1;
+-1 -1 5841 1;
 #X obj 276 131 list-round;
 #X msg 358 381 loadbang;
 #X obj 358 412 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 195 223 metro 5;
 #X text 34 796 slider #1;
 #X text 183 796 slider #2;
 #X text 319 796 slider #3;
 #X text 462 796 slider #4;
+#X obj 185 223 metro 47;
 #X connect 0 0 31 0;
 #X connect 1 0 0 0;
 #X connect 2 0 0 0;
 #X connect 3 0 4 0;
 #X connect 4 0 0 0;
-#X connect 9 0 110 0;
+#X connect 9 0 114 0;
 #X connect 10 0 55 0;
 #X connect 11 0 14 0;
 #X connect 11 0 21 0;
@@ -244,4 +244,4 @@
 #X connect 107 0 94 0;
 #X connect 108 0 109 0;
 #X connect 109 0 105 0;
-#X connect 110 0 10 0;
+#X connect 114 0 10 0;
