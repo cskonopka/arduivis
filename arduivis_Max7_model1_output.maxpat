@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 340.0, 100.0, 455.0, 431.0 ],
+		"rect" : [ 97.0, 78.0, 776.0, 728.0 ],
 		"bgcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 		"editing_bgcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 		"bglocked" : 0,
@@ -39,6 +39,19 @@
 		"style" : "",
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-5",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 367.0, 253.0, 271.0, 22.0 ],
+					"style" : "",
+					"text" : "þþð"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
@@ -1118,7 +1131,7 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 336.283936, 198.184265, 97.595009, 28.0 ],
 					"style" : "",
-					"text" : "output 1234",
+					"text" : "output 0",
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
 					"textjustification" : 2
 				}
@@ -1652,11 +1665,11 @@
 					"id" : "obj-43",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "float" ],
-					"patching_rect" : [ 29.723633, 420.519287, 63.0, 22.0 ],
+					"numoutlets" : 3,
+					"outlettype" : [ "int", "int", "int" ],
+					"patching_rect" : [ 29.723633, 420.519287, 79.0, 22.0 ],
 					"style" : "",
-					"text" : "unpack 0."
+					"text" : "unpack 0 0 0"
 				}
 
 			}
@@ -1825,7 +1838,7 @@
 					"fontname" : "Avenir Book",
 					"fontsize" : 24.0,
 					"id" : "obj-1129",
-					"items" : [ "HC-06-DevB", ",", "Bluetooth-Modem", ",", "Bluetooth-Incoming-Port", ",", "AdafruitEZ-Link2a86-SPP", ",", "usbmodem1411" ],
+					"items" : [ "HC-06-DevB", ",", "AdafruitEZ-Link2a86-SPP", ",", "Bluetooth-Modem", ",", "Bluetooth-Incoming-Port", ",", "usbmodem1411" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -1855,6 +1868,7 @@
 , 			{
 				"box" : 				{
 					"color" : [ 0.74902, 0.705882, 0.662745, 1.0 ],
+					"fontface" : 0,
 					"fontname" : "Avenir Book",
 					"fontsize" : 12.0,
 					"id" : "obj-25",
@@ -1862,9 +1876,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "int", "" ],
-					"patching_rect" : [ 29.723633, 288.540283, 110.0, 25.0 ],
+					"patching_rect" : [ 29.723633, 288.540283, 116.0, 25.0 ],
 					"style" : "",
-					"text" : "serial portA 9600"
+					"text" : "serial portA 115200"
 				}
 
 			}
@@ -2325,6 +2339,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-5", 1 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-44", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-24", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -2423,11 +2446,11 @@
  ],
 		"parameters" : 		{
 			"obj-1129" : [ "umenu", "umenu", 0 ],
+			"obj-66" : [ "live.toggle[1]", "live.toggle", 0 ],
+			"obj-70" : [ "live.toggle[3]", "live.toggle", 0 ],
 			"obj-27" : [ "live.toggle[7]", "live.toggle", 0 ],
 			"obj-28" : [ "live.toggle[8]", "live.toggle", 0 ],
-			"obj-48" : [ "live.toggle[6]", "live.toggle", 0 ],
-			"obj-66" : [ "live.toggle[1]", "live.toggle", 0 ],
-			"obj-70" : [ "live.toggle[3]", "live.toggle", 0 ]
+			"obj-48" : [ "live.toggle[6]", "live.toggle", 0 ]
 		}
 ,
 		"dependency_cache" : [  ],
