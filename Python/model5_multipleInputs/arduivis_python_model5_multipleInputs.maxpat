@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 38.0, 78.0, 456.0, 440.0 ],
+		"rect" : [ 38.0, 78.0, 455.0, 441.0 ],
 		"bgcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 		"editing_bgcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 		"bglocked" : 0,
@@ -102,7 +102,7 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 20.180077, 380.951538, 415.698914, 39.0 ],
 					"style" : "",
-					"text" : "python4 - 2393",
+					"text" : "python4 - 1891",
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
 					"textjustification" : 1
 				}
@@ -165,7 +165,7 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 20.180077, 337.774261, 415.698914, 39.0 ],
 					"style" : "",
-					"text" : "python3 - 1079",
+					"text" : "python3 - 2026",
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
 					"textjustification" : 1
 				}
@@ -891,7 +891,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 350.0, 95.0, 603.0, 548.0 ],
+						"rect" : [ 350.0, 95.0, 611.0, 557.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -927,12 +927,12 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 0.0, 0.0, 603.0, 547.0 ],
+									"patching_rect" : [ 0.0, 5.0, 606.0, 547.0 ],
 									"presentation" : 1,
 									"presentation_linecount" : 46,
-									"presentation_rect" : [ 126.173813, 33.686386, 203.0, 1162.0 ],
+									"presentation_rect" : [ 126.173813, 33.686386, 209.0, 1138.0 ],
 									"style" : "",
-									"text" : "instructions\n\n1) Upload the arduino sketch associated with this example. \n\"arduivis_python_model2_input.ino\"\n\n2) Open the max patch. \n\"arduivis_python_model2_input.maxpat\"\n\n3) Update the serial ports and select the appropriate board.\n\n4) Once the board is selected, wait a 2-3 seconds and click start.\n\n5) Open the terminal and run the python script. This will open the serial buffer in the terminal where it will wait to receive values from Max.\n\"arduivis_python_model2_input.py\"\n\n6) Lastly, send values from Max to Python by using the slider in the  patch. The values will be printed in Max and also will be visible in the terminal.\n\n* Required to use this example *\nPython (https://www.python.org/)\npySerial (http://pyserial.sourceforge.net/index.html)\n",
+									"text" : "instructions\n\n1) Upload the arduino sketch associated with this example. \n\"arduivis_python_model5_multipleInputs.ino\"\n\n2) Open the max patch. \n\"arduivis_python_model5_multipleInputs.maxpat\"\n\n3) Update the serial ports and select the appropriate board.\n\n4) Once the board is selected, wait a 2-3 seconds and click start.\n\n5) Open the terminal and run the python script. This will open the serial buffer in the terminal where it will wait to receive values from Max.\n\"arduivis_python_model5_multipleInputs.py\"\n\n6) Lastly, send values from Max to Python by using the slider in the  patch. The values will be printed in Max and also will be visible in the terminal.\n\n* requirements *\nPython (https://www.python.org/)\npySerial (http://pyserial.sourceforge.net/index.html)",
 									"textjustification" : 1
 								}
 
@@ -963,7 +963,7 @@
 									"mode" : 1,
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 0.0, 0.0, 603.0, 547.0 ],
+									"patching_rect" : [ 0.0, 0.0, 610.0, 557.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 14.333334, 119.479965, 425.21228, 271.071594 ],
 									"proportion" : 0.39,
@@ -2517,9 +2517,9 @@
 			}
  ],
 		"parameters" : 		{
+			"obj-70" : [ "live.toggle[3]", "live.toggle", 0 ],
 			"obj-1129" : [ "umenu", "umenu", 0 ],
 			"obj-66" : [ "live.toggle[1]", "live.toggle", 0 ],
-			"obj-70" : [ "live.toggle[3]", "live.toggle", 0 ],
 			"obj-27" : [ "live.toggle[7]", "live.toggle", 0 ],
 			"obj-28" : [ "live.toggle[8]", "live.toggle", 0 ]
 		}
