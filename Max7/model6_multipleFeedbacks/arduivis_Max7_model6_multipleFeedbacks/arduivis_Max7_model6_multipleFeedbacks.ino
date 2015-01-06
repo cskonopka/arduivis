@@ -3,7 +3,7 @@
 ~~~~~~~ arduivis - MaxMSP ~~~~~~~
 ~~~~ model#6: multiple feedbacks ~~~
 
-MaxMSP patch: arduivis_model6_multipleFeedbacks.maxpat
+MaxMSP: arduivis_Max7_model6_multipleFeedbacks.maxpat
 
 This is an example of to read sliders from MaxMSP. 
 An Arduino reads and parses this data, sending

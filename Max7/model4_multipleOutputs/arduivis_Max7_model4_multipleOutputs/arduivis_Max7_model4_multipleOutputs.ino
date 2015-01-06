@@ -3,7 +3,7 @@
 ~~~~~~~ arduivis - MaxMSP ~~~~~~~~
 ~~~~~ model#4: multiple outputs ~~~~~
 
-MaxMSP: arduivis_model4_MaxMSP_multipleOutputs.maxpat
+MaxMSP: arduivis_Max7_model4_multipleOutputs.maxpat
 
 This is an example of how to use a loop to write
 several streams of data to MaxMSP, from an Arduino.

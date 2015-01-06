@@ -891,7 +891,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 350.0, 95.0, 611.0, 557.0 ],
+						"rect" : [ 350.0, 95.0, 372.0, 312.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -923,16 +923,16 @@
 									"fontname" : "Avenir Book",
 									"fontsize" : 18.0,
 									"id" : "obj-33",
-									"linecount" : 22,
+									"linecount" : 12,
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 0.0, 5.0, 606.0, 547.0 ],
+									"patching_rect" : [ 2.0, 4.5, 370.0, 302.0 ],
 									"presentation" : 1,
-									"presentation_linecount" : 46,
-									"presentation_rect" : [ 126.173813, 33.686386, 209.0, 1138.0 ],
+									"presentation_linecount" : 16,
+									"presentation_rect" : [ 126.173813, 33.686386, 212.0, 400.0 ],
 									"style" : "",
-									"text" : "instructions\n\n1) Upload the arduino sketch associated with this example. \n\"arduivis_python_model5_multipleInputs.ino\"\n\n2) Open the max patch. \n\"arduivis_python_model5_multipleInputs.maxpat\"\n\n3) Update the serial ports and select the appropriate board.\n\n4) Once the board is selected, wait a 2-3 seconds and click start.\n\n5) Open the terminal and run the python script. This will open the serial buffer in the terminal where it will wait to receive values from Max.\n\"arduivis_python_model5_multipleInputs.py\"\n\n6) Lastly, send values from Max to Python by using the slider in the  patch. The values will be printed in Max and also will be visible in the terminal.\n\n* requirements *\nPython (https://www.python.org/)\npySerial (http://pyserial.sourceforge.net/index.html)",
+									"text" : "instructions\n\n1) upload arduino sketch\n\"arduivis_Max7_model5_multipleInputs.ino\"\n\n2) update serial ports\n\n3) select arduino from the menu\n\n4) start the communication link\n\n5) observe the output of the arduino",
 									"textjustification" : 1
 								}
 
@@ -963,7 +963,7 @@
 									"mode" : 1,
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 0.0, 0.0, 610.0, 557.0 ],
+									"patching_rect" : [ 0.0, 0.0, 371.0, 312.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 14.333334, 119.479965, 425.21228, 271.071594 ],
 									"proportion" : 0.39,

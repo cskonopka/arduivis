@@ -3,7 +3,7 @@
 ~~~~~~~ arduivis - MaxMSP ~~~~~~~
 ~~~~~~~~ model#2: input ~~~~~~~~~
 
-MaxMSP: arduivis_model2_MaxMSP_input.maxpat
+MaxMSP: arduivis_Max7_model2_input.maxpat
 
 This is an example of how to read a slider from 
 MaxMSP and write the values to a PWM LED connected

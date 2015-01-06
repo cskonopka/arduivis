@@ -3,7 +3,7 @@
 ~~~~~~~~~ arduivis - MaxMSP ~~~~~~~~
 ~~~~~ model#5: multiple inputs ~~~~~
 
-MaxMSP: arduivis_model5_MaxMSP_multipleInputs.maxpat
+MaxMSP: arduivis_Max7_model5_multipleInputs.maxpat
 
 This is an example of how to send a multiple streams
 of data from MaxMSP, to an Arduino.

@@ -1,16 +1,20 @@
-/*
-  ~ arduivis ~
-  [modular microcontroller programming]
+/* 
 
-  MaxMSP: arduivis_model3_feedback.maxpat
+~~~~~~~ arduivis - MaxMSP ~~~~~~~
+~~~~~~~~ model#3: feedback ~~~~~~~~~
 
-  The goal of the feedback loop is to simultaneously send information from the Arduino (output), through a visual programming language, and back to the Arduino (input). 
+MaxMSP: arduivis_Max7_model3_feedback.maxpat
 
-  [by Christopher Konopka]
+This is an example of a feedback loop that 
+simultaneously sends information from the 
+Arduino (output), through aprogramming 
+language, and back to the Arduino (input). 
 
-  This example code is in the public domain.
+synthesized by Christopher Konopka
+
+This example code is in the public domain.
+
 */
-
 void setup() 
 {
   // Create/open serial port  
