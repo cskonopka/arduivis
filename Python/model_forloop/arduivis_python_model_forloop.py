@@ -1,6 +1,7 @@
 import serial
-board = '/dev/cu.usbmodem5d11'
-arduino = serial.Serial(board, 115200, timeout=1)
+board = '/dev/cu.usbmodem1411'
+baud = 115200
+arduino = serial.Serial(board, baud, timeout=1)
 infinite = 1
 
 while (infinite == 1):
