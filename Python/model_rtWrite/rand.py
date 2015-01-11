@@ -38,9 +38,13 @@ while (infinite == 1):
 
 	# Read each line of the serial output	
 	output = arduino.readline()
+	ran1 = randint(2,9)
+	ran2 = randint(2,9)
+	ran3 = randint(2,9)		
+	ran4 = randint(2,9)
 
-	toArduino = raw_input('Write to Serial buffer: ')
-	print('Write to Serial buffer', toArduino)
-	arduino.write(toArduino+ '\n')
+	toArduino = raw_input('Press RETURN for 4 random numbers ')
+	print('4 Random Numbers : ', str(ran1) + " " + str(ran2) + " " + str(ran3) + " " + str(ran4) )
+	arduino.write(str(ran1) + " " + str(ran2) + " " + str(ran3)+ " " + str(ran4) + '\n')
 	# Print each line of the serial output
 	# print output
