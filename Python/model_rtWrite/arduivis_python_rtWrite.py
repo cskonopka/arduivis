@@ -22,7 +22,7 @@ from random import randint
 # Port Name
 # To find out the correct port type the line below into the terminal
 # python -m serial.tools.list_ports
-board = '/dev/cu.usbmodem1a211'
+board = '/dev/cu.usbmodem1411'
 
 # Baud Rate
 # Match baud rate with the rate used in the Arduino sketch and the Max patch
