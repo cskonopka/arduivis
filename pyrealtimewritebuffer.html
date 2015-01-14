@@ -42,7 +42,8 @@
 
         <a href="http://cskonopka.github.io/arduivis/maxmodels" style="padding-right: 15px;"><strong>MaxMSP</strong></a>
         <a href="http://cskonopka.github.io/arduivis/pdmodels" style="padding-right: 15px;"><strong>Pure Data</strong></a>
-        <a href="https://github.com/cskonopka/arduivis" style="padding-right: 15px;"><strong>Github</strong></a>           
+        <a href="https://github.com/cskonopka/arduivis/python" style="padding-right: 15px;"><strong>Python</strong></a> 
+<!--         <a href="https://github.com/cskonopka/arduivis" style="padding-right: 15px;"><strong>Github</strong></a>    -->                  
         <h3>
    
       </header>
@@ -89,6 +90,19 @@ Currently there are 6 models that make up arduivis.</p>
 <!-- </ul> -->
 <ul></ul>
 
+<h3><a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Instructions</h3>
+
+<p>* The process below is documented in the video below *
+
+<ol>
+  <li>Find and upload the sketch "SerialEvent.ino" in the Arduino IDE (File -> Examples -> 04.Communication -> SerialEvent.ino)</li>
+  <li>Once the upload process is complete, open the patch named "arduivis_python_model_rtWriteMax.maxpat" (arduivis -> Python -> model_rtWriteMax)</li>
+  <li>Follow the instructions inside the patch and start the serial buffer</li>
+  <li>Next, find and open the computer terminal and run the Python sketch named "arduivis_python_model_rtWriteMax.py" (arduivis -> Python -> model_rtWriteMax)
+  <li>Once the sketch is running, a string can be sent from the terminal using Python and is received by Max via the [serial] object. The Arduino is used as a communication layer where these two languages can converse in real-time.
+</ol>
+
+
 <h3><a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Video</h3>
 
 
@@ -101,11 +115,6 @@ Currently there are 6 models that make up arduivis.</p>
   <p><u>THROUGH:</u>    An <b>Arduino</b> is used to create the serial buffer. This is where the Python messages are formatted for the receiver language/</p>
   <p><u>RECEIVE:</u> <b>MaxMSP/PD</b> receives the real-time messages that can are accesible to the user. </p>
 
-<!--   <li><a href="https://www.python.org/">Python</a></li>
-  <li><a href="http://pyserial.sourceforge.net/">pySerial</a></li>
-  <li><a href="http://cycling74.com/">MaxMSP</a> or <a href="http://puredata.info/">Pure Data</a></li> -->
-
-<h3><a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Instructions</h3>
 
 <h3><a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Python Code</h3>
 
@@ -208,6 +217,7 @@ void serialEvent() {
 </code></pre>
 
 <h3><a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Max Patch</h3>
+       <img src="http://cskonopka.github.io/arduivis/arduivis_python_rtWriteMax.png" alt="some_text">
 
 
 <!-- <h3>
