@@ -109,11 +109,39 @@ Currently there are 6 models that make up arduivis.</p>
 
 <h3><a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Python Code</h3>
 
-<h3><a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Arduino Code</h3>
+<pre><code>
+# Import pySerial
+import serial
 
-[[collapsible]]
-Some text to show/hide.
-[[/collapsible]]
+# Port Name
+# To find out the correct port type the line below into the terminal
+# python -m serial.tools.list_ports
+board = '/dev/cu.usbmodem1411'
+
+# Baud Rate
+# Match baud rate with the rate used in the Arduino sketch and the Max patch
+baud = 9600
+
+# Define the connected port
+arduino = serial.Serial(board, baud, timeout=1)
+
+# Keep the data flowing with an infinite while loop
+infinite = 1
+
+while (infinite == 1):
+
+  # Read each line of the serial output 
+  output = arduino.readline()
+
+  toArduino = raw_input('Write to Serial buffer: ')
+  print('Write to Serial buffer', toArduino)
+  arduino.write(toArduino+ '\n')
+  # Print each line of the serial output
+  # print output
+</code></pre>
+
+
+<h3><a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Arduino Code</h3>
 
 <p>* The Arduino code can be found in the following directory. (File -> Examples -> 04.Communication -> SerialEvent)</p>
 <pre><code>
