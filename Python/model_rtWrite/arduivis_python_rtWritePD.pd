@@ -1,0 +1,56 @@
+#N canvas 4 22 1436 856 10;
+#X obj 176 81 comport 9600;
+#X msg 176 33 devices;
+#X msg 284 33 close;
+#X floatatom 231 7 5 0 0 0 - - -;
+#X msg 231 33 open 5;
+#X obj 195 180 print;
+#X obj 239 143 list-extend;
+#X obj 349 79 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 282 100 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 239 205 104 101 108 108 111;
+#X obj 239 180 prepend set;
+#X msg 373 381 h;
+#X obj 373 356 prepend set;
+#X obj 502 203 zl len;
+#X floatatom 508 229 5 0 0 0 - - -;
+#X obj 161 266 coll;
+#C restore;
+#X obj 161 238 listfunnel;
+#X floatatom 150 306 5 0 0 0 - - -;
+#X obj 114 353 zl group 40;
+#X floatatom 47 284 5 0 0 0 - - -;
+#X floatatom 252 358 5 0 0 0 - - -;
+#X obj 333 306 makefilename %c;
+#X obj 176 104 route 10 13;
+#X obj 458 415 list-extend;
+#X obj 568 351 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 501 372 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X connect 0 0 22 0;
+#X connect 1 0 0 0;
+#X connect 2 0 0 0;
+#X connect 3 0 4 0;
+#X connect 4 0 0 0;
+#X connect 6 0 5 0;
+#X connect 6 0 10 0;
+#X connect 7 0 6 1;
+#X connect 8 0 6 0;
+#X connect 9 0 13 0;
+#X connect 9 0 16 0;
+#X connect 9 0 21 0;
+#X connect 10 0 9 0;
+#X connect 12 0 11 0;
+#X connect 13 0 14 0;
+#X connect 15 0 17 0;
+#X connect 16 0 15 0;
+#X connect 17 0 21 0;
+#X connect 19 0 15 0;
+#X connect 21 0 12 0;
+#X connect 21 0 20 0;
+#X connect 22 2 6 0;
+#X connect 24 0 23 1;
+#X connect 25 0 23 0;

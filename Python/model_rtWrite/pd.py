@@ -29,18 +29,29 @@ board = '/dev/tty.usbmodem1411'
 baud = 9600
 
 # Define the connected port
-arduino = serial.Serial(board, baud, timeout=1)
+arduino = serial.Serial(board, baud, timeout=0)
 
 # Keep the data flowing with an infinite while loop
 infinite = 1
+
+# # Read each line of the serial output	
+# output = arduino.readline()
+
+# toArduino = raw_input('Write to Serial buffer:')
+# print('Write to Serial buffer', toArduino)
+# arduino.write(toArduino+ '\n')
+# # Print each line of the serial output
+# # print output
+
 
 while (infinite == 1):
 
 	# Read each line of the serial output	
 	output = arduino.readline()
-
-	toArduino = raw_input('Write to Serial buffer: ')
+	toArduino = raw_input('Write to Serial buffer:')
 	print('Write to Serial buffer', toArduino)
+
 	arduino.write(toArduino+ '\n')
 	# Print each line of the serial output
 	# print output
+
