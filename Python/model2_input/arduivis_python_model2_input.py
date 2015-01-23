@@ -22,11 +22,11 @@ import serial
 # Port Name
 # To find out the correct port type the line below into the terminal
 # python -m serial.tools.list_ports
-board = '/dev/cu.usbmodem1411'
+board = '/dev/cu.AdafruitEZ-Link2a86-SPP'
 
 # Baud Rate
 # Match baud rate with the rate used in the Arduino sketch and the Max patch
-baud = 115200
+baud = 9600
 
 # Define the connected port
 arduino = serial.Serial(board, baud, timeout=1)
