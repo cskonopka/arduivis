@@ -14,7 +14,7 @@ portName = process.argv[2];
 
  
  var myPort = new SerialPort(portName, {
-   baudRate: 9600,
+   baudRate: 115200,
    // look for return and newline at the end of each data packet:
    parser: serialport.parsers.readline("\r")
  });

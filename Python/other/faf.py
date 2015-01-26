@@ -22,25 +22,35 @@ import serial
 # Port Name
 # To find out the correct port type the line below into the terminal
 # python -m serial.tools.list_ports
-board = '/dev/tty.usbmodem1411'
+board = '/dev/cu.usbmodem1451'
 
 # Baud Rate
 # Match baud rate with the rate used in the Arduino sketch and the Max patch
 baud = 9600
 
 # Define the connected port
-arduino = serial.Serial(board, baud, timeout=1)
+arduino = serial.Serial(board, baud, timeout=0)
 
 # Keep the data flowing with an infinite while loop
 infinite = 1
+
+# # Read each line of the serial output	
+# output = arduino.readline()
+
+# toArduino = raw_input('Write to Serial buffer:')
+# print('Write to Serial buffer', toArduino)
+# arduino.write(toArduino+ '\n')
+# # Print each line of the serial output
+# # print output
+
 
 while (infinite == 1):
 
 	# Read each line of the serial output	
 	output = arduino.readline()
+	toArduino = raw_input('Write to Serial buffer:')
 
-	toArduino = raw_input('Write to Serial buffer: ')
-	print('Write to Serial buffer', toArduino)
+	print('Write to Serial buffer', toArduino, output)
 	arduino.write(toArduino+ '\n')
-	# Print each line of the serial output
-	# print output
+
+

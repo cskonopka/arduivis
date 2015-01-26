@@ -1,13 +1,13 @@
 #____________________________________________________
 #
 # ~~~~~~~ arduivis - Python ~~~~~~~
-# ~~~~~~~~ model#5: multipleInputs ~~~~~~~~~
+# ~~~~~~~~ model: forloop ~~~~~~~~~
 #
-# Python: arduivis_python_model5_multipleInputs.py
-# MaxMSP: arduivis_python_model5_multipleInputs.maxpat
+# Python: arduivis_python_model_forloop.py
 #
-# This is an example of how to send a multiple streams
-# of data from MaxMSP, to Python, via an Arduino.
+# This is an example of how to send data from an
+# Arduino to Python. The for-loop printout can be
+# viewed in the terimnal.
 #
 # synthesized by Christopher Konopka
 #
@@ -28,15 +28,14 @@ board = '/dev/cu.usbmodem1451'
 baud = 9600
 
 # Define the connected port
-arduino = serial.Serial(board, baud, timeout=5000)
+arduino = serial.Serial(board, baud, timeout=1)
 
-# Keep the data flowing with an infinite while loop
 infinite = 1
 
 while (infinite == 1):
 
-	# Read each line of the serial output
+	# Read each line of the serial output	
 	output = arduino.readline()
 
-	# Print each line of the serial output
+	# Print each line of the serial output	
 	print output
