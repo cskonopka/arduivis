@@ -22,7 +22,7 @@ import serial
 # Port Name
 # To find out the correct port type the line below into the terminal
 # python -m serial.tools.list_ports
-board = '/dev/cu.HC-06-DevB'
+board = '/dev/cu.usbmodem1451'
 
 # Baud Rate
 # Match baud rate with the rate used in the Arduino sketch and the Max patch

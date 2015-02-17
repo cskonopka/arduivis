@@ -47,13 +47,6 @@ void loop()
     pdSlider3 = Serial.parseInt();
     pdSlider4 = Serial.parseInt(); 
 
-  // Write parsed slider values to serial buffer
-  // [comport] object
-  // to Pure Data, from Arduino
-    Serial.write(pdSlider1);
-    Serial.write(pdSlider2);
-    Serial.write(pdSlider3);
-    Serial.write(pdSlider4);
 
   // Parse incoming Pure Data (feedback) values
   // from Pure Data (feedback), to Arduino 
@@ -70,6 +63,14 @@ void loop()
     analogWrite(6, feedbackFromPD3);    
     analogWrite(9, feedbackFromPD4);
   
+    // Write parsed slider values to serial buffer
+  // [comport] object
+  // to Pure Data, from Arduino
+    Serial.write(pdSlider1);
+    Serial.write(pdSlider2);
+    Serial.write(pdSlider3);
+    Serial.write(pdSlider4);
+
   // Write feedback values to serial buffer
   // [comport] object
   // to Pure Data, from Arduino
