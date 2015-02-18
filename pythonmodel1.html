@@ -70,21 +70,25 @@ Currently there are 6 models that make up arduivis.</p>
 <a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Getting Started</h3>
 
  -->
+ <h2>
+<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Python - Model #2: Input</h2>
 
- <h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Pure Data Model #2: Input</h3>
+<h3>Abstract</h3>
+<p>This is an example of how to read a slider from MaxMSP and write the values to Python in the terminal.</p>
 
 <p><b>Arduino</b></p>
- <pre><code>/* 
+ <pre><code> 
+/* 
 
-~~~~ arduivis - Pure Data ~~~~~~~
-~~~~~~~ model#2: input ~~~~~~~~~~
+~~~~~~~ arduivis - Python ~~~~~~~
+~~~~~~~~ model#2: input ~~~~~~~~~
 
-PD: arduivis_model2_PD_input.pd
+MaxMSP: arduivis_python_model2_input.maxpat
+Python: arduivis_python_model2_input.py
 
 This is an example of how to read a slider from 
-Pure Data and write the values to a PWM LED connected
-to an Arduino.
+MaxMSP and write the values to Python in the 
+terminal.
 
 synthesized by Christopher Konopka
 
@@ -94,64 +98,78 @@ This example code is in the public domain.
 
 void setup() 
 { 
-  // Create/open serial port
+  //  Create/open serial port
     Serial.begin(9600);   
-
-  // Define LED mode 
-  // PWM LED  
-    pinMode(3, OUTPUT);
 }
 
 void loop() 
 {
+  // Slider from MaxMSP 
+  int maxmspSlider;
 
-  // Slider from Pure Data  
-    int pdSlider;
-
-  // Parse incoming Pure Data slider values
-  // from Pure Data, to Arduino   
-    pdSlider = Serial.parseInt();  
-
-  // Write parsed values to LEDs
-  // Fading LED
-  // from Pure Data, to Arduino     
-    analogWrite(3, pdSlider);
-
-  // Pure Data Slider values to serial buffer
-  // [comport] object
-  // to Pure Data, from Arduino       
-    Serial.write(pdSlider);  
+  // Parse incoming MaxMSP slider values
+  // from MaxMSP, thru Arduino, to Python    
+  maxmspSlider = Serial.parseInt();  
 }
 </code></pre>
 
-<p><b>PD-Extended</b></p>
 
-       <img src="http://cskonopka.github.io/arduivis/arduivis_PD_model2_input.png" alt="some_text">
+<p><b>Python</b></p>
+ <pre><code>
+#____________________________________________________
+#
+# ~~~~~~~ arduivis - Python ~~~~~~~
+# ~~~~~~~~ model#1: output ~~~~~~~~~
+#
+# Python: arduivis_python_model1_output.py
+# MaxMSP: arduivis_python_model1_output.maxpat
+#
+# This is an example of how to send data from 
+# Python to MaxMSP by using an Arduino as 
+# a serial communication hub
+#
+# synthesized by Christopher Konopka
+#
+# This example code is in the public domain.
+#
+#____________________________________________________
+
+# Import pySerial
+import serial
+
+# Port Name
+# To find out the correct port type the line below into the terminal
+# python -m serial.tools.list_ports
+board = '/dev/cu.usbmodem1451'
+
+# Baud Rate
+# Match baud rate with the rate used in the Arduino sketch and the Max patch
+baud = 9600
+
+# Define the connected port
+arduino = serial.Serial(board, baud, timeout=1)
+
+# Keep the data flowing with an infinite while loop
+infinite = 1
+
+while (infinite == 1):
+
+  # Read each line of the serial output 
+  output = arduino.readline()
+
+  # Takes input from the command-line
+  toArduino = raw_input('Write to Serial buffer: ')
+
+  # Print each line of the serial output
+  # print output
+  print('Write to Serial buffer', toArduino)
+  arduino.write(toArduino+ '\n')
+</code></pre>  
 
 
-<!--   <ul>
-    <li>Next, open the folder named "model1_output"</li>
-      <ul>
-        <li> arduivis > MaxMSP > model1_output</li>
-        <li> arduivis > PD > model1_output</li>
-      </ul>
-  </ul>  
+<p><b>MaxMSP</b></p>
 
-  <ul>
-    <li>Inside "model1_output" there will be a patch for the VPL and a folder containing the Arduino sketch for this example</li>
-      <ul>
-        <li>Open the sketch "arduivis_MaxMSP_model1_output.ino" in the Arduino IDE</li>
-        <li>Upload the sketch to the Arduino</li>
-      </ul>
-  </ul>     -->
-
-<!-- 
-  <ul>
-    <li>For MaxMSP, find the folder model #1</li>
-      <ul>
-        <li> arduivis > MaxMSP > model1_output</li>
-      </ul>
-  </ul> -->
+       <img src="http://cskonopka.github.io/arduivis/images/arduivis_python_model1_input.png" alt="some_text">
 
       </section>
       <footer>
