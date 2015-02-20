@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 830.0, 78.0, 455.0, 441.0 ],
+		"rect" : [ 38.0, 85.0, 455.0, 441.0 ],
 		"bgcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 		"editing_bgcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 		"bglocked" : 0,
@@ -102,7 +102,7 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 20.180077, 380.951538, 415.698914, 39.0 ],
 					"style" : "",
-					"text" : "input4 - 1709",
+					"text" : "input4 - 147",
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
 					"textjustification" : 1
 				}
@@ -122,7 +122,7 @@
 					"patching_rect" : [ 759.415283, 317.576782, 329.0, 34.513275 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 20.180077, 380.951538, 415.698914, 39.177277 ],
-					"size" : 4096.0,
+					"size" : 255.0,
 					"style" : ""
 				}
 
@@ -149,7 +149,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 627.0, 458.0, 385.0, 22.0 ],
 					"style" : "",
-					"text" : "\"1281, 2286, 2235, 3039\""
+					"text" : "\"215 112 45 147\""
 				}
 
 			}
@@ -165,7 +165,7 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 20.180077, 337.774261, 415.698914, 39.0 ],
 					"style" : "",
-					"text" : "input3 - 1525",
+					"text" : "input3 - 45",
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
 					"textjustification" : 1
 				}
@@ -185,7 +185,7 @@
 					"patching_rect" : [ 949.615295, 155.300003, 329.0, 34.513275 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 20.180077, 337.774261, 415.698914, 39.177277 ],
-					"size" : 4096.0,
+					"size" : 255.0,
 					"style" : ""
 				}
 
@@ -215,7 +215,7 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 20.180077, 294.374268, 415.698914, 39.0 ],
 					"style" : "",
-					"text" : "input2 - 1576",
+					"text" : "input2 - 112",
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
 					"textjustification" : 1
 				}
@@ -235,7 +235,7 @@
 					"patching_rect" : [ 704.415283, 75.715332, 329.0, 34.513275 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 20.180077, 294.374268, 415.698914, 39.177277 ],
-					"size" : 4096.0,
+					"size" : 255.0,
 					"style" : ""
 				}
 
@@ -559,7 +559,7 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 20.180077, 251.374268, 415.698914, 39.0 ],
 					"style" : "",
-					"text" : "input1 - 2093",
+					"text" : "input1 - 215",
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
 					"textjustification" : 1
 				}
@@ -579,7 +579,7 @@
 					"patching_rect" : [ 345.415314, 147.715332, 329.0, 34.513275 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 20.180077, 251.374268, 415.698914, 39.177277 ],
-					"size" : 4096.0,
+					"size" : 255.0,
 					"style" : ""
 				}
 
@@ -1080,7 +1080,7 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 312.878967, 295.374268, 123.0, 28.0 ],
 					"style" : "",
-					"text" : "To-Python 1281",
+					"text" : "To-Python 215",
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
 					"textjustification" : 2
 				}
@@ -1787,7 +1787,7 @@
 					"fontname" : "Avenir Book",
 					"fontsize" : 24.0,
 					"id" : "obj-1129",
-					"items" : [ "HC-06-DevB", ",", "AdafruitEZ-Link2a86-SPP", ",", "Bluetooth-Modem", ",", "Bluetooth-Incoming-Port", ",", "usbmodem1411" ],
+					"items" : [ "HC-05-DevB", ",", "AdafruitEZ-Link15b9-SPP", ",", "AdafruitEZ-Link2a86-SPP", ",", "Bluetooth-Modem", ",", "Bluetooth-Incoming-Port", ",", "csKonopkasiPhone-Wirele", ",", "usbmodem1411" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -1844,7 +1844,7 @@
 					"patching_rect" : [ 598.802124, 563.86499, 229.62085, 108.793373 ],
 					"setminmax" : [ 0.0, 4096.0 ],
 					"setstyle" : 3,
-					"size" : 7,
+					"size" : 4,
 					"slidercolor" : [ 0.317647, 0.654902, 0.976471, 1.0 ],
 					"style" : ""
 				}
@@ -2517,10 +2517,10 @@
  ],
 		"parameters" : 		{
 			"obj-70" : [ "live.toggle[3]", "live.toggle", 0 ],
-			"obj-1129" : [ "umenu", "umenu", 0 ],
-			"obj-66" : [ "live.toggle[1]", "live.toggle", 0 ],
 			"obj-27" : [ "live.toggle[7]", "live.toggle", 0 ],
-			"obj-28" : [ "live.toggle[8]", "live.toggle", 0 ]
+			"obj-28" : [ "live.toggle[8]", "live.toggle", 0 ],
+			"obj-66" : [ "live.toggle[1]", "live.toggle", 0 ],
+			"obj-1129" : [ "umenu", "umenu", 0 ]
 		}
 ,
 		"dependency_cache" : [  ],

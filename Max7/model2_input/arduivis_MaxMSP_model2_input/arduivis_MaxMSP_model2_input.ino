@@ -38,5 +38,5 @@ void loop()
   // Write parsed values to LEDs
   // Fading LED
   // from MaxMSP, to Arduino    
-    analogWrite(13, maxmspSlider);
+    analogWrite(3, maxmspSlider);
 }

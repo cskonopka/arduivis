@@ -56,8 +56,7 @@ void loop()
     Serial.print(" ");
     Serial.print(maxmspSlider3);
     Serial.print(" ");
-    Serial.print(maxmspSlider4);
-    Serial.print(" ");
+    Serial.println(maxmspSlider4);
 
   // Parse incoming MaxMSP (feedback) values
   // from MaxMSP (feedback), to Arduino 
@@ -73,14 +72,6 @@ void loop()
     analogWrite(5, feedbackFromMaxMSP2);
     analogWrite(6, feedbackFromMaxMSP3);    
     analogWrite(9, feedbackFromMaxMSP4);
-
-    Serial.print(feedbackFromMaxMSP1);
-    Serial.print(" ");
-    Serial.print(feedbackFromMaxMSP2);
-    Serial.print(" ");
-    Serial.print(feedbackFromMaxMSP3);
-    Serial.print(" ");
-    Serial.println(feedbackFromMaxMSP4);
     
-      delay(2);
+    delay(2);
 }
