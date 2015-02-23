@@ -22,7 +22,7 @@ void setup()
 
   // Define LED mode 
   // PWM LED  
-    pinMode(ledpin, OUTPUT);
+   pinMode(13, OUTPUT);
 }
 
 void loop() 
@@ -38,5 +38,5 @@ void loop()
   // Write parsed values to LEDs
   // Fading LED
   // from MaxMSP, to Arduino    
-    analogWrite(3, maxmspSlider);
+    analogWrite(13, maxmspSlider);
 }
