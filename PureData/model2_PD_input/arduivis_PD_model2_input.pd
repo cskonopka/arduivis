@@ -49,10 +49,10 @@
 #X text 22 400 convert symbol;
 #X floatatom 158 422 5 0 0 0 - - -;
 #X text 22 420 data from slider;
-#X text 312 77 poll clock;
+#X text 354 100 poll clock;
 #X text 304 191 1;
-#X text 303 66 2;
-#X text 160 68 3;
+#X text 354 90 2;
+#X text 163 68 3;
 #X text 273 397 Christopher Konopka;
 #X text 273 410 cskonopka.github.io/arduivis/;
 #X text 273 423 christopherkonopka.com;

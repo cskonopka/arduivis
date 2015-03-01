@@ -1,3 +1,13 @@
+/*
+
+This code is in the public domain
+
+written by Christopher Konopka
+http://cskonopka.github.io/arduivis/
+http://christopherkonopka.com/
+
+*/
+
 #include <Servo.h>
 Servo myservo;
 

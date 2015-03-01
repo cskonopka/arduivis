@@ -13,9 +13,11 @@ from MaxMSP, controlling the PWM of a LED.
 This is done with several streams of data in 
 this example.
 
-synthesized by Christopher Konopka
+This code is in the public domain
 
-This example code is in the public domain.
+written by Christopher Konopka
+http://cskonopka.github.io/arduivis/
+http://christopherkonopka.com/
 
 */
 

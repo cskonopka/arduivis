@@ -10,11 +10,14 @@ simultaneously sends information from the
 Arduino (output), through aprogramming 
 language, and back to the Arduino (input). 
 
-synthesized by Christopher Konopka
+This code is in the public domain
 
-This example code is in the public domain.
+written by Christopher Konopka
+http://cskonopka.github.io/arduivis/
+http://christopherkonopka.com/
 
 */
+
 void setup() 
 {
   // Create/open serial port  

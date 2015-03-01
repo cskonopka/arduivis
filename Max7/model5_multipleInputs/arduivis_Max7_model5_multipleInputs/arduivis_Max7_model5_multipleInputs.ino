@@ -8,9 +8,11 @@ MaxMSP: arduivis_Max7_model5_multipleInputs.maxpat
 This is an example of how to send a multiple streams
 of data from MaxMSP, to an Arduino.
 
-synthesized by Christopher Konopka
+This code is in the public domain
 
-This example code is in the public domain.
+written by Christopher Konopka
+http://cskonopka.github.io/arduivis/
+http://christopherkonopka.com/
 
 */
 
@@ -55,5 +57,5 @@ void loop()
   Serial.print(" ");
   Serial.print(maxmspSlider3);
   Serial.print(" ");
-  Serial.print(maxmspSlider4);
+  Serial.println(maxmspSlider4);
 }
