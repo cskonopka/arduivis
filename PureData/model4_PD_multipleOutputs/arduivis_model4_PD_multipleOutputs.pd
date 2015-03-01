@@ -1,37 +1,40 @@
-#N canvas 0 22 290 546 10;
-#X obj -154 191 sel 13 10;
-#X obj -154 238 iem_anything;
-#X obj -154 258 iem_alisttosym;
-#X obj -154 278 fromsymbol;
-#X obj -154 218 zl group 1000;
-#X text -52 191 route & trigger;
-#X text -52 228 group into 1 message;
-#X text -52 258 convert ASCII to int;
-#X text -51 278 convert symbol;
-#X text -51 298 unpack slider data;
-#X msg -154 71 devices;
-#X msg -124 144 close;
-#X obj -154 171 comport 9600;
-#X floatatom -143 98 5 0 0 0 - - -;
-#X msg -143 117 open \$1;
-#X obj -154 390 vsl 24 128 0 255 0 0 empty empty empty 0 -9 0 10 -262144
+#N canvas 135 22 320 547 10;
+#X obj -123 191 sel 13 10;
+#X obj -123 238 iem_anything;
+#X obj -123 258 iem_alisttosym;
+#X obj -123 278 fromsymbol;
+#X obj -123 218 zl group 1000;
+#X text -21 191 route & trigger;
+#X text -21 228 group into 1 message;
+#X text -21 258 convert ASCII to int;
+#X text -20 278 convert symbol;
+#X text -20 298 unpack slider data;
+#X msg -123 71 devices;
+#X msg -93 144 close;
+#X obj -123 171 comport 9600;
+#X floatatom -112 98 5 0 0 0 - - -;
+#X msg -112 117 open \$1;
+#X obj -123 390 vsl 24 128 0 255 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
-#X obj -127 390 vsl 24 128 0 255 0 0 empty empty empty 0 -9 0 10 -262144
+#X obj -96 390 vsl 24 128 0 255 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
-#X obj -100 390 vsl 24 128 0 255 0 0 empty empty empty 0 -9 0 10 -262144
+#X obj -69 390 vsl 24 128 0 255 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
-#X obj -73 390 vsl 24 128 0 255 0 0 empty empty empty 0 -9 0 10 -262144
+#X obj -42 390 vsl 24 128 0 255 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
-#X text -127 11 arduivis - model #4 - multipleOutputs;
-#X text -164 35 sketch: arduivis_PD_model4_multipleoutputs.ino;
-#X obj -154 298 unpack 0 0 0 0;
-#X floatatom -154 318 5 0 0 0 - - -;
-#X floatatom -127 335 5 0 0 0 - - -;
-#X floatatom -100 352 5 0 0 0 - - -;
-#X floatatom -73 369 5 0 0 0 - - -;
-#X text -53 71 find Arduino board;
-#X text -52 145 close serial port;
-#X text -52 106 open serial port;
+#X text -94 10 arduivis - model #4 - multipleOutputs;
+#X text -131 34 sketch: arduivis_PD_model4_multipleoutputs.ino;
+#X obj -123 298 unpack 0 0 0 0;
+#X floatatom -123 318 5 0 0 0 - - -;
+#X floatatom -96 335 5 0 0 0 - - -;
+#X floatatom -69 352 5 0 0 0 - - -;
+#X floatatom -42 369 5 0 0 0 - - -;
+#X text -22 71 find Arduino board;
+#X text -21 145 close serial port;
+#X text -21 106 open serial port;
+#X text -5 418 Christopher Konopka;
+#X text -5 431 cskonopka.github.io/arduivis/;
+#X text -5 444 christopherkonopka.com;
 #X connect 0 0 4 0;
 #X connect 0 2 4 0;
 #X connect 1 0 2 0;

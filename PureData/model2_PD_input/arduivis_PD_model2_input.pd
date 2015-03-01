@@ -20,7 +20,7 @@
 #X msg 158 252 49 52 55 10;
 #X obj 158 229 t b a;
 #X obj 161 67 hsl 128 20 0 255 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 7300 1;
+-1 -1 0 1;
 #X obj 158 90 list-round;
 #X obj 158 129 speedlim 0.47;
 #X obj 158 169 thresh 0.47;
@@ -53,6 +53,9 @@
 #X text 304 191 1;
 #X text 303 66 2;
 #X text 160 68 3;
+#X text 273 397 Christopher Konopka;
+#X text 273 410 cskonopka.github.io/arduivis/;
+#X text 273 423 christopherkonopka.com;
 #X connect 0 0 2 0;
 #X connect 1 0 23 0;
 #X connect 2 0 1 0;

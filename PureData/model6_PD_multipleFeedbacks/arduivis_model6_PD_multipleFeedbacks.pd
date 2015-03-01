@@ -1,105 +1,108 @@
 #N canvas 0 22 842 856 10;
-#X floatatom 208 -47 5 0 0 0 - - -;
-#X obj 211 -90 hsl 128 20 0 255 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 4500 1;
-#X obj 208 -67 list-round;
-#X floatatom 224 16 5 0 0 0 - - -;
-#X obj 227 -27 hsl 128 20 0 255 0 0 empty empty empty -2 -8 0 10 -262144
+#X floatatom 208 -43 5 0 0 0 - - -;
+#X obj 211 -86 hsl 128 20 0 255 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 0 1;
-#X obj 224 -4 list-round;
-#X obj 209 224 spell;
-#X obj 209 304 prepend set;
-#X msg 209 347 57 48 32 48 32 49 48 32 53 56 32 57 48 32 48 32 49 48
+#X obj 208 -63 list-round;
+#X floatatom 224 20 5 0 0 0 - - -;
+#X obj 227 -23 hsl 128 20 0 255 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 224 0 list-round;
+#X obj 209 228 spell;
+#X obj 209 308 prepend set;
+#X msg 209 351 57 48 32 48 32 49 48 32 53 56 32 57 48 32 48 32 49 48
 32 48 10;
-#X obj 209 324 t b a;
-#X obj 209 284 iem_append 10;
-#X floatatom 240 78 5 0 0 0 - - -;
-#X obj 243 35 hsl 128 20 0 255 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 500 1;
-#X obj 240 58 list-round;
-#X floatatom 256 140 5 0 0 0 - - -;
-#X obj 259 97 hsl 128 20 0 255 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 2900 1;
-#X obj 256 120 list-round;
-#X obj 192 -163 tgl 50 0 empty empty empty 17 7 0 10 -262144 -1 -1
-1 1;
-#X obj 192 -90 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 209 372 comport 9600;
-#X msg 18 8 devices;
-#X msg 18 81 close;
-#X floatatom 18 35 5 0 0 0 - - -;
-#X msg 18 54 open \$1;
-#X obj 209 392 sel 13 10;
-#X obj 209 439 iem_anything;
-#X obj 209 459 iem_alisttosym;
-#X obj 209 479 fromsymbol;
-#X text 73 8 find Arduino board;
-#X text 74 81 close serial port;
-#X text 74 43 open serial port;
-#X text 32 -10 1;
-#X text 245 -140 2;
-#X floatatom 209 520 5 0 0 0 - - -;
-#X floatatom 227 537 5 0 0 0 - - -;
-#X floatatom 245 554 5 0 0 0 - - -;
-#X floatatom 264 571 5 0 0 0 - - -;
-#X obj 209 419 zl group 1000;
-#X obj 209 244 thresh 0.047;
-#X obj 209 264 speedlim 0.047;
-#X text 244 -129 poll clock;
-#X obj 192 -110 metro 50;
-#X obj 209 500 unpack 0 0 0 0 0 0 0 0;
-#X floatatom 282 520 5 0 0 0 - - -;
-#X floatatom 301 537 5 0 0 0 - - -;
-#X floatatom 319 554 5 0 0 0 - - -;
-#X floatatom 338 571 5 0 0 0 - - -;
-#X obj 209 565 s fb1;
-#X obj 227 585 s fb2;
-#X obj 245 605 s fb3;
-#X obj 264 625 s fb4;
-#X obj 372 -122 r fb1;
-#X obj 412 -122 r fb2;
-#X obj 450 -122 r fb3;
-#X obj 489 -122 r fb4;
-#X floatatom 372 -47 5 0 0 0 - - -;
-#X obj 375 -90 hsl 128 20 0 255 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 4482 1;
-#X obj 372 -67 list-round;
-#X floatatom 412 16 5 0 0 0 - - -;
-#X obj 415 -27 hsl 128 20 0 255 0 0 empty empty empty -2 -8 0 10 -262144
+#X obj 209 328 t b a;
+#X obj 209 288 iem_append 10;
+#X floatatom 240 82 5 0 0 0 - - -;
+#X obj 243 39 hsl 128 20 0 255 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 0 1;
-#X obj 412 -4 list-round;
-#X floatatom 450 78 5 0 0 0 - - -;
-#X obj 453 35 hsl 128 20 0 255 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 498 1;
-#X obj 450 58 list-round;
-#X floatatom 489 140 5 0 0 0 - - -;
-#X obj 492 97 hsl 128 20 0 255 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 2889 1;
-#X obj 489 120 list-round;
-#X obj 192 164 pack 0 0 0 0 0 0 0 0 0;
-#X obj 192 184 unpack 0 0 0 0 0 0 0 0 0;
-#X obj 209 204 pack 0 0 0 0 0 0 0 0;
-#X text 628 -22 slider data to Arduino;
-#X text 628 -1 round slider floats;
-#X text 628 224 convert to ASCII;
-#X text 628 244 combine into list;
-#X text 628 346 poll slider data;
-#X text 628 372 serial port;
-#X text 628 392 route & trigger;
-#X text 628 429 group into 1 message;
-#X text 628 459 convert ASCII to int;
-#X text 629 479 convert symbol;
-#X text 628 183 unpack data;
-#X text 628 164 pack data;
-#X text 628 203 repack data;
-#X text 628 264 slow down data;
-#X text 628 285 append newline;
-#X text 628 304 set message for polling;
-#X text 629 499 unpack slider data;
-#X text 268 -208 arduivis - model #6 - multipleFeedbacks;
-#X text 241 -188 sketch: arduivis_PD_model6_multipleFeedbacks.ino;
-#X text 397 -145 feedback sliders;
+#X obj 240 62 list-round;
+#X floatatom 256 144 5 0 0 0 - - -;
+#X obj 259 101 hsl 128 20 0 255 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 256 124 list-round;
+#X obj 192 -159 tgl 50 0 empty empty empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 192 -86 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 209 376 comport 9600;
+#X msg 18 12 devices;
+#X msg 18 85 close;
+#X floatatom 18 39 5 0 0 0 - - -;
+#X msg 18 58 open \$1;
+#X obj 209 396 sel 13 10;
+#X obj 209 443 iem_anything;
+#X obj 209 463 iem_alisttosym;
+#X obj 209 483 fromsymbol;
+#X text 73 12 find Arduino board;
+#X text 74 85 close serial port;
+#X text 74 47 open serial port;
+#X text 32 -6 1;
+#X text 245 -136 2;
+#X floatatom 209 524 5 0 0 0 - - -;
+#X floatatom 227 541 5 0 0 0 - - -;
+#X floatatom 245 558 5 0 0 0 - - -;
+#X floatatom 264 575 5 0 0 0 - - -;
+#X obj 209 423 zl group 1000;
+#X obj 209 248 thresh 0.047;
+#X obj 209 268 speedlim 0.047;
+#X text 244 -125 poll clock;
+#X obj 192 -106 metro 50;
+#X obj 209 504 unpack 0 0 0 0 0 0 0 0;
+#X floatatom 282 524 5 0 0 0 - - -;
+#X floatatom 301 541 5 0 0 0 - - -;
+#X floatatom 319 558 5 0 0 0 - - -;
+#X floatatom 338 575 5 0 0 0 - - -;
+#X obj 209 569 s fb1;
+#X obj 227 589 s fb2;
+#X obj 245 609 s fb3;
+#X obj 264 629 s fb4;
+#X obj 372 -118 r fb1;
+#X obj 412 -118 r fb2;
+#X obj 450 -118 r fb3;
+#X obj 489 -118 r fb4;
+#X floatatom 372 -43 5 0 0 0 - - -;
+#X obj 375 -86 hsl 128 20 0 255 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 372 -63 list-round;
+#X floatatom 412 20 5 0 0 0 - - -;
+#X obj 415 -23 hsl 128 20 0 255 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 412 0 list-round;
+#X floatatom 450 82 5 0 0 0 - - -;
+#X obj 453 39 hsl 128 20 0 255 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 450 62 list-round;
+#X floatatom 489 144 5 0 0 0 - - -;
+#X obj 492 101 hsl 128 20 0 255 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 489 124 list-round;
+#X obj 192 168 pack 0 0 0 0 0 0 0 0 0;
+#X obj 192 188 unpack 0 0 0 0 0 0 0 0 0;
+#X obj 209 208 pack 0 0 0 0 0 0 0 0;
+#X text 628 -18 slider data to Arduino;
+#X text 628 3 round slider floats;
+#X text 628 228 convert to ASCII;
+#X text 628 248 combine into list;
+#X text 628 350 poll slider data;
+#X text 628 376 serial port;
+#X text 628 396 route & trigger;
+#X text 628 433 group into 1 message;
+#X text 628 463 convert ASCII to int;
+#X text 629 483 convert symbol;
+#X text 628 187 unpack data;
+#X text 628 168 pack data;
+#X text 628 207 repack data;
+#X text 628 268 slow down data;
+#X text 628 289 append newline;
+#X text 628 308 set message for polling;
+#X text 629 503 unpack slider data;
+#X text 263 -201 arduivis - model #6 - multipleFeedbacks;
+#X text 236 -181 sketch: arduivis_PD_model6_multipleFeedbacks.ino;
+#X text 397 -141 feedback sliders;
+#X text 564 585 Christopher Konopka;
+#X text 564 598 cskonopka.github.io/arduivis/;
+#X text 564 611 christopherkonopka.com;
 #X connect 0 0 67 1;
 #X connect 1 0 2 0;
 #X connect 2 0 0 0;

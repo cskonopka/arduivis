@@ -10,9 +10,11 @@ several streams of data to Pure Data, from an Arduino.
 A fading LED is used to provide visual feedback for
 this process.
 
-synthesized by Christopher Konopka
+This code is in the public domain
 
-This example code is in the public domain.
+written by Christopher Konopka
+http://cskonopka.github.io/arduivis/
+http://christopherkonopka.com/
 
 */
 

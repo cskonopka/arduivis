@@ -11,11 +11,11 @@ to an Arduino.
 
 This code is in the public domain
 
-Written by Christopher Konopka
+written by Christopher Konopka
 http://cskonopka.github.io/arduivis/
 http://christopherkonopka.com/
-*/
 
+*/
 void setup() 
 { 
   //  Create/open serial port

@@ -9,9 +9,11 @@ This is an example of how to send data from
 an Arduino and read it in Pure Data via 
 a serial buffer.
 
-synthesized by Christopher Konopka
+This code is in the public domain
 
-This example code is in the public domain.
+written by Christopher Konopka
+http://cskonopka.github.io/arduivis/
+http://christopherkonopka.com/
 
 */
 

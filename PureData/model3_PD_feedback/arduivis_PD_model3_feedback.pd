@@ -10,21 +10,21 @@
 #X text 312 149 1;
 #X floatatom 182 -4 5 0 0 0 - - -;
 #X obj 185 -47 hsl 128 20 0 255 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 7600 1;
+-1 -1 0 1;
 #X obj 182 -24 list-round;
 #X floatatom 211 78 5 0 0 0 - - -;
 #X obj 214 35 hsl 128 20 0 255 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 7620 1;
+-1 -1 0 1;
 #X obj 211 58 list-round;
 #X obj 188 157 spell;
 #X obj 188 237 prepend set;
 #X obj 188 257 t b a;
 #X obj 188 217 iem_append 10;
 #X obj 154 -120 tgl 50 0 empty empty empty 17 7 0 10 -262144 -1 -1
-1 1;
+0 1;
 #X obj 154 -47 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X text 157 -121 2;
+#X text 207 -98 2;
 #X obj 188 177 thresh 0.047;
 #X obj 188 197 speedlim 0.047;
 #X obj 154 -67 metro 50;
@@ -42,9 +42,9 @@
 #X obj 188 433 unpack 0 0;
 #X obj 188 482 s output-to-feedbackSlider;
 #X obj 211 15 r output-to-feedbackSlider;
-#X text 165 -110 poll clock;
-#X text 254 -173 arduivis - model #3 - feedback;
-#X text 227 -153 sketch: arduivis_PD_model3_feedback.ino;
+#X text 207 -87 poll clock;
+#X text 43 -163 arduivis - model #3 - feedback;
+#X text 16 -143 sketch: arduivis_PD_model3_feedback.ino;
 #X text 17 11 slider data to Arduino;
 #X text 17 32 round slider floats;
 #X text 17 200 convert to ASCII;
@@ -62,6 +62,9 @@
 #X text 17 261 append newline;
 #X text 17 280 set message for polling;
 #X text 18 475 unpack slider data;
+#X text 288 -165 Christopher Konopka;
+#X text 288 -152 cskonopka.github.io/arduivis/;
+#X text 288 -139 christopherkonopka.com;
 #X connect 0 0 29 0;
 #X connect 1 0 0 0;
 #X connect 2 0 0 0;

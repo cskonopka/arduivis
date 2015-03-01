@@ -8,9 +8,11 @@ pd: arduivis_PD_model5_multipleInputs.maxpat
 This is an example of how to send a multiple streams
 of data from pd, to an Arduino.
 
-synthesized by Christopher Konopka
+This code is in the public domain
 
-This example code is in the public domain.
+written by Christopher Konopka
+http://cskonopka.github.io/arduivis/
+http://christopherkonopka.com/
 
 */
 
