@@ -41,9 +41,7 @@ void loop()
     // Incremental loop values to serial buffer
     // [comport] object
     // to Pure Data, from Arduino    
-      Serial.write(lp); 
-
-    delay(10);
+      Serial.println(lp); 
   }
 
   // Loop #2
@@ -57,8 +55,6 @@ void loop()
     // Decremental loop values to serial buffer
     // [comport] object
     // to Pure Data, from Arduino     
-      Serial.write(lp);  
-
-    delay(10);
+      Serial.println(lp);  
   }
 }

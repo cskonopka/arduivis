@@ -1,42 +1,53 @@
-#N canvas 666 41 396 524 16;
-#X msg 22 67 devices;
-#X msg 52 147 close;
-#X obj 22 179 comport 9600;
-#X floatatom 33 94 5 0 0 0 - - -;
-#X msg 33 120 open \$1;
-#X text 180 65 find Arduino board;
-#X text 180 145 close serial buffer;
-#X text 180 93 define board number;
-#X text 180 117 open defined board;
-#X floatatom 22 259 5 0 0 0 - - -;
-#X floatatom 67 286 5 0 0 0 - - -;
-#X floatatom 113 312 5 0 0 0 - - -;
-#X floatatom 159 339 5 0 0 0 - - -;
-#X obj 22 375 vsl 30 128 0 255 0 0 empty empty empty 0 -9 0 10 -262144
+#N canvas 0 22 290 546 10;
+#X obj -154 191 sel 13 10;
+#X obj -154 238 iem_anything;
+#X obj -154 258 iem_alisttosym;
+#X obj -154 278 fromsymbol;
+#X obj -154 218 zl group 1000;
+#X text -52 191 route & trigger;
+#X text -52 228 group into 1 message;
+#X text -52 258 convert ASCII to int;
+#X text -51 278 convert symbol;
+#X text -51 298 unpack slider data;
+#X msg -154 71 devices;
+#X msg -124 144 close;
+#X obj -154 171 comport 9600;
+#X floatatom -143 98 5 0 0 0 - - -;
+#X msg -143 117 open \$1;
+#X obj -154 390 vsl 24 128 0 255 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
-#X obj 67 375 vsl 30 128 0 255 0 0 empty empty empty 0 -9 0 10 -262144
+#X obj -127 390 vsl 24 128 0 255 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
-#X obj 113 375 vsl 30 128 0 255 0 0 empty empty empty 0 -9 0 10 -262144
+#X obj -100 390 vsl 24 128 0 255 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
-#X obj 159 375 vsl 30 128 0 255 0 0 empty empty empty 0 -9 0 10 -262144
+#X obj -73 390 vsl 24 128 0 255 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
-#X obj 22 232 unpack 0 0 0 0;
-#X obj 22 206 repack 4;
-#X text 49 7 arduivis - model #4 - multipleOutputs;
-#X text 180 203 repack message to parse;
-#X text 180 229 unpack message;
-#X text 12 31 sketch: arduivis_PD_model4_multipleoutputs.ino;
-#X connect 0 0 2 0;
+#X text -127 11 arduivis - model #4 - multipleOutputs;
+#X text -164 35 sketch: arduivis_PD_model4_multipleoutputs.ino;
+#X obj -154 298 unpack 0 0 0 0;
+#X floatatom -154 318 5 0 0 0 - - -;
+#X floatatom -127 335 5 0 0 0 - - -;
+#X floatatom -100 352 5 0 0 0 - - -;
+#X floatatom -73 369 5 0 0 0 - - -;
+#X text -53 71 find Arduino board;
+#X text -52 145 close serial port;
+#X text -52 106 open serial port;
+#X connect 0 0 4 0;
+#X connect 0 2 4 0;
 #X connect 1 0 2 0;
-#X connect 2 0 18 0;
-#X connect 3 0 4 0;
-#X connect 4 0 2 0;
-#X connect 9 0 13 0;
-#X connect 10 0 14 0;
-#X connect 11 0 15 0;
-#X connect 12 0 16 0;
-#X connect 17 0 9 0;
-#X connect 17 1 10 0;
-#X connect 17 2 11 0;
-#X connect 17 3 12 0;
-#X connect 18 0 17 0;
+#X connect 2 0 3 0;
+#X connect 3 0 21 0;
+#X connect 4 0 1 0;
+#X connect 10 0 12 0;
+#X connect 11 0 12 0;
+#X connect 12 0 0 0;
+#X connect 13 0 14 0;
+#X connect 14 0 12 0;
+#X connect 21 0 22 0;
+#X connect 21 1 23 0;
+#X connect 21 2 24 0;
+#X connect 21 3 25 0;
+#X connect 22 0 15 0;
+#X connect 23 0 16 0;
+#X connect 24 0 17 0;
+#X connect 25 0 18 0;

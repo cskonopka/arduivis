@@ -66,19 +66,26 @@ void loop()
     // Write parsed slider values to serial buffer
   // [comport] object
   // to Pure Data, from Arduino
-    Serial.write(pdSlider1);
-    Serial.write(pdSlider2);
-    Serial.write(pdSlider3);
-    Serial.write(pdSlider4);
+    Serial.print(pdSlider1);
+    Serial.print(" ");
+    Serial.print(pdSlider2);
+    Serial.print(" ");
+    Serial.print(pdSlider3);
+    Serial.print(" ");
+    Serial.print(pdSlider4);
+    Serial.print(" ");
 
   // Write feedback values to serial buffer
   // [comport] object
   // to Pure Data, from Arduino
   // This is useful for debugging
-    Serial.write(feedbackFromPD1); 
-    Serial.write(feedbackFromPD2);   
-    Serial.write(feedbackFromPD3); 
-    Serial.write(feedbackFromPD4); 
-  
-  delay(2);
+    Serial.print(feedbackFromPD1);
+    Serial.print(" "); 
+    Serial.print(feedbackFromPD2);
+    Serial.print(" ");   
+    Serial.print(feedbackFromPD3);
+    Serial.print(" "); 
+    Serial.println(feedbackFromPD4); 
+    
+    delay(2);
 }

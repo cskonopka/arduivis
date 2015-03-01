@@ -9,10 +9,11 @@ This is an example of how to read a slider from
 Pure Data and write the values to a PWM LED connected
 to an Arduino.
 
-synthesized by Christopher Konopka
+This code is in the public domain
 
-This example code is in the public domain.
-
+Written by Christopher Konopka
+http://cskonopka.github.io/arduivis/
+http://christopherkonopka.com/
 */
 
 void setup() 
@@ -43,5 +44,5 @@ void loop()
   // Pure Data Slider values to serial buffer
   // [comport] object
   // to Pure Data, from Arduino       
-    Serial.write(pdSlider);  
+    Serial.println(pdSlider);  
 }

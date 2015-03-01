@@ -55,5 +55,5 @@ void loop()
   Serial.print(" ");
   Serial.print(maxmspSlider3);
   Serial.print(" ");
-  Serial.println(maxmspSlider4);
+  Serial.print(maxmspSlider4);
 }
