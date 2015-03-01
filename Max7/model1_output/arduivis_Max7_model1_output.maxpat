@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 38.0, 78.0, 472.0, 788.0 ],
+		"rect" : [ 38.0, 78.0, 456.0, 356.0 ],
 		"bgcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 		"editing_bgcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 		"bglocked" : 0,
@@ -311,7 +311,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 499.945435, 348.066864, 104.659729, 39.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 229.385895, 70.019722, 206.159729, 39.0 ],
+					"presentation_rect" : [ 229.385895, 64.019722, 206.159729, 39.0 ],
 					"style" : "",
 					"text" : "github",
 					"textcolor" : [ 0.990094, 0.989905, 0.995022, 1.0 ],
@@ -624,10 +624,10 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 2.0, 4.5, 306.0, 302.0 ],
+									"patching_rect" : [ 2.0, 4.5, 309.0, 302.0 ],
 									"presentation" : 1,
 									"presentation_linecount" : 16,
-									"presentation_rect" : [ 126.173813, 33.686386, 211.0, 400.0 ],
+									"presentation_rect" : [ 126.173813, 33.686386, 212.0, 400.0 ],
 									"style" : "",
 									"text" : "instructions\n\n1) upload arduino sketch\n\"arduivis_Max7_model1_output.ino\"\n\n2) update serial ports\n\n3) select arduino from the menu\n\n4) start the communication link\n\n5) observe the output of the arduino",
 									"textjustification" : 1
@@ -698,7 +698,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 280.945465, 340.987244, 104.659729, 72.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 20.180077, 70.10836, 205.198883, 39.0 ],
+					"presentation_rect" : [ 20.180077, 64.10836, 205.198883, 39.0 ],
 					"style" : "",
 					"text" : "instructions",
 					"textcolor" : [ 0.990094, 0.989905, 0.995022, 1.0 ],
@@ -716,7 +716,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 452.539612, 34.715332, 390.0, 34.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 15.333336, 23.846695, 425.21228, 34.0 ],
+					"presentation_rect" : [ 15.333336, 17.846695, 425.21228, 34.0 ],
 					"style" : "",
 					"text" : "arduivis : model#1 - output",
 					"textjustification" : 1
@@ -775,7 +775,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 42.642426, 528.86499, 136.0, 28.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 336.283936, 258.184265, 97.595009, 28.0 ],
+					"presentation_rect" : [ 336.283936, 252.184265, 97.595009, 28.0 ],
 					"style" : "",
 					"text" : "output 1234",
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
@@ -1393,7 +1393,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 279.415314, 61.728607, 85.0, 39.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 20.180077, 214.374268, 415.698914, 39.0 ],
+					"presentation_rect" : [ 20.180077, 208.374268, 415.698914, 39.0 ],
 					"style" : "",
 					"text" : "start",
 					"textcolor" : [ 0.990094, 0.989905, 0.995022, 1.0 ],
@@ -1412,7 +1412,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 33.445465, 33.728607, 97.0, 105.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 111.840492, 124.019722, 232.378082, 39.0 ],
+					"presentation_rect" : [ 111.840492, 118.019714, 232.378082, 39.0 ],
 					"style" : "",
 					"text" : "update serial ports",
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
@@ -1493,7 +1493,7 @@
 					"patching_rect" : [ 29.723633, 190.076782, 234.861816, 41.0 ],
 					"pattrmode" : 1,
 					"presentation" : 1,
-					"presentation_rect" : [ 20.180077, 168.196991, 415.698883, 41.0 ],
+					"presentation_rect" : [ 20.180077, 162.196991, 415.698883, 41.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_longname" : "umenu",
@@ -1543,7 +1543,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 269.585449, 25.715332, 104.659729, 107.02655 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 20.180077, 214.374268, 415.698914, 39.177277 ],
+					"presentation_rect" : [ 20.180077, 208.374268, 415.698914, 39.177277 ],
 					"rounded" : 10.0,
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
@@ -1576,7 +1576,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 29.615601, 25.715332, 104.659729, 107.02655 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 20.180077, 124.019722, 415.698883, 39.177277 ],
+					"presentation_rect" : [ 20.180077, 118.019714, 415.698883, 39.177277 ],
 					"rounded" : 10.0,
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
@@ -1605,7 +1605,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 184.802124, 528.86499, 229.62085, 108.793373 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 20.180077, 258.374268, 415.698883, 83.354553 ],
+					"presentation_rect" : [ 20.180077, 252.374268, 415.698883, 83.354553 ],
 					"setminmax" : [ 0.0, 255.0 ],
 					"setstyle" : 3,
 					"slidercolor" : [ 0.317647, 0.654902, 0.976471, 1.0 ],
@@ -1627,7 +1627,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 151.585449, 27.715332, 102.659729, 102.513275 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 15.333334, 119.479965, 425.21228, 227.248856 ],
+					"presentation_rect" : [ 15.333334, 113.479965, 425.21228, 227.248856 ],
 					"proportion" : 0.39,
 					"rounded" : 4,
 					"style" : ""
@@ -1648,7 +1648,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 452.539612, 34.715332, 312.0, 39.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 15.333336, 21.258057, 425.21228, 39.177277 ],
+					"presentation_rect" : [ 15.333336, 15.258057, 425.21228, 39.177277 ],
 					"proportion" : 0.39,
 					"rounded" : 4,
 					"style" : ""
@@ -1671,7 +1671,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 280.945465, 323.473938, 104.659729, 107.02655 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 19.180077, 70.019722, 206.198883, 39.177277 ],
+					"presentation_rect" : [ 19.180077, 64.019722, 206.198883, 39.177277 ],
 					"rounded" : 10.0,
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
@@ -1704,7 +1704,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 499.945435, 314.053558, 104.659729, 107.02655 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 229.385895, 70.019722, 206.159729, 39.177277 ],
+					"presentation_rect" : [ 229.385895, 64.019722, 206.159729, 39.177277 ],
 					"rounded" : 10.0,
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
@@ -1735,7 +1735,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 467.539612, 49.715332, 312.0, 39.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 15.333336, 65.032997, 425.21228, 49.164001 ],
+					"presentation_rect" : [ 15.333336, 59.032997, 425.21228, 49.164001 ],
 					"proportion" : 0.39,
 					"rounded" : 4,
 					"style" : ""
@@ -2022,11 +2022,11 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-70" : [ "live.toggle[3]", "live.toggle", 0 ],
+			"obj-27" : [ "live.toggle[7]", "live.toggle", 0 ],
+			"obj-28" : [ "live.toggle[8]", "live.toggle", 0 ],
 			"obj-1129" : [ "umenu", "umenu", 0 ],
 			"obj-66" : [ "live.toggle[1]", "live.toggle", 0 ],
-			"obj-27" : [ "live.toggle[7]", "live.toggle", 0 ],
-			"obj-28" : [ "live.toggle[8]", "live.toggle", 0 ]
+			"obj-70" : [ "live.toggle[3]", "live.toggle", 0 ]
 		}
 ,
 		"dependency_cache" : [  ],

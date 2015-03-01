@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 38.0, 78.0, 456.0, 355.0 ],
+		"rect" : [ 38.0, 78.0, 455.0, 356.0 ],
 		"bgcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 		"editing_bgcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 		"bglocked" : 0,
@@ -791,7 +791,7 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 230.118195, 300.188934, 205.760788, 28.0 ],
 					"style" : "",
-					"text" : "feedback 282",
+					"text" : "feedback 63",
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
 					"textjustification" : 1
 				}
@@ -992,7 +992,7 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 15.333334, 300.188934, 210.607529, 28.0 ],
 					"style" : "",
-					"text" : "input 192",
+					"text" : "input 63",
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
 					"textjustification" : 1
 				}
@@ -1699,7 +1699,7 @@
 					"fontname" : "Avenir Book",
 					"fontsize" : 24.0,
 					"id" : "obj-1129",
-					"items" : [ "HC-06-DevB", ",", "Bluetooth-Modem", ",", "Bluetooth-Incoming-Port", ",", "AdafruitEZ-Link2a86-SPP", ",", "usbmodem1411" ],
+					"items" : [ "HC-05-DevB", ",", "AdafruitEZ-Link15b9-SPP", ",", "AdafruitEZ-Link2a86-SPP", ",", "Bluetooth-Modem", ",", "Bluetooth-Incoming-Port", ",", "csKonopkasiPhone-Wirele", ",", "usbmodem1451" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -2450,11 +2450,11 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-70" : [ "live.toggle[3]", "live.toggle", 0 ],
+			"obj-27" : [ "live.toggle[7]", "live.toggle", 0 ],
+			"obj-28" : [ "live.toggle[8]", "live.toggle", 0 ],
 			"obj-1129" : [ "umenu", "umenu", 0 ],
 			"obj-66" : [ "live.toggle[1]", "live.toggle", 0 ],
-			"obj-27" : [ "live.toggle[7]", "live.toggle", 0 ],
-			"obj-28" : [ "live.toggle[8]", "live.toggle", 0 ]
+			"obj-70" : [ "live.toggle[3]", "live.toggle", 0 ]
 		}
 ,
 		"dependency_cache" : [  ],
