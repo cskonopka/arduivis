@@ -9,7 +9,7 @@
 #X obj 135 437 phasor~;
 #X obj 135 467 *~;
 #X obj 255 668 hsl 200 15 0 1 0 0 empty empty empty -2 -6 0 8 -262144
--1 -1 11330 1;
+-1 -1 0 1;
 #X text 253 691 0;
 #X text 453 690 1;
 #X obj 83 487 line~;
@@ -20,7 +20,7 @@
 #X obj 136 576 dac~;
 #X obj 135 417 *;
 #X obj 138 360 hsl 128 15 -2 2 0 0 empty empty empty -2 -6 0 8 -262144
--1 -1 5078 1;
+-1 -1 0 1;
 #X text 117 358 -2;
 #X text 272 359 2;
 #X text -12 249 load sound file;
@@ -39,7 +39,7 @@
 #X msg 146 116 open \$1;
 #X text 213 68 find Arduino board;
 #X obj 138 296 hsl 128 15 0 1023 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 5078 1;
+-1 -1 0 1;
 #X text 213 104 open serial port;
 #X text 213 141 close serial port;
 #X obj 135 190 sel 13 10;
