@@ -79,10 +79,11 @@ Currently there are 6 models that make up arduivis.</p>
 
 
 <p><b>Arduino</b></p>
- <pre><code>/* 
+ <pre><code>
+/* 
 
 ~~~~~~~ arduivis - Pure Data ~~~~~~~
-~~~~~~~~ model#3: feedback ~~~~~~~~~
+~~~~~ model#3: feedback ~~~~~
 
 PD: arduivis_model3_PD_feedback.pd
 
@@ -92,54 +93,58 @@ it from the Arduino and back into PD. This
 feedback data is then sent back to the Arduino
 from Pure Data, controlling the PWM of a LED.
 
-synthesized by Christopher Konopka
+This code is in the public domain
 
-This example code is in the public domain.
+written by Christopher Konopka
+http://cskonopka.github.io/arduivis/
+http://christopherkonopka.com/
 
 */
 
 void setup() 
 {
-  // Create/open serial port
-    Serial.begin(9600);   
+// Create/open serial port
+  Serial.begin(9600);   
 
   // Define LED mode 
   // PWM LED
-    pinMode(3, OUTPUT);
+  pinMode(3, OUTPUT);
 }
 
 void loop() 
 {
   // Slider from Pure Data
-    int pdSlider;
+  int pdSlider;
   
   // Feedback from Pure Data (original output from Arduino)
-    int feedbackFromPD;
+  int feedbackFromPD;
   
   // Parse incoming Pure Data slider values
   // from Pure Data, to Arduino 
-    pdSlider = Serial.parseInt();   
+  pdSlider = Serial.parseInt();   
    
   // Write parsed slider values to serial buffer
   // [comport] object
   // to Pure Data, from Arduino
-    Serial.write(pdSlider);   
+  Serial.print(pdSlider); 
+        Serial.print(" ");  
   
   // Parse incoming Pure Data (feedback) values
   // from Pure Data (feedback), to Arduino 
-    feedbackFromPD = Serial.parseInt();
+  feedbackFromPD = Serial.parseInt();
   
   // Write parsed values to LEDs
   // Fading LED
   // from Pure Data (feedback), to Arduino
-    analogWrite(3, feedbackFromPD); 
+  analogWrite(3, feedbackFromPD); 
   
   // Write feedback values to serial buffer
   // [comport] object
   // to Pure Data, from Arduino
   // This is useful for debugging
-    Serial.write(feedbackFromPD);
+  Serial.println(feedbackFromPD);
 }
+
 </code></pre>
 
 <p><b>PD-Extended</b></p>

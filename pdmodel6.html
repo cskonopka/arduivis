@@ -79,7 +79,8 @@ Currently there are 6 models that make up arduivis.</p>
 
 
 <p><b>Arduino</b></p>
- <pre><code>/* 
+ <pre><code>
+/* 
 
 ~~~~~~~ arduivis - Pure Data ~~~~~~~
 ~~~~~ model#6: multiple feedbacks ~~~~~
@@ -94,9 +95,11 @@ from Pure Data, controlling the PWM of a LED.
 This is done with several streams of data in 
 this example.
 
-synthesized by Christopher Konopka
+This code is in the public domain
 
-This example code is in the public domain.
+written by Christopher Konopka
+http://cskonopka.github.io/arduivis/
+http://christopherkonopka.com/
 
 */
 
@@ -128,13 +131,6 @@ void loop()
     pdSlider3 = Serial.parseInt();
     pdSlider4 = Serial.parseInt(); 
 
-  // Write parsed slider values to serial buffer
-  // [comport] object
-  // to Pure Data, from Arduino
-    Serial.write(pdSlider1);
-    Serial.write(pdSlider2);
-    Serial.write(pdSlider3);
-    Serial.write(pdSlider4);
 
   // Parse incoming Pure Data (feedback) values
   // from Pure Data (feedback), to Arduino 
@@ -151,18 +147,32 @@ void loop()
     analogWrite(6, feedbackFromPD3);    
     analogWrite(9, feedbackFromPD4);
   
+    // Write parsed slider values to serial buffer
+  // [comport] object
+  // to Pure Data, from Arduino
+    Serial.print(pdSlider1);
+    Serial.print(" ");
+    Serial.print(pdSlider2);
+    Serial.print(" ");
+    Serial.print(pdSlider3);
+    Serial.print(" ");
+    Serial.print(pdSlider4);
+    Serial.print(" ");
+
   // Write feedback values to serial buffer
   // [comport] object
   // to Pure Data, from Arduino
   // This is useful for debugging
-    Serial.write(feedbackFromPD1); 
-    Serial.write(feedbackFromPD2);   
-    Serial.write(feedbackFromPD3); 
-    Serial.write(feedbackFromPD4); 
-  
-  delay(2);
+    Serial.print(feedbackFromPD1);
+    Serial.print(" "); 
+    Serial.print(feedbackFromPD2);
+    Serial.print(" ");   
+    Serial.print(feedbackFromPD3);
+    Serial.print(" "); 
+    Serial.println(feedbackFromPD4); 
+    
+    delay(2);
 }
-
 
 </code></pre>
 

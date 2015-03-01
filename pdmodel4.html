@@ -78,21 +78,25 @@ Currently there are 6 models that make up arduivis.</p>
 <p>This is an example of how to use a loop to write several streams of data to Pure Data, from an Arduino. A fading LED is used to provide visual feedback for this process.</p>
 
 <p><b>Arduino</b></p>
- <pre><code>/* 
+ <pre><code>
+  
+/* 
 
 ~~~~~~~ arduivis - Pure Data ~~~~~~~~
 ~~~~~ model#4: multiple outputs ~~~~~
 
-PD: arduivis_model4_PD_multipleOutputs.pd
+pd patch: arduivis_model4_PD_multipleOutputs.pd
 
 This is an example of how to use a loop to write
 several streams of data to Pure Data, from an Arduino.
 A fading LED is used to provide visual feedback for
 this process.
 
-synthesized by Christopher Konopka
+This code is in the public domain
 
-This example code is in the public domain.
+written by Christopher Konopka
+http://cskonopka.github.io/arduivis/
+http://christopherkonopka.com/
 
 */
 
@@ -169,6 +173,7 @@ int loopSystem(int startIncrement, int incrementLoopRange, int startDecrement, i
     delay(10);
   }
 }
+
 </code></pre>
 
 <p><b>PD-Extended</b></p>
