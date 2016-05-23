@@ -17,9 +17,10 @@ var vatoi;
 var vsel;
 var vx=200;
 var vy=140;
-
+var count=0;
 
 var sliders = new Array();
+	var multisliders = new Array();
 
 var vrouteport; 		
 var vtclear; 		
@@ -43,6 +44,7 @@ var vunpack;
 var vpipe;
 var vloadbang;
 var vmettogM;
+var vmultiSL;
 var verticalSpacing=30;
 
 var _arduivis = this.patcher;
@@ -56,20 +58,26 @@ function arduivis(ins, outs){
 	var inputs = new Array();
 	var outputs = new Array();
 
+
+	count = count +1;
+	post(count);
+
+	if(count > 1){
+		clear();
+	}
+
 	for(ii=0;ii<ins;ii++){
 		inputs[ii] = 0;
 	}
 	
 	for(oo=0;oo<outs;oo++){
 		outputs[oo] = 0;
+		multisliders[oo] = 0;
 	}
 	
 	vinputs = ins;
 	voutputs = outs;
 
-	if(vserialport != 0){
-		post('232');
-	}
 	if(vinputs == 0 && voutputs == 0){
 
 	}
@@ -89,7 +97,12 @@ function arduivis(ins, outs){
 		vzl 			= _arduivis.newdefault(200, verticalSpacing*12, 'zl', 'group', '1000');
 		vitoa 			= _arduivis.newdefault(200, verticalSpacing*13,  'itoa');
 		vsym 			= _arduivis.newdefault(200, verticalSpacing*14, 'fromsymbol');
-		vunpack 		= _arduivis.newdefault(200, verticalSpacing*15, 'unpack', outputs);			
+		vunpack 		= _arduivis.newdefault(200, verticalSpacing*15, 'unpack', outputs);
+
+		for(d=0;d<outs;d++){
+			multisliders[d] 			= _arduivis.newdefault(200+(d*50), verticalSpacing*16,'multislider');
+		}	
+
 	}
 	else if (voutputs == 0){
 	
@@ -134,8 +147,8 @@ function arduivis(ins, outs){
 
 		for(s=0;s<ins;s++){
 			sliders[s] = _arduivis.newobject("slider",  415+(s*50), verticalSpacing*1, 40, 100);
-		}	
-
+		}
+	
 		//outputs
 		vsel 			= _arduivis.newdefault(200, verticalSpacing*9, 'sel', '13', '10');
 		vzl 			= _arduivis.newdefault(200, verticalSpacing*10, 'zl', 'group', '1000');
@@ -169,13 +182,14 @@ function connectCables(){
 	_arduivis.connect(vatoi, 0, vapp10, 0);	
  	_arduivis.connect(vapp10, 0, vserialport, 0);
  	_arduivis.connect(vpak, 0, vatoi, 2);
+	_arduivis.connect(vsym, 0, vunpack, 0);	
 
 	for(sc=0;sc<vinputs;sc++){
 		_arduivis.connect(sliders[sc], 0, vpak, sc);	
 	}
 
-	for(oo=0;oo<voutputs;oo++){
-		_arduivis.connect(vsym, 0, vunpack, 0);	
+	for(ko=0;ko<voutputs;ko++){
+		_arduivis.connect(vunpack, ko, multisliders[ko], 0);		
 	}
 }
 
@@ -226,11 +240,20 @@ function clear(){
 	_arduivis.remove(vpak);
 	_arduivis.remove(sliders);
 	_arduivis.remove(vmettogM);
+	// _arduivis.remove(vmultiSL);
+
+
+	for(ko=0;ko<voutputs;ko++){
+		_arduivis.remove(multisliders[ko]);		
+	}
 
 	for(j=0;j<vinputs;j++){
 		_arduivis.remove(sliders[j]);	
 	}	
 
+
+
+	
 	vinputs = 0;
 	vouputs = 0;
 }
