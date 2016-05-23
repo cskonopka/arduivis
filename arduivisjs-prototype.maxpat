@@ -38,12 +38,188 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"fontsize" : 50.0,
+					"id" : "obj-597",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 452.0, 529.0, 50.0, 62.0 ],
+					"style" : "",
+					"text" : "*"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontsize" : 16.0,
+					"id" : "obj-596",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 102.0, 707.0, 26.0, 24.0 ],
+					"style" : "",
+					"text" : "3)"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontsize" : 16.0,
+					"id" : "obj-595",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 102.0, 559.0, 26.0, 24.0 ],
+					"style" : "",
+					"text" : "2)"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontsize" : 16.0,
+					"id" : "obj-594",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 205.5, 524.0, 26.0, 24.0 ],
+					"style" : "",
+					"text" : "1)"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontsize" : 16.0,
+					"id" : "obj-593",
+					"linecount" : 6,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 587.0, 510.0, 397.0, 114.0 ],
+					"style" : "",
+					"text" : "1) select the amount of inputs/outputs\n2) create patch \n3) export code\n\n* to create a new layout you need to \"clear\" the patch using the specified button"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontsize" : 24.0,
+					"id" : "obj-117",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 238.5, 707.0, 285.5, 33.0 ],
+					"style" : "",
+					"text" : "arduivis.js (auto patching)"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-1124",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 74.0, 736.0, 154.0, 20.0 ],
+					"style" : "",
+					"text" : "create arduino code"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-1123",
+					"maxclass" : "button",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 57.0, 668.0, 36.0, 36.0 ],
+					"style" : ""
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-1122",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 57.0, 707.0, 36.0, 22.0 ],
+					"style" : "",
+					"text" : "write"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-920",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 95.0, 676.0, 154.0, 20.0 ],
+					"style" : "",
+					"text" : "export arduino code"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-919",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 30.0, 513.0, 82.0, 20.0 ],
+					"style" : "",
+					"text" : "create patch"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-918",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 452.0, 559.0, 103.0, 20.0 ],
+					"style" : "",
+					"text" : "clear patch/code"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-917",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 313.0, 513.0, 71.0, 20.0 ],
+					"style" : "",
+					"text" : "# of outputs"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-916",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 233.5, 513.0, 71.0, 20.0 ],
+					"style" : "",
+					"text" : "# of inputs"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-872",
 					"maxclass" : "button",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 560.0, 287.0, 70.0, 70.0 ],
+					"patching_rect" : [ 30.0, 535.0, 70.0, 70.0 ],
 					"style" : ""
 				}
 
@@ -55,9 +231,9 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 560.0, 359.0, 233.0, 22.0 ],
+					"patching_rect" : [ 30.0, 607.0, 233.0, 22.0 ],
 					"style" : "",
-					"text" : "arduivis 3 0"
+					"text" : "arduivis 5 4"
 				}
 
 			}
@@ -69,7 +245,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 853.5, 287.0, 50.0, 22.0 ],
+					"patching_rect" : [ 323.5, 535.0, 50.0, 22.0 ],
 					"style" : ""
 				}
 
@@ -82,7 +258,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 774.0, 287.0, 50.0, 22.0 ],
+					"patching_rect" : [ 244.0, 535.0, 50.0, 22.0 ],
 					"style" : ""
 				}
 
@@ -94,7 +270,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 774.0, 311.0, 99.0, 22.0 ],
+					"patching_rect" : [ 244.0, 559.0, 99.0, 22.0 ],
 					"style" : "",
 					"text" : "pak 0 0"
 				}
@@ -107,7 +283,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 774.0, 335.0, 99.0, 22.0 ],
+					"patching_rect" : [ 244.0, 583.0, 99.0, 22.0 ],
 					"style" : "",
 					"text" : "prepend arduivis"
 				}
@@ -120,7 +296,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 878.5, 311.0, 46.0, 46.0 ],
+					"patching_rect" : [ 377.5, 535.0, 70.0, 70.0 ],
 					"style" : ""
 				}
 
@@ -132,7 +308,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "bang", "int" ],
-					"patching_rect" : [ 560.0, 420.0, 40.0, 22.0 ],
+					"patching_rect" : [ 30.0, 736.0, 40.0, 22.0 ],
 					"style" : "",
 					"text" : "text"
 				}
@@ -145,7 +321,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 878.5, 359.0, 37.0, 22.0 ],
+					"patching_rect" : [ 377.5, 607.0, 37.0, 22.0 ],
 					"style" : "",
 					"text" : "clear"
 				}
@@ -161,7 +337,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 560.0, 390.0, 112.0, 22.0 ],
+					"patching_rect" : [ 30.0, 638.0, 112.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "arduivis-backup.js",
 						"parameter_enable" : 0
@@ -172,13 +348,67 @@
 				}
 
 			}
+, 			{
+				"box" : 				{
+					"angle" : 270.0,
+					"border" : 2,
+					"bordercolor" : [ 0.0, 0.0, 0.0, 1.0 ],
+					"grad1" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"grad2" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"id" : "obj-116",
+					"maxclass" : "panel",
+					"mode" : 1,
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 7.0, 493.0, 566.0, 287.0 ],
+					"proportion" : 0.39,
+					"style" : ""
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"angle" : 270.0,
+					"border" : 2,
+					"bordercolor" : [ 0.0, 0.0, 0.0, 1.0 ],
+					"grad1" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"grad2" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"id" : "obj-598",
+					"maxclass" : "panel",
+					"mode" : 1,
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 577.0, 493.0, 417.0, 148.0 ],
+					"proportion" : 0.39,
+					"style" : ""
+				}
+
+			}
  ],
 		"lines" : [ 			{
+				"patchline" : 				{
+					"destination" : [ "obj-64", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-1122", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-1122", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-1123", 0 ]
+				}
+
+			}
+, 			{
 				"patchline" : 				{
 					"destination" : [ "obj-35", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 888.0, 385.5, 569.5, 385.5 ],
+					"midpoints" : [ 387.0, 633.5, 39.5, 633.5 ],
 					"source" : [ "obj-31", 0 ]
 				}
 
@@ -188,7 +418,7 @@
 					"destination" : [ "obj-64", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 888.0, 415.0, 569.5, 415.0 ],
+					"midpoints" : [ 387.0, 663.0, 39.5, 663.0 ],
 					"source" : [ "obj-31", 0 ]
 				}
 

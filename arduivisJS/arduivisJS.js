@@ -18,8 +18,7 @@ var vsel;
 var vx=200;
 var vy=140;
 
-var inputs = new Array();
-var outputs = new Array();
+
 var sliders = new Array();
 
 var vrouteport; 		
@@ -54,6 +53,9 @@ function arduivis(ins, outs){
 	post(ins+" inputs \n");
 	post(outs+" outputs \n");
 
+	var inputs = new Array();
+	var outputs = new Array();
+
 	for(ii=0;ii<ins;ii++){
 		inputs[ii] = 0;
 	}
@@ -61,16 +63,18 @@ function arduivis(ins, outs){
 	for(oo=0;oo<outs;oo++){
 		outputs[oo] = 0;
 	}
-
-
 	
 	vinputs = ins;
 	voutputs = outs;
+
+	if(vserialport != 0){
+		post('232');
+	}
 	if(vinputs == 0 && voutputs == 0){
 
 	}
 
-	 else if(vinputs == 0){
+	else if(vinputs == 0){
 		vmettogM 		= _arduivis.newdefault(85, verticalSpacing*7, "toggle", "1");
 		vmessage		= _arduivis.newobject('message', 85, verticalSpacing*8, 30, 10, 'print');	
 		vrouteport 		= _arduivis.newdefault(85, verticalSpacing*4, 'route', 'port');
@@ -128,18 +132,16 @@ function arduivis(ins, outs){
 		vapp10 			= _arduivis.newdefault(305, verticalSpacing*7, 'append', '10');
 		vpak 			= _arduivis.newdefault(415, verticalSpacing*5,'pak', inputs);
 
+		for(s=0;s<ins;s++){
+			sliders[s] = _arduivis.newobject("slider",  415+(s*50), verticalSpacing*1, 40, 100);
+		}	
+
 		//outputs
 		vsel 			= _arduivis.newdefault(200, verticalSpacing*9, 'sel', '13', '10');
 		vzl 			= _arduivis.newdefault(200, verticalSpacing*10, 'zl', 'group', '1000');
 		vitoa 			= _arduivis.newdefault(200, verticalSpacing*11,  'itoa');
 		vsym 			= _arduivis.newdefault(200, verticalSpacing*12, 'fromsymbol');
-		vunpack 		= _arduivis.newdefault(200, verticalSpacing*13, 'unpack', outputs);	
-
-		for(s=0;s<ins;s++){
-			sliders[s] = _arduivis.newobject("slider",  415+(s*50), verticalSpacing*1, 40, 100);
-		}		
-
-		
+		vunpack 		= _arduivis.newdefault(200, verticalSpacing*13, 'unpack', outputs);			
 	}
 
 	connectCables(); 
@@ -228,14 +230,9 @@ function clear(){
 	for(j=0;j<vinputs;j++){
 		_arduivis.remove(sliders[j]);	
 	}	
-	// if(vinputs === 0){
-	// 	post('hhinin');
-	// 	// _arduivis.remove(vmettog);
-	// 	// _arduivis.remove(vmetro); 
-	// 	// _arduivis.remove(vatoi);
-	// 	// _arduivis.remove(vapp10);
-	// 	_arduivis.remove(vpak);		
-	// }	
+
+	vinputs = 0;
+	vouputs = 0;
 }
 
 function location(x,y)
