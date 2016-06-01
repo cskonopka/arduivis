@@ -46,6 +46,12 @@ var vloadbang;
 var vmettogM;
 var vmultiSL;
 var vupdatemes;
+var vcmtupdate;
+var vcmtmenu;
+var vcmttog;
+var vcmtoutput;
+var vcmtinput;
+
 var verticalSpacing=30;
 
 var _arduivis = this.patcher;
@@ -84,22 +90,29 @@ function arduivis(ins, outs){
 	}
 
 	else if(vinputs == 0){
+
+		vcmtupdate		= _arduivis.newobject('comment', 3, verticalSpacing*4, 200, 12, 'update ports >');
 		vrouteport 		= _arduivis.newdefault(95, 	verticalSpacing*2, 'route', 'port');
-		vmettog 		= _arduivis.newdefault(305, verticalSpacing*2, "toggle");
 		vtclear 		= _arduivis.newdefault(95, 	verticalSpacing*3, 't', 'clear');	
 		viter 			= _arduivis.newdefault(200, verticalSpacing*3, 'iter');
-		vmetro 			= _arduivis.newdefault(305, verticalSpacing*3, "metro", "50");
+
 		vpipe 			= _arduivis.newdefault(200, verticalSpacing*4, 'pipe', '47');
-		vupdatemes		= _arduivis.newobject('message', 95, verticalSpacing*4, 100, 30, 'update');		
+		vupdatemes		= _arduivis.newobject('message', 95, verticalSpacing*4, 100, 10, 'update');		
+		vmessage		= _arduivis.newobject('message', 95, verticalSpacing*5, 100, 10, 'print');
 		vprependappend 	= _arduivis.newdefault(200, verticalSpacing*5, 'prepend', 'append');
+		vcmtmenu		= _arduivis.newobject('comment', 100, verticalSpacing*6, 100, 12, 'select board >');
 		vumenu 			= _arduivis.newdefault(200, verticalSpacing*6, 'umenu');			
-		vmessage		= _arduivis.newobject('message', 95, verticalSpacing*6, 100, 10, 'print');
+
+		vmettog 		= _arduivis.newdefault(305, verticalSpacing*6, "toggle");
+		vcmttog			= _arduivis.newobject('comment', 335, verticalSpacing*6, 100, 12, '< start polling');		
+		vmetro 			= _arduivis.newdefault(305, verticalSpacing*7, "metro", "50");		
 		vprependport 	= _arduivis.newdefault(200, verticalSpacing*7, 'prepend', 'port');
 		vserialport 	= _arduivis.newdefault(200, verticalSpacing*8, 'serial', 'arduivisPort', '9600');
 		vsel 			= _arduivis.newdefault(200, verticalSpacing*9, 'sel', '13', '10');
 		vzl 			= _arduivis.newdefault(200, verticalSpacing*10, 'zl', 'group', '1000');
 		vitoa 			= _arduivis.newdefault(200, verticalSpacing*11,  'itoa');
 		vsym 			= _arduivis.newdefault(200, verticalSpacing*12, 'fromsymbol');
+		vcmtoutput		= _arduivis.newobject('comment', 310, verticalSpacing*13, 175, 12, '< output from arduino/to max');		
 		vunpack 		= _arduivis.newdefault(200, verticalSpacing*13, 'unpack', outputs);
 
 		for(d=0;d<outs;d++){
@@ -110,12 +123,19 @@ function arduivis(ins, outs){
 	}
 	else if (voutputs == 0){
 	
+		vcmtupdate		= _arduivis.newobject('comment', 3, verticalSpacing*4, 200, 12, 'update ports >');
+		vcmtmenu		= _arduivis.newobject('comment', 100, verticalSpacing*6, 100, 12, 'select board >');
+		vcmttog			= _arduivis.newobject('comment', 335, verticalSpacing*4, 85, 12, '< start polling');
+		vcmtinput		= _arduivis.newobject('comment', 240, verticalSpacing*2, 175, 12, 'input to arduino/from max >');
+
+
 		vrouteport 		= _arduivis.newdefault(95, verticalSpacing*2, 'route', 'port');
 		vtclear 		= _arduivis.newdefault(95, verticalSpacing*3, 't', 'clear');	
 		viter 			= _arduivis.newdefault(200, verticalSpacing*3, 'iter');
 		vpipe 			= _arduivis.newdefault(200, verticalSpacing*4, 'pipe', '47');	
 		vmettog 		= _arduivis.newdefault(305, verticalSpacing*4, "toggle");		
-		vupdatemes		= _arduivis.newobject('message', 95, verticalSpacing*4, 100, 30, 'update');
+		vupdatemes		= _arduivis.newobject('message', 95, verticalSpacing*4, 100, 10, 'update');
+		vmessage		= _arduivis.newobject('message', 95, verticalSpacing*5, 100, 10, 'print');		
 		vprependappend 	= _arduivis.newdefault(200, verticalSpacing*5, 'prepend', 'append');
 		vmetro 			= _arduivis.newdefault(305, verticalSpacing*5, "metro", "50");		
 		vpak 			= _arduivis.newdefault(410, verticalSpacing*5,'pak', inputs);		
@@ -123,7 +143,7 @@ function arduivis(ins, outs){
 		vatoi 			= _arduivis.newdefault(305, verticalSpacing*6, 'atoi');	
 		vprependport 	= _arduivis.newdefault(200, verticalSpacing*7, 'prepend', 'port');
 		vapp10 			= _arduivis.newdefault(305, verticalSpacing*7, 'append', '10');		
-		vmessage		= _arduivis.newobject('message', 95, verticalSpacing*7, 100, 10, 'print');	
+	
 		vserialport 	= _arduivis.newdefault(200, verticalSpacing*8, 'serial', 'arduivisPort', '9600');	
 	
 		for(s=0;s<ins;s++){
@@ -134,24 +154,32 @@ function arduivis(ins, outs){
 	}
 
 	else if (vinputs > 0 && voutputs > 0){
+
+		vcmtupdate		= _arduivis.newobject('comment', 3, verticalSpacing*4, 200, 12, 'update ports >');
+		vcmtmenu		= _arduivis.newobject('comment', 100, verticalSpacing*6, 100, 12, 'select board >');
+		vcmttog			= _arduivis.newobject('comment', 335, verticalSpacing*4, 85, 12, '< start polling');
+		vcmtinput		= _arduivis.newobject('comment', 240, verticalSpacing*2, 175, 12, 'input to arduino/from max >');
+		vcmtoutput		= _arduivis.newobject('comment', 310, verticalSpacing*13, 175, 12, '< output from arduino/to max');		
+
 		// inputs
 		vrouteport 		= _arduivis.newdefault(95, 	verticalSpacing*2, 'route', 'port');
 		vtclear 		= _arduivis.newdefault(95, 	verticalSpacing*3, 't', 'clear');	
 		viter 			= _arduivis.newdefault(200, verticalSpacing*3, 'iter');
-		vmettog 		= _arduivis.newdefault(305, verticalSpacing*3, "toggle");
+		vmettog 		= _arduivis.newdefault(305, verticalSpacing*4, "toggle");
 
 		vpipe 			= _arduivis.newdefault(200, verticalSpacing*4, 'pipe', '47');	
-		vpak 			= _arduivis.newdefault(410, verticalSpacing*4,'pak', inputs);
-		vmetro 			= _arduivis.newdefault(305, verticalSpacing*4, "metro", "50");		
-		vupdatemes		= _arduivis.newobject('message', 95, verticalSpacing*4, 100, 30, 'update');
+		vpak 			= _arduivis.newdefault(410, verticalSpacing*5,'pak', inputs);
+		vmetro 			= _arduivis.newdefault(305, verticalSpacing*5, "metro", "50");		
+		vupdatemes		= _arduivis.newobject('message', 95, verticalSpacing*4, 100, 10, 'update');
+		vmessage		= _arduivis.newobject('message', 95, verticalSpacing*5, 100, 10, 'print');
 		vprependappend 	= _arduivis.newdefault(200, verticalSpacing*5, 'prepend', 'append');
-		vatoi 			= _arduivis.newdefault(305, verticalSpacing*5, 'atoi');		
+		vatoi 			= _arduivis.newdefault(305, verticalSpacing*6, 'atoi');		
 		vumenu 			= _arduivis.newdefault(200, verticalSpacing*6, 'umenu');
 
-		vapp10 			= _arduivis.newdefault(305, verticalSpacing*6, 'append', '10');
+		vapp10 			= _arduivis.newdefault(305, verticalSpacing*7, 'append', '10');
 
 		vprependport 	= _arduivis.newdefault(200, verticalSpacing*7, 'prepend', 'port');
-		vmessage		= _arduivis.newobject('message', 95, verticalSpacing*7, 100, 10, 'print');
+		// vmessage		= _arduivis.newobject('message', 95, verticalSpacing*7, 100, 10, 'print');
 
 	
 		vserialport 	= _arduivis.newdefault(200, verticalSpacing*8, 'serial', 'arduivisPort', '9600');	
@@ -268,16 +296,16 @@ function createScript(scriptIn, scriptOut){
 
 	for(ii=0;ii<scriptIn;ii++){
 		if(scriptIn !== 0){
-			outlet(0, "int arduivisSlider"+ii+ " = Serial.parseInt();"+'\n');
+			outlet(0, "int ardvMaxSlider"+ii+ " = Serial.parseInt();"+'\n');
 		}
 	}
 	
 	for(oo=0;oo<scriptOut;oo++){
 		if(scriptOut !== 0 && oo < scriptOut-1){		
-			outlet(0, "Serial.println(arduivisSlider"+oo+"); Serial.println("+spacer+");"+'\n' );
+			outlet(0, "Serial.print(ardvPrint2Max"+oo+"); Serial.print("+spacer+");"+'\n' );
 		} 
 		else if(oo+1 == scriptOut){
-			outlet(0, "Serial.print(arduivisSlider"+oo+");"+'\n');
+			outlet(0, "Serial.println(ardvPrint2Max"+oo+");"+'\n');
 		}
 	}
 	outlet(0,"};");
@@ -307,6 +335,12 @@ function clear(){
 	_arduivis.remove(vpak);
 	_arduivis.remove(sliders);
 	_arduivis.remove(vupdatemes);
+
+	_arduivis.remove(vcmtoutput);
+	_arduivis.remove(vcmtinput);
+	_arduivis.remove(vcmttog);
+	_arduivis.remove(vcmtmenu);
+	_arduivis.remove(vcmtupdate);
 	// _arduivis.remove(vmultiSL);
 
 
