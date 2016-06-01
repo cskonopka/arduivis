@@ -95,7 +95,6 @@ function arduivis(ins, outs){
 		vrouteport 		= _arduivis.newdefault(95, 	verticalSpacing*2, 'route', 'port');
 		vtclear 		= _arduivis.newdefault(95, 	verticalSpacing*3, 't', 'clear');	
 		viter 			= _arduivis.newdefault(200, verticalSpacing*3, 'iter');
-
 		vpipe 			= _arduivis.newdefault(200, verticalSpacing*4, 'pipe', '47');
 		vupdatemes		= _arduivis.newobject('message', 95, verticalSpacing*4, 100, 10, 'update');		
 		vmessage		= _arduivis.newobject('message', 95, verticalSpacing*5, 100, 10, 'print');
