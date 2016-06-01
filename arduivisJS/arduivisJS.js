@@ -83,48 +83,53 @@ function arduivis(ins, outs){
 	}
 
 	else if(vinputs == 0){
-		vmettogM 		= _arduivis.newdefault(85, verticalSpacing*7, "toggle", "1");
-		vmessage		= _arduivis.newobject('message', 85, verticalSpacing*8, 30, 10, 'print');	
-		vrouteport 		= _arduivis.newdefault(85, verticalSpacing*4, 'route', 'port');
-		vtclear 		= _arduivis.newdefault(85, verticalSpacing*5, 't', 'clear');	
-		viter 			= _arduivis.newdefault(200, verticalSpacing*5, 'iter');
-		vpipe 			= _arduivis.newdefault(200, verticalSpacing*6, 'pipe', '200');
-		vprependappend 	= _arduivis.newdefault(200, verticalSpacing*7, 'prepend', 'append');
-		vumenu 			= _arduivis.newdefault(200, verticalSpacing*8, 'umenu');
-		vprependport 	= _arduivis.newdefault(200, verticalSpacing*9, 'prepend', 'port');
-		vserialport 	= _arduivis.newdefault(200, verticalSpacing*10, 'serial', 'arduivisPort', '9600');
-		vsel 			= _arduivis.newdefault(200, verticalSpacing*11, 'sel', '13', '10');
-		vzl 			= _arduivis.newdefault(200, verticalSpacing*12, 'zl', 'group', '1000');
-		vitoa 			= _arduivis.newdefault(200, verticalSpacing*13,  'itoa');
-		vsym 			= _arduivis.newdefault(200, verticalSpacing*14, 'fromsymbol');
-		vunpack 		= _arduivis.newdefault(200, verticalSpacing*15, 'unpack', outputs);
+		vrouteport 		= _arduivis.newdefault(85, 	verticalSpacing*2, 'route', 'port');
+		vtclear 		= _arduivis.newdefault(85, 	verticalSpacing*3, 't', 'clear');	
+		viter 			= _arduivis.newdefault(200, verticalSpacing*3, 'iter');
+		vpipe 			= _arduivis.newdefault(200, verticalSpacing*5, 'pipe', '200');
+		vmettog 		= _arduivis.newdefault(305, verticalSpacing*5, "toggle");
+		vprependappend 	= _arduivis.newdefault(200, verticalSpacing*6, 'prepend', 'append');
+		vmetro 			= _arduivis.newdefault(305, verticalSpacing*6, "metro", "50");
+		vumenu 			= _arduivis.newdefault(200, verticalSpacing*7, 'umenu');
+		vmettogM 		= _arduivis.newdefault(85, 	verticalSpacing*7, "toggle", "1");		
+		vmessage		= _arduivis.newobject('message', 85, verticalSpacing*7, 30, 10, 'print');	
+		vprependport 	= _arduivis.newdefault(200, verticalSpacing*8, 'prepend', 'port');
+		vserialport 	= _arduivis.newdefault(200, verticalSpacing*9, 'serial', 'arduivisPort', '9600');
+		vsel 			= _arduivis.newdefault(200, verticalSpacing*10, 'sel', '13', '10');
+		vzl 			= _arduivis.newdefault(200, verticalSpacing*11, 'zl', 'group', '1000');
+		vitoa 			= _arduivis.newdefault(200, verticalSpacing*12,  'itoa');
+		vsym 			= _arduivis.newdefault(200, verticalSpacing*13, 'fromsymbol');
+		vunpack 	7= _arduivis.newdefault(200, verticalSpacing*14, 'unpack', outputs);
 
 		for(d=0;d<outs;d++){
 			multisliders[d] 			= _arduivis.newdefault(200+(d*50), verticalSpacing*16,'multislider');
 		}	
 
+		connectObjects(1);
 	}
 	else if (voutputs == 0){
 	
 		vmettogM 		= _arduivis.newdefault(85, verticalSpacing*7, "toggle", "set", '1');	
 		vmessage		= _arduivis.newobject('message', 85, verticalSpacing*8, 30, 10, 'print');	
-		vrouteport 		= _arduivis.newdefault(85, verticalSpacing*3, 'route', 'port');
-		vtclear 		= _arduivis.newdefault(85, verticalSpacing*4, 't', 'clear');	
-		viter 			= _arduivis.newdefault(200, verticalSpacing*4, 'iter');
-		vpipe 			= _arduivis.newdefault(200, verticalSpacing*5, 'pipe', '200');	
+		vrouteport 		= _arduivis.newdefault(85, 	verticalSpacing*2, 'route', 'port');
+		vtclear 		= _arduivis.newdefault(85, 	verticalSpacing*3, 't', 'clear');	
+		viter 			= _arduivis.newdefault(200, verticalSpacing*3, 'iter');
+		vpipe 			= _arduivis.newdefault(200, verticalSpacing*4, 'pipe', '47');	
+		vmettog 		= _arduivis.newdefault(305, verticalSpacing*4, "toggle");		
 		vprependappend 	= _arduivis.newdefault(200, verticalSpacing*5, 'prepend', 'append');
+		vmetro 			= _arduivis.newdefault(305, verticalSpacing*5, "metro", "50");		
+		vpak 			= _arduivis.newdefault(415, verticalSpacing*5,'pak', inputs);		
 		vumenu 			= _arduivis.newdefault(200, verticalSpacing*6, 'umenu');
-		vprependport 	= _arduivis.newdefault(200, verticalSpacing*7, 'prepend', 'port');
-		vserialport 	= _arduivis.newdefault(200, verticalSpacing*8, 'serial', 'arduivisPort', '9600');	
-		vmettog 		= _arduivis.newdefault(305, verticalSpacing*4, "toggle");
-		vmetro 			= _arduivis.newdefault(305, verticalSpacing*5, "metro", "50");
 		vatoi 			= _arduivis.newdefault(305, verticalSpacing*6, 'atoi');	
-		vapp10 			= _arduivis.newdefault(305, verticalSpacing*7, 'append', '10');
-		vpak 			= _arduivis.newdefault(415, verticalSpacing*5,'pak', inputs);
+		vprependport 	= _arduivis.newdefault(200, verticalSpacing*7, 'prepend', 'port');
+		vapp10 			= _arduivis.newdefault(305, verticalSpacing*7, 'append', '10');		
+		vserialport 	= _arduivis.newdefault(200, verticalSpacing*8, 'serial', 'arduivisPort', '9600');	
 
 		for(s=0;s<ins;s++){
 			sliders[s] = _arduivis.newobject("slider",  415+(s*50), verticalSpacing*1, 40, 100);
 		}		
+
+		connectObjects(2);		
 	}
 
 	else if (vinputs > 0 && voutputs > 0){
@@ -155,13 +160,135 @@ function arduivis(ins, outs){
 		vitoa 			= _arduivis.newdefault(200, verticalSpacing*11,  'itoa');
 		vsym 			= _arduivis.newdefault(200, verticalSpacing*12, 'fromsymbol');
 		vunpack 		= _arduivis.newdefault(200, verticalSpacing*13, 'unpack', outputs);			
+
+		for(d=0;d<outs;d++){
+			multisliders[d] 			= _arduivis.newdefault(200+(d*50), verticalSpacing*16,'multislider');
+		}	
+
+		connectObjects(3);	
 	}
 
-	connectCables(); 
+	// connectCables(); 
 	createScript(ins, outs);	
 }
 
+
+function connectObjects(type){
+	if(type == 1){
+		_arduivis.connect(vserialport, 1, vrouteport, 0);
+		_arduivis.connect(vrouteport, 0, viter, 0);
+		_arduivis.connect(vrouteport, 0, vtclear, 0);
+		_arduivis.connect(vtclear, 0, vumenu, 0);
+		_arduivis.connect(vmettogM, 0, vmessage,0);
+		_arduivis.connect(vmessage, 0, vserialport, 0);
+		_arduivis.connect(viter, 0, vpipe, 0);
+		_arduivis.connect(vpipe, 0, vprependappend, 0);
+		_arduivis.connect(vprependappend, 0, vumenu, 0);
+		_arduivis.connect(vumenu, 1, vprependport, 0);
+		_arduivis.connect(vprependport, 0, vserialport, 0);
+		_arduivis.connect(vserialport, 0, vsel, 0);
+		_arduivis.connect(vsel, 0, vzl, 0);
+		_arduivis.connect(vsel, 2, vzl, 0);
+		_arduivis.connect(vzl, 0, vitoa, 0);
+		_arduivis.connect(vitoa, 0, vsym, 0);
+		_arduivis.connect(vmettog, 0, vmetro, 0);
+		_arduivis.connect(vmetro, 0, vserialport, 0);	
+ 		_arduivis.connect(vpak, 0, vatoi, 2);
+		_arduivis.connect(vsym, 0, vunpack, 0);	
+	
+		for(ko=0;ko<voutputs;ko++){
+			_arduivis.connect(vunpack, ko, multisliders[ko], 0);		
+		}
+	}
+	if(type == 2){
+		_arduivis.connect(vserialport, 1, vrouteport, 0);
+		_arduivis.connect(vrouteport, 0, viter, 0);
+		_arduivis.connect(vrouteport, 0, vtclear, 0);
+		_arduivis.connect(vtclear, 0, vumenu, 0);
+		_arduivis.connect(vmettogM, 0, vmessage,0);
+		_arduivis.connect(vmessage, 0, vserialport, 0);
+		_arduivis.connect(viter, 0, vpipe, 0);
+		_arduivis.connect(vpipe, 0, vprependappend, 0);
+		_arduivis.connect(vprependappend, 0, vumenu, 0);
+		_arduivis.connect(vumenu, 1, vprependport, 0);
+		_arduivis.connect(vprependport, 0, vserialport, 0);
+		_arduivis.connect(vserialport, 0, vsel, 0);
+		_arduivis.connect(vmettog, 0, vmetro, 0);
+		_arduivis.connect(vmetro, 0, vatoi, 0);
+		_arduivis.connect(vatoi, 0, vapp10, 0);	
+		_arduivis.connect(vapp10, 0, vserialport, 0);
+		_arduivis.connect(vpak, 0, vatoi, 2);
+
+		for(sc=0;sc<vinputs;sc++){
+			_arduivis.connect(sliders[sc], 0, vpak, sc);	
+		}
+	}	
+	if(type == 3){
+
+		_arduivis.connect(vserialport, 1, vrouteport, 0);
+		_arduivis.connect(vrouteport, 0, viter, 0);
+		_arduivis.connect(vrouteport, 0, vtclear, 0);
+		_arduivis.connect(vtclear, 0, vumenu, 0);
+		_arduivis.connect(vmettogM, 0, vmessage,0);
+		_arduivis.connect(vmessage, 0, vserialport, 0);
+		_arduivis.connect(viter, 0, vpipe, 0);
+		_arduivis.connect(vpipe, 0, vprependappend, 0);
+		_arduivis.connect(vprependappend, 0, vumenu, 0);
+		_arduivis.connect(vumenu, 1, vprependport, 0);
+		_arduivis.connect(vprependport, 0, vserialport, 0);
+		_arduivis.connect(vserialport, 0, vsel, 0);
+		_arduivis.connect(vsel, 0, vzl, 0);
+		_arduivis.connect(vzl, 0, vitoa, 0);
+		_arduivis.connect(vitoa, 0, vsym, 0);
+		_arduivis.connect(vmettog, 0, vmetro, 0);
+		_arduivis.connect(vmetro, 0, vatoi, 0);
+		_arduivis.connect(vatoi, 0, vapp10, 0);	
+		_arduivis.connect(vapp10, 0, vserialport, 0);
+		_arduivis.connect(vpak, 0, vatoi, 2);
+		_arduivis.connect(vsym, 0, vunpack, 0);	
+
+		for(sc=0;sc<vinputs;sc++){
+			_arduivis.connect(sliders[sc], 0, vpak, sc);	
+		}
+		for(ko=0;ko<voutputs;ko++){
+			_arduivis.connect(vunpack, ko, multisliders[ko], 0);		
+		}		
+	}
+}
+
 function connectCables(){
+	_arduivis.connect(vserialport, 1, vrouteport, 0);
+	_arduivis.connect(vrouteport, 0, viter, 0);
+	_arduivis.connect(vrouteport, 0, vtclear, 0);
+	_arduivis.connect(vtclear, 0, vumenu, 0);
+	_arduivis.connect(vmettogM, 0, vmessage,0);
+	_arduivis.connect(vmessage, 0, vserialport, 0);
+	_arduivis.connect(viter, 0, vpipe, 0);
+	_arduivis.connect(vpipe, 0, vprependappend, 0);
+	_arduivis.connect(vprependappend, 0, vumenu, 0);
+	_arduivis.connect(vumenu, 1, vprependport, 0);
+	_arduivis.connect(vprependport, 0, vserialport, 0);
+	_arduivis.connect(vserialport, 0, vsel, 0);
+	_arduivis.connect(vsel, 0, vzl, 0);
+	_arduivis.connect(vzl, 0, vitoa, 0);
+	_arduivis.connect(vitoa, 0, vsym, 0);
+	_arduivis.connect(vmettog, 0, vmetro, 0);
+	_arduivis.connect(vmetro, 0, vatoi, 0);
+	_arduivis.connect(vatoi, 0, vapp10, 0);	
+ 	_arduivis.connect(vapp10, 0, vserialport, 0);
+ 	_arduivis.connect(vpak, 0, vatoi, 2);
+	_arduivis.connect(vsym, 0, vunpack, 0);	
+
+	for(sc=0;sc<vinputs;sc++){
+		_arduivis.connect(sliders[sc], 0, vpak, sc);	
+	}
+
+	for(ko=0;ko<voutputs;ko++){
+		_arduivis.connect(vunpack, ko, multisliders[ko], 0);		
+	}
+}
+
+function connectCables_zeroOutput(){
 	_arduivis.connect(vserialport, 1, vrouteport, 0);
 	_arduivis.connect(vrouteport, 0, viter, 0);
 	_arduivis.connect(vrouteport, 0, vtclear, 0);

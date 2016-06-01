@@ -31,14 +31,22 @@ void loop()
 {
 
   // Slider from MaxMSP 
-    int maxmspSlider;
+    int maxmspSlider1, maxmspSlider2, maxmspSlider3;
 
   // Parse incoming MaxMSP slider values
   // from MaxMSP, to Arduino    
-    maxmspSlider = Serial.parseInt();  
+    maxmspSlider1 = Serial.parseInt();  
+    maxmspSlider2 = Serial.parseInt();  
+    maxmspSlider3 = Serial.parseInt();          
 
   // Write parsed values to LEDs
   // Fading LED
   // from MaxMSP, to Arduino    
-    analogWrite(13, maxmspSlider);
+//    analogWrite(13, maxmspSlider);
+Serial.print(maxmspSlider1);
+Serial.print(" ");
+Serial.print(maxmspSlider2);
+Serial.print(" ");
+Serial.println(maxmspSlider3);
+
 }
