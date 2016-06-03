@@ -11,13 +11,16 @@ arduivisJS
 
 ![arduivisJSlogo](http://i.imgur.com/KLhS1Ro.png)
 
-~ what is arduivisJS? ~
-arduivisJS is a Javascript factory object that dyanmically creates MaxMSP patches and Arduino code to accomidate the newly created patch. 
+what is arduivisJS?
+========
+	arduivisJS is a Javascript factory object that dyanmically creates MaxMSP patches and Arduino code to accomidate the newly created patch. 
 
-~ Why does this matter? ~
-- Significantlly cuts down the time it takes to prototype a new idea
+why does this matter?
+========
+- It significantlly cuts down the time it takes to prototype a new idea
 - Provides a more efficient way to test experimental systems with external devices in real-time
 - Opens the door for new performance possibilities
+- A more efficient way to use the serial protocol
 
 
 ~ arduivis vs arduivisJS ~
