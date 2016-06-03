@@ -71,6 +71,7 @@ function arduivis(ins, outs){
 
 	if(count > 1){
 		clear();
+		outlet(1, "clear");
 	}
 
 	for(ii=0;ii<ins;ii++){
@@ -295,7 +296,7 @@ function createScript(scriptIn, scriptOut){
 
 	for(ii=0;ii<scriptIn;ii++){
 		if(scriptIn !== 0){
-			outlet(0, "int ardvMaxSlider"+ii+ " = Serial.parseInt();"+'\n');
+			outlet(0, "int ardvFromMax"+ii+ " = Serial.parseInt();"+'\n');
 		}
 	}
 	
@@ -334,14 +335,11 @@ function clear(){
 	_arduivis.remove(vpak);
 	_arduivis.remove(sliders);
 	_arduivis.remove(vupdatemes);
-
 	_arduivis.remove(vcmtoutput);
 	_arduivis.remove(vcmtinput);
 	_arduivis.remove(vcmttog);
 	_arduivis.remove(vcmtmenu);
 	_arduivis.remove(vcmtupdate);
-	// _arduivis.remove(vmultiSL);
-
 
 	for(ko=0;ko<voutputs;ko++){
 		_arduivis.remove(multisliders[ko]);		
