@@ -1,3 +1,7 @@
+<h3 align="center">
+  <img src="http://i.imgur.com/5zRYwxq.png"/>
+</h3>
+
 arduivis
 ========
 
