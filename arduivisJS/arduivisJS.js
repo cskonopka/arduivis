@@ -1,14 +1,5 @@
-
-/*
-	super simple max scripting with javascript example
-	this shows the use of the newdefault method for creating objects in patchers
-	so that you can create objects without needing to specify special patcher format 
-	arguments for UI objects or font information and pixel width for text objects.
-*/
-
 autowatch=1;
 outlets=2;
-
 
 // global varables and code
 var vbox;
@@ -19,8 +10,9 @@ var vx=200;
 var vy=140;
 var count=0;
 
-var sliders = new Array();
-	var multisliders = new Array();
+var sliders 		= 	new Array();
+var multisliders 	= 	new Array();
+var outputbox 		= 	new Array();
 
 var vrouteport; 		
 var vtclear; 		
@@ -56,13 +48,12 @@ var verticalSpacing=30;
 
 var _arduivis = this.patcher;
 
-
 function arduivis(ins, outs){
 	
 	post(ins+" inputs \n");
 	post(outs+" outputs \n");
 
-	var inputs = new Array();
+	var inputs 	= new Array();
 	var outputs = new Array();
 
 
@@ -80,7 +71,8 @@ function arduivis(ins, outs){
 	
 	for(oo=0;oo<outs;oo++){
 		outputs[oo] = 0;
-		multisliders[oo] = 0;
+		// multisliders[oo] = 0;
+		outputbox[oo] = 0;
 	}
 	
 	vinputs = ins;
@@ -116,7 +108,8 @@ function arduivis(ins, outs){
 		vunpack 		= _arduivis.newdefault(200, verticalSpacing*13, 'unpack', outputs);
 
 		for(d=0;d<outs;d++){
-			multisliders[d] 			= _arduivis.newdefault(200+(d*50), verticalSpacing*14,'multislider');
+			// multisliders[d] 			= _arduivis.newdefault(200+(d*50), verticalSpacing*14,'multislider', '@setmin', '0','setmax','255');
+			outputbox[d] 			= _arduivis.newdefault(200+(d*55), verticalSpacing*14,'number', 'float');			
 		}	
 
 		connectObjects(1);
@@ -147,7 +140,7 @@ function arduivis(ins, outs){
 		vserialport 	= _arduivis.newdefault(200, verticalSpacing*8, 'serial', 'arduivisPort', '9600');	
 	
 		for(s=0;s<ins;s++){
-			sliders[s] = _arduivis.newobject("slider",  410+(s*50), verticalSpacing*2, 40, 77);
+			sliders[s] = _arduivis.newobject("slider",  410+(s*55), verticalSpacing*2, 40, 77);
 		}		
 
 		connectObjects(2);		
@@ -194,7 +187,8 @@ function arduivis(ins, outs){
 		}
 
 		for(d=0;d<outs;d++){
-			multisliders[d] 			= _arduivis.newdefault(200+(d*50), verticalSpacing*14,'multislider');
+			// multisliders[d] 			= _arduivis.newdefault(200+(d*50), verticalSpacing*14,'multislider');
+			outputbox[d] 			= _arduivis.newdefault(200+(d*55), verticalSpacing*14,'number', 'float');			
 		}	
 
 		connectObjects(3);	
@@ -203,7 +197,6 @@ function arduivis(ins, outs){
 	// connectCables(); 
 	createScript(ins, outs);	
 }
-
 
 function connectObjects(type){
 	if(type == 1){
@@ -229,7 +222,7 @@ function connectObjects(type){
 		_arduivis.connect(vsym, 0, vunpack, 0);	
 	
 		for(ko=0;ko<voutputs;ko++){
-			_arduivis.connect(vunpack, ko, multisliders[ko], 0);		
+			_arduivis.connect(vunpack, ko, outputbox[ko], 0);		
 		}
 	}
 	if(type == 2){
@@ -283,7 +276,8 @@ function connectObjects(type){
 			_arduivis.connect(sliders[sc], 0, vpak, sc);	
 		}
 		for(ko=0;ko<voutputs;ko++){
-			_arduivis.connect(vunpack, ko, multisliders[ko], 0);		
+			// _arduivis.connect(vunpack, ko, multisliders[ko], 0);	
+			_arduivis.connect(vunpack, ko, outputbox[ko], 0);					
 		}		
 	}
 }
@@ -302,10 +296,10 @@ function createScript(scriptIn, scriptOut){
 	
 	for(oo=0;oo<scriptOut;oo++){
 		if(scriptOut !== 0 && oo < scriptOut-1){		
-			outlet(0, "Serial.print(ardvPrint2Max"+oo+"); Serial.print("+spacer+");"+'\n' );
+			outlet(0, "Serial.print(ardvFromMax"+oo+"); Serial.print("+spacer+");"+'\n' );
 		} 
 		else if(oo+1 == scriptOut){
-			outlet(0, "Serial.println(ardvPrint2Max"+oo+");"+'\n');
+			outlet(0, "Serial.println(ardvFromMax"+oo+");"+'\n');
 		}
 	}
 	outlet(0,"};");
@@ -342,7 +336,7 @@ function clear(){
 	_arduivis.remove(vcmtupdate);
 
 	for(ko=0;ko<voutputs;ko++){
-		_arduivis.remove(multisliders[ko]);		
+		_arduivis.remove(outputbox[ko]);		
 	}
 
 	for(j=0;j<vinputs;j++){
