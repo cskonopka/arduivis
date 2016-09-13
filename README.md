@@ -1,16 +1,19 @@
-arduivis
-========
-
-arduivis is a bi-directional communication paradigm for programming languages & microcontrollers. The purpose of this project is to explore and expand the interconnectivity possibilities of music, art and science. The general idea revolves around using an Arduino, or a microcontroller with serial capability, as a communication hub. This hub can be programmed to handle with several types of interactions from a selected programming language. Currently, this project is compatible with MaxMSP, Pure Data, Python and NodeJS.
-
-More information about this project can be found here: cskonopka.github.io/arduivis/
 
 
-arduivisJS
-========
+<h1 align="center">arduivis</h1>
+<h3 align="center">a bi-directional communication paradigm for programming languages & microcontrollers</h3>
+<h3 align="center">
+  <img src="http://i.imgur.com/VAooaxY.png"/>
+</h3>
 
-![arduivisJSlogo](http://i.imgur.com/MLyE3eL.png?1)
+<h4>abstract</h4>
+<ol>
+<p>arduivis is a bi-directional communication paradigm for programming languages & microcontrollers. The purpose of this project is to explore and expand the interconnectivity possibilities of music, art and science. The general idea revolves around using an Arduino, or a microcontroller with serial capability, as a communication hub. This hub can be programmed to handle with several types of interactions from a selected programming language. Currently, this project is compatible with MaxMSP, Pure Data, Python and NodeJS.</p>
+</ol>
 
+
+
+<h1 align="left">arduivisJS</h1>
 what is arduivisJS?
 ========
 arduivisJS is a Javascript factory object that dynamically creates MaxMSP patches and Arduino code to accommodate the newly created patch. This is a project within the arduivis scope but it specifically deals with dynamic code/patch creation for MaxMSP and an Arduino.
@@ -60,5 +63,7 @@ future
 06/2016:
 - Patches may be jumbled for a little bit since I'm reorganizing patches so arduivisJS does Max specific patches then arduivis handles other languages. Down the road I may create GUIs for other languages. Depends on the response.
 - Currently arduivisJS only creates a testing template and not all of the code one would need for a complex project. Many ideas can be added to this template system by pasting other code within the template. Creating an automated for something like this is more complete but I have started to work on it. The problem with this is how to handle a more complex design. To start I think it would be wise to keep it simple by specifying what sensors you may be adding to the project before the template so the correct code can be compiled.
-
-
+<h1 align="left">arduivisPD</h1>
+<h1 align="left">arduivisNode</h1>
+<h1 align="left">arduivisPy</h1>
+<h1 align="left">arduivisOSC</h1>
