@@ -1,0 +1,56 @@
+#N canvas 135 22 320 547 10;
+#X obj -123 191 sel 13 10;
+#X obj -123 238 iem_anything;
+#X obj -123 258 iem_alisttosym;
+#X obj -123 278 fromsymbol;
+#X obj -123 218 zl group 1000;
+#X text -21 191 route & trigger;
+#X text -21 228 group into 1 message;
+#X text -21 258 convert ASCII to int;
+#X text -20 278 convert symbol;
+#X text -20 298 unpack slider data;
+#X msg -123 71 devices;
+#X msg -93 144 close;
+#X obj -123 171 comport 9600;
+#X floatatom -112 98 5 0 0 0 - - -;
+#X msg -112 117 open \$1;
+#X obj -123 390 vsl 24 128 0 255 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj -96 390 vsl 24 128 0 255 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj -69 390 vsl 24 128 0 255 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj -42 390 vsl 24 128 0 255 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X text -94 10 arduivis - model #4 - multipleOutputs;
+#X text -131 34 sketch: arduivis_PD_model4_multipleoutputs.ino;
+#X obj -123 298 unpack 0 0 0 0;
+#X floatatom -123 318 5 0 0 0 - - -;
+#X floatatom -96 335 5 0 0 0 - - -;
+#X floatatom -69 352 5 0 0 0 - - -;
+#X floatatom -42 369 5 0 0 0 - - -;
+#X text -22 71 find Arduino board;
+#X text -21 145 close serial port;
+#X text -21 106 open serial port;
+#X text -5 418 Christopher Konopka;
+#X text -5 431 cskonopka.github.io/arduivis/;
+#X text -5 444 christopherkonopka.com;
+#X connect 0 0 4 0;
+#X connect 0 2 4 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 21 0;
+#X connect 4 0 1 0;
+#X connect 10 0 12 0;
+#X connect 11 0 12 0;
+#X connect 12 0 0 0;
+#X connect 13 0 14 0;
+#X connect 14 0 12 0;
+#X connect 21 0 22 0;
+#X connect 21 1 23 0;
+#X connect 21 2 24 0;
+#X connect 21 3 25 0;
+#X connect 22 0 15 0;
+#X connect 23 0 16 0;
+#X connect 24 0 17 0;
+#X connect 25 0 18 0;
