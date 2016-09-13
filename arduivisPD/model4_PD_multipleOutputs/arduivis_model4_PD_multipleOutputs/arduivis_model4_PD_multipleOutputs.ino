@@ -61,10 +61,13 @@ int loopSystem(int startIncrement, int incrementLoopRange, int startDecrement, i
       // Incremental loop values to serial buffer
       // [comport] object
       // to Pure Data, from Arduino
-        Serial.write(lp);
-        Serial.write(lp - 13);
-        Serial.write(lp + 47);
-        Serial.write(lp - 60);
+        Serial.print(lp);
+        Serial.print(" ");         
+        Serial.print(lp - 13);
+        Serial.print(" ");         
+        Serial.print(lp + 47);
+        Serial.print(" ");         
+        Serial.println(lp - 60);
               
     delay(10);
   }
@@ -83,10 +86,13 @@ int loopSystem(int startIncrement, int incrementLoopRange, int startDecrement, i
       // Decremental loop values to serial buffer
       // [comport] object
       // to Pure Data, from Arduino  
-        Serial.write(lp);    
-        Serial.write(lp - 13);
-        Serial.write(lp + 47);
-        Serial.write(lp - 60);
+        Serial.print(lp);    
+        Serial.print(" ");         
+        Serial.print(lp - 13);
+        Serial.print(" ");         
+        Serial.print(lp + 47);
+        Serial.print(" ");         
+        Serial.println(lp - 60);
   
     delay(10);
   }
