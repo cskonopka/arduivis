@@ -15,6 +15,11 @@ what?
 The idea revolves around using an Arduino, or similar mircocontroller with serial capability, as a communication hub. Within this hub, a user can send and/or receive data from a microcontroller using a programming language that has serial
 capabilities. At this point, anything connected to the microcontroller, that provides some type of data or voltage source, is a new source of information that can be used for new forms of research.
 
+how?
+========
+- The wiki connected to this respository is where all information regarding the use of arduivis can be found
+- <a href="https://vimeopro.com/cskonopka/arduivis">arduivis videos</a>
+
 why?
 ========
 - Because it expands the interconnectivity potential of “Big data” in science, music & art
@@ -23,9 +28,6 @@ why?
 - Increases research potential of unique datasets that may have been previously overlooked
 - Cuts down research/development time
 
-how?
-========
-All of the information about how to use arduivis can be found in the wiki associated with this respository. And if you are a visual-learner like myself, here is a video album to get started:
-<a href="https://vimeopro.com/cskonopka/arduivis">arduivis videos</a>
+
 
 
