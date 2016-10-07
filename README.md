@@ -22,3 +22,10 @@ why?
 - It is a more efficient way to collect data from simultaneous sources
 - Increases research potential of unique datasets that may have been previously overlooked
 - Cuts down research/development time
+
+how?
+========
+All of the information about how to use arduivis can be found in the wiki associated with this respository. And if you are a visual-learner like myself, here is a video album to get started:
+<a href="https://vimeopro.com/cskonopka/arduivis">arduivis videos</a>
+
+
