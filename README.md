@@ -22,9 +22,3 @@ why?
 - It is a more efficient way to collect data from simultaneous sources
 - Increases research potential of unique datasets that may have been previously overlooked
 - Cuts down research/development time
-
-
-<h1 align="left">arduivisPD</h1>
-<h1 align="left">arduivisNode</h1>
-<h1 align="left">arduivisPy</h1>
-<h1 align="left">arduivisOSC</h1>
