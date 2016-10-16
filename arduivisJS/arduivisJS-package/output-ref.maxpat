@@ -47,7 +47,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "jit_matrix" ],
-					"patching_rect" : [ 288.833344, 69.099998, 543.200012, 386.64455 ],
+					"patching_rect" : [ 288.833344, 46.099998, 543.200012, 386.64455 ],
 					"pic" : "ref.png"
 				}
 
@@ -65,7 +65,7 @@
 					"mode" : 1,
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 280.833344, 61.5, 560.799988, 402.194336 ],
+					"patching_rect" : [ 280.833344, 38.5, 560.799988, 402.194336 ],
 					"proportion" : 0.39,
 					"style" : ""
 				}

@@ -46,7 +46,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 435.5, 696.649048, 675.025879, 80.0 ],
+					"patching_rect" : [ 420.5, 673.649048, 675.025879, 80.0 ],
 					"style" : "",
 					"text" : "Serial.print(data1);\nSerial.print(\" \");\nSerial.println(data2);",
 					"textjustification" : 1
@@ -62,7 +62,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 15.5, 721.649048, 417.464325, 31.0 ],
+					"patching_rect" : [ 0.5, 698.649048, 417.464325, 31.0 ],
 					"style" : "",
 					"text" : "Serial.println(data1);",
 					"textjustification" : 1
@@ -79,7 +79,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 442.293457, 441.209381, 663.232422, 247.0 ],
+					"patching_rect" : [ 427.293457, 418.209381, 667.0, 247.0 ],
 					"style" : "",
 					"text" : "To format multiple message, it's as easy as adding a few extra lines of code. The main difference is how printed messages are processed in the serial buffer. Compared to single-output messages which exclusively use \"Serial.println()\", multiple-output messages uses a combination of \"Serial.print()\" and \"Serial.println()\" messages paired with spaces. In this case, each message printed will use a \"Serial.print()\" message so the data is printed without a carriage return and then followed by a print message with a space. The reasoning for this is because in Max commas will add another piece of data to the buffer which is not necessary. The space ensures that the packed message is the correct size on the output and also makes the code more efficient. Lastly, the last print message always has to be a \"Serial.println()\" message, this creates a carriage return and consolidates all of the data being sent into one packet."
 				}
@@ -95,7 +95,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 26.5, 441.209381, 374.0, 247.0 ],
+					"patching_rect" : [ 11.5, 418.209381, 378.0, 247.0 ],
 					"style" : "",
 					"text" : "To format a single message, it's easy. All you need to do is create the line of code below, a print message with carriage return (Serial.println). This ensures that the stream of data is read sequentially whereas using (Serial.print) will continually group the values and it becomes a lot more difficult to parse the necessary information. Below is a code example using a loop to increase and decrease the PWM of an LED while using \"Serial.println\" to send the data from the Arduino to Max followed by the corresponding image."
 				}
@@ -111,7 +111,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 702.700439, 69.500008, 393.0, 356.0 ],
+					"patching_rect" : [ 687.700439, 46.500008, 398.0, 356.0 ],
 					"style" : "",
 					"text" : "Parsing the values in Max is a different story in general since you need to convert the ASCii into an integer by reading the streaming values for carriage returns and grouping them properly. Then from there converting them from a symbol and finally into a tangible integer which can be used in Max. This formatting was originally created by cycling74 as part of their [serial] object help-file. No matter what, this is a necessary step to reading the values coming form the Arduino. The only thing that changes is how many values are to be unpacked from the buffer based on how many you sent out using the print messages in the Arduino code. This is where the comma-concept mentioned above comes into play. Below are two sections which breakdown how single and multiple output styles work."
 				}
@@ -125,7 +125,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "jit_matrix" ],
-					"patching_rect" : [ 365.5, 69.500008, 330.482605, 356.0 ],
+					"patching_rect" : [ 350.5, 46.500008, 330.482605, 356.0 ],
 					"pic" : "output0.png"
 				}
 
@@ -140,7 +140,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 26.5, 69.500008, 315.0, 356.0 ],
+					"patching_rect" : [ 11.5, 46.500008, 315.0, 356.0 ],
 					"style" : "",
 					"text" : "Creating outputs so that data from an Arduino can be read in Max is a lot easier but there is one caveat that needs to be understood and that is the use of the comma. Within Max the comma, due to how the ASCii is read, creates an extra placeholder which can create issues when packing several numbers you want to then use in Max. Instead of doubling the amount of output data, the way around this is just to add a space to a message that comes before a message with a carriage return. This being said, this formatting is very important with larger groupings but there is also a specific way single messages need to be formatted."
 				}
@@ -159,7 +159,7 @@
 					"mode" : 1,
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 15.5, 696.649048, 417.464325, 80.999969 ],
+					"patching_rect" : [ 0.5, 673.649048, 417.464325, 80.999969 ],
 					"proportion" : 0.39,
 					"style" : ""
 				}
@@ -178,7 +178,7 @@
 					"mode" : 1,
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 435.5, 696.649048, 675.025879, 80.999969 ],
+					"patching_rect" : [ 420.5, 673.649048, 675.025879, 80.999969 ],
 					"proportion" : 0.39,
 					"style" : ""
 				}
@@ -197,7 +197,7 @@
 					"mode" : 1,
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 435.5, 436.252106, 675.025879, 258.396912 ],
+					"patching_rect" : [ 420.5, 413.252106, 675.025879, 258.396912 ],
 					"proportion" : 0.39,
 					"style" : ""
 				}
@@ -216,7 +216,7 @@
 					"mode" : 1,
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 15.5, 436.252106, 417.464325, 258.396912 ],
+					"patching_rect" : [ 0.5, 413.252106, 417.464325, 258.396912 ],
 					"proportion" : 0.39,
 					"style" : ""
 				}
@@ -235,7 +235,7 @@
 					"mode" : 1,
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 15.5, 61.623955, 1095.025879, 372.628143 ],
+					"patching_rect" : [ 0.5, 38.623955, 1095.025879, 372.628143 ],
 					"proportion" : 0.39,
 					"style" : ""
 				}

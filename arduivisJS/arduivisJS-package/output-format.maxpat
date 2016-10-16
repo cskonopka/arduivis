@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 368.0, 120.0, 1368.0, 787.0 ],
+		"rect" : [ 264.0, 226.0, 1368.0, 787.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -46,7 +46,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "jit_matrix" ],
-					"patching_rect" : [ 661.353271, 106.209381, 186.293427, 310.489044 ],
+					"patching_rect" : [ 648.353271, 90.209381, 186.293427, 310.489044 ],
 					"pic" : "output2.png"
 				}
 
@@ -61,7 +61,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 480.0, 423.209351, 549.0, 1842.0 ],
+					"patching_rect" : [ 467.0, 407.209351, 549.0, 1842.0 ],
 					"style" : "",
 					"text" : "void setup() \n{ \n  // Create/open serial port\n  Serial.begin(9600);  \n\n  // Define LED mode \n  // PWM LED  \n  pinMode(3, OUTPUT);     \n  pinMode(5, OUTPUT);     \n  pinMode(6, OUTPUT);     \n  pinMode(9, OUTPUT);     \n}\n\nvoid loop() \n{ \n  // Loop variables\n  int lp;\n  int startIncrement = 0; \n  int incrementLoopRange = 255; \n  int startDecrement = 255;\n  int decrementLoopRange = 0;\n\n\n  // Loop Function        \n  lp = loopSystem(startIncrement, incrementLoopRange, startDecrement,     decrementLoopRange);\n\n}\n\nint loopSystem(int startIncrement, int incrementLoopRange, int startDecrement, int    decrementLoopRange)\n{\n  int lp;\n\n  // Loop #1\n  // Incremental Loop\n  for(lp = startIncrement; lp < incrementLoopRange; lp++)         \n  {\n    // Incremental loop values to LED\n    // Controls fade of 4 LEDs\n    analogWrite(3, lp);    \n    analogWrite(5, lp);\n    analogWrite(6, lp);\n    analogWrite(9, lp);\n\n      // Incremental loop values to serial buffer\n      // [serial] object\n      // to MaxMSP, from Arduino\n      Serial.print(lp);\n      Serial.print(\" \");\n      Serial.print(lp);\n      Serial.print(\" \");\n      Serial.print(lp);\n      Serial.print(\" \");\n      Serial.println(lp);\n\n        delay(10);\n  }\n\n  // Loop #2\n  // Decremental Loop\n  for(lp = startDecrement; lp > decrementLoopRange; lp--)    \n  {\n    // Deremental loop values to LED\n    // Controls fade of 4 LEDs\n    analogWrite(3, lp);    \n    analogWrite(5, lp);\n    analogWrite(6, lp);\n    analogWrite(9, lp);\n\n      // Decremental loop values to serial buffer\n      // [serial] object\n      // to MaxMSP, from Arduino  \n      Serial.print(lp);    \n      Serial.print(\" \");      \n      Serial.print(lp);\n      Serial.print(\" \");      \n      Serial.print(lp);\n      Serial.print(\" \");      \n      Serial.println(lp);\n\n        delay(10);\n  }\n}"
 				}
@@ -75,7 +75,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 472.0, 57.5, 553.0, 39.0 ],
+					"patching_rect" : [ 459.0, 41.5, 553.0, 39.0 ],
 					"style" : "",
 					"text" : "multiple-output formatting",
 					"textjustification" : 1
@@ -92,7 +92,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "jit_matrix" ],
-					"patching_rect" : [ 148.5, 106.209381, 186.293427, 310.489044 ],
+					"patching_rect" : [ 135.5, 90.209381, 186.293427, 310.489044 ],
 					"pic" : "output1.png"
 				}
 
@@ -107,7 +107,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 22.0, 423.209351, 439.293457, 1034.0 ],
+					"patching_rect" : [ 9.0, 407.209351, 439.293457, 1034.0 ],
 					"style" : "",
 					"text" : "void setup() \n{\n  // Create/open serial port  \n  Serial.begin(9600);      \n\n  // Define LED mode \n  // PWM LED    \n  pinMode(3, OUTPUT);\n}\n\nvoid loop() \n{ \n  // Loop variables  \n  int lp = 0; \n\n  // Loop #1  \n  // Incremental Loop\n  for(lp = 0; lp<=255; lp++)         // Create incremental loop\n  {\n    // Incremental loop values to LED\n    // Controls PWM fade\n    analogWrite(3,lp);\n\n    // Incremental loop values to serial buffer\n    // [serial] object\n    // to MaxMSP, from Arduino    \n    Serial.println(lp); \n\n    delay(10);\n  }\n\n  // Loop #2\n  // Decremental Loop  \n  for(lp = 255; lp>=0; lp--)    // Create decremental loop\n  {\n    // Deremental loop values to LED\n    // Controls PWM fade      \n    analogWrite(3,lp);   \n\n    // Decremental loop values to serial buffer\n    // [serial] object\n    // to MaxMSP, from Arduino     \n    Serial.println(lp);  \n\n    delay(10);\n  }\n}"
 				}
@@ -121,7 +121,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 14.0, 57.5, 455.293427, 39.0 ],
+					"patching_rect" : [ 1.0, 41.5, 455.293427, 39.0 ],
 					"style" : "",
 					"text" : "single-output formatting",
 					"textjustification" : 1
@@ -141,7 +141,7 @@
 					"mode" : 1,
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 14.0, 57.25, 455.293427, 39.0 ],
+					"patching_rect" : [ 1.0, 41.25, 455.293427, 39.0 ],
 					"proportion" : 0.39,
 					"style" : ""
 				}
@@ -160,7 +160,7 @@
 					"mode" : 1,
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 14.0, 97.5, 455.293427, 1363.447021 ],
+					"patching_rect" : [ 1.0, 81.5, 455.293427, 1363.447021 ],
 					"proportion" : 0.39,
 					"style" : ""
 				}
@@ -179,7 +179,7 @@
 					"mode" : 1,
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 472.0, 57.25, 553.0, 39.0 ],
+					"patching_rect" : [ 459.0, 41.25, 553.0, 39.0 ],
 					"proportion" : 0.39,
 					"style" : ""
 				}
@@ -198,7 +198,7 @@
 					"mode" : 1,
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 472.0, 97.5, 553.0, 2325.447021 ],
+					"patching_rect" : [ 459.0, 81.5, 553.0, 2325.447021 ],
 					"proportion" : 0.39,
 					"style" : ""
 				}
