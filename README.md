@@ -12,8 +12,8 @@ Create a flexible hardware/software prototyping system to better understand “B
 
 Usage
 ========
-main file : ___arduivisJS.maxpat
-test file : ___arduivisJS-testenv.maxpat
+- main file : ___arduivisJS.maxpat
+- test file : ___arduivisJS-testenv.maxpat
 
 what?
 ========
