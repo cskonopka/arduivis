@@ -4,8 +4,8 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 2,
-			"revision" : 3,
-			"architecture" : "x64",
+			"revision" : 4,
+			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
@@ -61,7 +61,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 467.0, 407.209351, 549.0, 1842.0 ],
+					"patching_rect" : [ 463.0, 407.209351, 549.0, 1842.0 ],
 					"style" : "",
 					"text" : "void setup() \n{ \n  // Create/open serial port\n  Serial.begin(9600);  \n\n  // Define LED mode \n  // PWM LED  \n  pinMode(3, OUTPUT);     \n  pinMode(5, OUTPUT);     \n  pinMode(6, OUTPUT);     \n  pinMode(9, OUTPUT);     \n}\n\nvoid loop() \n{ \n  // Loop variables\n  int lp;\n  int startIncrement = 0; \n  int incrementLoopRange = 255; \n  int startDecrement = 255;\n  int decrementLoopRange = 0;\n\n\n  // Loop Function        \n  lp = loopSystem(startIncrement, incrementLoopRange, startDecrement,     decrementLoopRange);\n\n}\n\nint loopSystem(int startIncrement, int incrementLoopRange, int startDecrement, int    decrementLoopRange)\n{\n  int lp;\n\n  // Loop #1\n  // Incremental Loop\n  for(lp = startIncrement; lp < incrementLoopRange; lp++)         \n  {\n    // Incremental loop values to LED\n    // Controls fade of 4 LEDs\n    analogWrite(3, lp);    \n    analogWrite(5, lp);\n    analogWrite(6, lp);\n    analogWrite(9, lp);\n\n      // Incremental loop values to serial buffer\n      // [serial] object\n      // to MaxMSP, from Arduino\n      Serial.print(lp);\n      Serial.print(\" \");\n      Serial.print(lp);\n      Serial.print(\" \");\n      Serial.print(lp);\n      Serial.print(\" \");\n      Serial.println(lp);\n\n        delay(10);\n  }\n\n  // Loop #2\n  // Decremental Loop\n  for(lp = startDecrement; lp > decrementLoopRange; lp--)    \n  {\n    // Deremental loop values to LED\n    // Controls fade of 4 LEDs\n    analogWrite(3, lp);    \n    analogWrite(5, lp);\n    analogWrite(6, lp);\n    analogWrite(9, lp);\n\n      // Decremental loop values to serial buffer\n      // [serial] object\n      // to MaxMSP, from Arduino  \n      Serial.print(lp);    \n      Serial.print(\" \");      \n      Serial.print(lp);\n      Serial.print(\" \");      \n      Serial.print(lp);\n      Serial.print(\" \");      \n      Serial.println(lp);\n\n        delay(10);\n  }\n}"
 				}
@@ -198,7 +198,7 @@
 					"mode" : 1,
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 459.0, 81.5, 553.0, 2325.447021 ],
+					"patching_rect" : [ 459.0, 82.209381, 553.0, 2167.0 ],
 					"proportion" : 0.39,
 					"style" : ""
 				}
@@ -208,13 +208,13 @@
 		"lines" : [  ],
 		"dependency_cache" : [ 			{
 				"name" : "output1.png",
-				"bootpath" : "~/Documents/_airReam/arduivis/arduivisJS/arduivisJS-package",
+				"bootpath" : "~/Documents/_mainReam/arduivis/arduivisJS/arduivisJS-package",
 				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "output2.png",
-				"bootpath" : "~/Documents/_airReam/arduivis/arduivisJS/arduivisJS-package",
+				"bootpath" : "~/Documents/_mainReam/arduivis/arduivisJS/arduivisJS-package",
 				"type" : "PNG ",
 				"implicit" : 1
 			}
