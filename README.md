@@ -10,6 +10,11 @@ purpose
 ========
 Create a flexible hardware/software prototyping system to better understand “Big data”
 
+Usage
+========
+main file : ___arduivisJS.maxpat
+test file : ___arduivisJS-testenv.maxpat
+
 what?
 ========
 The idea revolves around using an Arduino, or similar mircocontroller with serial capability, as a communication hub. Within this hub, a user can send and/or receive data from a microcontroller using a programming language that has serial

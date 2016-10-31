@@ -217,7 +217,8 @@ function connectObjects(type){
 		_arduivis.connect(vzl, 0, vitoa, 0);
 		_arduivis.connect(vitoa, 0, vsym, 0);
 		_arduivis.connect(vmettog, 0, vmetro, 0);
-		_arduivis.connect(vmetro, 0, vserialport, 0);	
+		_arduivis.connect(vmetro, 0, vserialport, 0);
+		_arduivis.connect(vmetro, 0, vatoi, 0);
  		_arduivis.connect(vpak, 0, vatoi, 2);
 		_arduivis.connect(vsym, 0, vunpack, 0);	
 	
@@ -240,7 +241,6 @@ function connectObjects(type){
 		_arduivis.connect(vserialport, 0, vsel, 0);
 		_arduivis.connect(vmettog, 0, vmetro, 0);
 		_arduivis.connect(vmetro, 0, vatoi, 0);
-		_arduivis.connect(vmetro, 0, vserialport, 0);	
 		_arduivis.connect(vatoi, 0, vapp10, 0);	
 		_arduivis.connect(vapp10, 0, vserialport, 0);
 		_arduivis.connect(vpak, 0, vatoi, 2);
@@ -264,12 +264,12 @@ function connectObjects(type){
 		_arduivis.connect(vprependport, 0, vserialport, 0);
 		_arduivis.connect(vserialport, 0, vsel, 0);
 		_arduivis.connect(vsel, 0, vzl, 0);
-		_arduivis.connect(vsel, 2, vzl, 0);		
+		_arduivis.connect(vsel, 2, vzl, 0);
 		_arduivis.connect(vzl, 0, vitoa, 0);
 		_arduivis.connect(vitoa, 0, vsym, 0);
 		_arduivis.connect(vmettog, 0, vmetro, 0);
 		_arduivis.connect(vmetro, 0, vatoi, 0);
-		_arduivis.connect(vmetro, 0, vserialport, 0);			
+		_arduivis.connect(vmetro, 0, vserialport, 0);		
 		_arduivis.connect(vatoi, 0, vapp10, 0);	
 		_arduivis.connect(vapp10, 0, vserialport, 0);
 		_arduivis.connect(vpak, 0, vatoi, 2);
