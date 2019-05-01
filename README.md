@@ -1,21 +1,28 @@
 
-<h3 align="center">
-  <img height="255" width="255" src="https://i.ibb.co/G5NnFJG/arduivis-logo.png"/>
-  </h3>
 <h1 align="center">arduivis</h1>
+
+<h3 align="center">
+  <img height="255" width="253" src="https://i.ibb.co/G5NnFJG/arduivis-logo.png"/>
+</h3>
+
 <h3 align="center">a bi-directional communication paradigm for programming languages & microcontrollers</h3>
 
+<p align="center">
+  <img width="80%" height="80%" src="https://i.ibb.co/9tkc65m/arduivis-bpatcher.png"/>
+</p>
 
-  <p align="center">
-    <img width="80%" height="80%" src="https://i.ibb.co/9tkc65m/arduivis-bpatcher.png"/>
-  </p>
+Usage
+========
   <p align="center">
     <img width="50%" height="50%" src="https://i.ibb.co/vdjPFc4/arduivis-demo.gif"/>
   </p>
   
-Purpose
-========
-  
++ i (inputs) - *The number of inputs, going from Max to Arduino*
++ o (outputs) - *The number of outputs, going from Arduino to Max*
++ create - *Create a new arduivis instance based on the number of i/o's*
++ code - *View generated Arduino code*
++ save - *Save new Arduino code*
++ clear - *Clear arduivis instance and generated code*
 
 Installation
 ========
@@ -41,21 +48,6 @@ Patch setup
   
   <p align="center">
     <img width="80%" height="80%" src="https://i.ibb.co/9tkc65m/arduivis-bpatcher.png"/>
-  </p>
-
-Usage
-========
-+ i (inputs) - *The number of inputs, going from Max to Arduino*
-+ o (outputs) - *The number of outputs, going from Arduino to Max*
-+ create - *Create a new arduivis instance based on the number of i/o's*
-+ code - *View generated Arduino code*
-+ save - *Save new Arduino code*
-+ clear - *Clear arduivis instance and generated code*
-
-Demo 
-========
-  <p align="center">
-    <img width="80%" height="80%" src="https://i.ibb.co/vdjPFc4/arduivis-demo.gif"/>
   </p>
 
 
