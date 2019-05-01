@@ -11,10 +11,6 @@
 
 <h3 align="center">a bi-directional communication paradigm for programming languages & microcontrollers</h3>
 
-<p align="center">
-  <img width="80%" height="80%" src="https://i.ibb.co/9tkc65m/arduivis-bpatcher.png"/>
-</p>
-
 Usage
 ========
   <p align="center">
