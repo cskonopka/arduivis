@@ -2,13 +2,14 @@
 	"patcher" : 	{
 		"fileversion" : 1,
 		"appversion" : 		{
-			"major" : 7,
-			"minor" : 3,
-			"revision" : 4,
-			"architecture" : "x86",
+			"major" : 8,
+			"minor" : 0,
+			"revision" : 3,
+			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
+		"classnamespace" : "box",
 		"rect" : [ 59.0, 104.0, 640.0, 480.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
@@ -47,20 +48,21 @@
 					"id" : "obj-1",
 					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
-					"name" : "arduivis-main.maxpat",
+					"name" : "arduivis.maxpat",
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"offset" : [ 0.0, 0.0 ],
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
-							"major" : 7,
-							"minor" : 3,
-							"revision" : 4,
-							"architecture" : "x86",
+							"major" : 8,
+							"minor" : 0,
+							"revision" : 3,
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
+						"classnamespace" : "box",
 						"rect" : [ 59.0, 104.0, 486.0, 214.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
@@ -96,8 +98,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 64.316666, 24.133335, 34.466667, 23.0 ],
-									"style" : "",
+									"patching_rect" : [ 64.316665999999998, 24.133334999999999, 34.466667000000001, 23.0 ],
 									"text" : "outs",
 									"textjustification" : 1
 								}
@@ -111,8 +112,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 143.649994, 145.066696, 35.0, 22.0 ],
-									"style" : "",
+									"patching_rect" : [ 143.649993999999992, 145.066696000000007, 35.0, 22.0 ],
 									"text" : "clear"
 								}
 
@@ -125,8 +125,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
-									"patching_rect" : [ 143.649994, 122.233315, 15.5, 15.5 ],
-									"style" : ""
+									"parameter_enable" : 0,
+									"patching_rect" : [ 143.649993999999992, 122.233315000000005, 15.5, 15.5 ]
 								}
 
 							}
@@ -138,8 +138,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
-									"patching_rect" : [ 143.649994, 76.566689, 15.5, 15.5 ],
-									"style" : ""
+									"parameter_enable" : 0,
+									"patching_rect" : [ 143.649993999999992, 76.566688999999997, 15.5, 15.5 ]
 								}
 
 							}
@@ -151,8 +151,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
-									"patching_rect" : [ 143.649994, 95.733315, 54.0, 22.0 ],
-									"style" : "",
+									"patching_rect" : [ 143.649993999999992, 95.733315000000005, 54.0, 22.0 ],
 									"text" : "delay 50"
 								}
 
@@ -165,8 +164,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 395.283325, 3.8, 86.316666, 39.0 ],
-									"style" : "",
+									"patching_rect" : [ 395.283324999999991, 3.8, 86.316665999999998, 39.0 ],
 									"text" : "clear",
 									"textjustification" : 1
 								}
@@ -180,8 +178,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 127.849998, 3.8, 86.800003, 39.0 ],
-									"style" : "",
+									"patching_rect" : [ 127.849997999999999, 3.8, 86.800003000000004, 39.0 ],
 									"text" : "create",
 									"textjustification" : 1
 								}
@@ -197,8 +194,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 7.458331, 49.566689, 81.324997, 25.0 ],
-									"style" : "",
+									"patching_rect" : [ 7.458331, 49.566688999999997, 81.324996999999996, 25.0 ],
 									"text" : "pak 0 0",
 									"textjustification" : 1
 								}
@@ -214,8 +210,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 7.458331, 76.566689, 118.39167, 25.0 ],
-									"style" : "",
+									"patching_rect" : [ 7.458331, 76.566688999999997, 118.391670000000005, 25.0 ],
 									"text" : "prepend arduivis",
 									"textjustification" : 1
 								}
@@ -229,8 +224,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 2.991664, 24.133335, 24.0, 23.0 ],
-									"style" : "",
+									"patching_rect" : [ 2.991664, 24.133334999999999, 24.0, 23.0 ],
 									"text" : "ins",
 									"textjustification" : 1
 								}
@@ -245,8 +239,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 305.966675, 3.8, 86.316666, 39.0 ],
-									"style" : "",
+									"patching_rect" : [ 305.966675000000009, 3.8, 86.316665999999998, 39.0 ],
 									"text" : "save",
 									"textjustification" : 1
 								}
@@ -260,8 +253,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 216.649994, 3.8, 86.316666, 39.0 ],
-									"style" : "",
+									"patching_rect" : [ 216.649993999999992, 3.8, 86.316665999999998, 39.0 ],
 									"text" : "code",
 									"textjustification" : 1
 								}
@@ -277,8 +269,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 7.458331, 112.733315, 118.39167, 25.0 ],
-									"style" : "",
+									"patching_rect" : [ 7.458331, 112.733315000000005, 118.391670000000005, 25.0 ],
 									"text" : "arduivis 3 3",
 									"textjustification" : 1
 								}
@@ -294,13 +285,12 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 7.458331, 145.066696, 118.39167, 25.0 ],
+									"patching_rect" : [ 7.458331, 145.066696000000007, 118.391670000000005, 25.0 ],
 									"saved_object_attributes" : 									{
 										"filename" : "arduivis.js",
 										"parameter_enable" : 0
 									}
 ,
-									"style" : "",
 									"text" : "js arduivis.js",
 									"textjustification" : 1,
 									"varname" : "js"
@@ -317,8 +307,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "bang", "int" ],
-									"patching_rect" : [ 7.458331, 180.733322, 118.39167, 25.0 ],
-									"style" : "",
+									"patching_rect" : [ 7.458331, 180.733321999999987, 118.391670000000005, 25.0 ],
 									"text" : "text",
 									"textjustification" : 1
 								}
@@ -336,8 +325,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 69.783333, 6.233334, 54.0, 33.0 ],
-									"style" : "",
+									"patching_rect" : [ 69.783332999999999, 6.233334, 53.066665999999998, 33.0 ],
 									"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 									"tricolor" : [ 0.368627, 0.192157, 0.482353, 1.0 ]
 								}
@@ -356,10 +344,9 @@
 									"mode" : 1,
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 66.283333, 3.8, 59.566666, 39.0 ],
+									"patching_rect" : [ 66.283332999999999, 3.8, 59.566665999999998, 39.0 ],
 									"proportion" : 0.39,
-									"rounded" : 2,
-									"style" : ""
+									"rounded" : 2
 								}
 
 							}
@@ -375,8 +362,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 7.458331, 6.233334, 54.0, 33.0 ],
-									"style" : "",
+									"patching_rect" : [ 7.458331, 6.233334, 53.066665999999998, 33.0 ],
 									"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 									"tricolor" : [ 0.368627, 0.192157, 0.482353, 1.0 ]
 								}
@@ -395,10 +381,9 @@
 									"mode" : 1,
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 3.958331, 3.8, 59.566666, 39.0 ],
+									"patching_rect" : [ 3.958331, 3.8, 59.566665999999998, 39.0 ],
 									"proportion" : 0.39,
-									"rounded" : 2,
-									"style" : ""
+									"rounded" : 2
 								}
 
 							}
@@ -415,10 +400,9 @@
 									"mode" : 1,
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 395.283325, 3.8, 86.316666, 38.866669 ],
+									"patching_rect" : [ 395.283324999999991, 3.8, 86.316665999999998, 38.866669000000002 ],
 									"proportion" : 0.39,
-									"rounded" : 2,
-									"style" : ""
+									"rounded" : 2
 								}
 
 							}
@@ -435,10 +419,9 @@
 									"mode" : 1,
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 305.966675, 3.8, 86.316666, 38.866669 ],
+									"patching_rect" : [ 305.966675000000009, 3.8, 86.316665999999998, 38.866669000000002 ],
 									"proportion" : 0.39,
-									"rounded" : 2,
-									"style" : ""
+									"rounded" : 2
 								}
 
 							}
@@ -455,10 +438,9 @@
 									"mode" : 1,
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 216.649994, 3.8, 86.316666, 38.866669 ],
+									"patching_rect" : [ 216.649993999999992, 3.8, 86.316665999999998, 38.866669000000002 ],
 									"proportion" : 0.39,
-									"rounded" : 2,
-									"style" : ""
+									"rounded" : 2
 								}
 
 							}
@@ -471,8 +453,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 143.649994, 49.566689, 71.0, 22.0 ],
-									"style" : "",
+									"patching_rect" : [ 143.649993999999992, 49.566688999999997, 71.0, 22.0 ],
 									"text" : "arduivis 0 0",
 									"textjustification" : 1
 								}
@@ -487,8 +468,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 312.341675, 7.300001, 73.566666, 22.0 ],
-									"style" : "",
+									"patching_rect" : [ 312.341675000000009, 7.300001, 73.566665999999998, 22.0 ],
 									"text" : "write",
 									"textjustification" : 1
 								}
@@ -503,7 +483,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "bang", "bang", "", "int" ],
-									"patching_rect" : [ 395.283325, 3.8, 86.316666, 38.866669 ]
+									"parameter_enable" : 0,
+									"patching_rect" : [ 395.283324999999991, 3.8, 86.316665999999998, 38.866669000000002 ]
 								}
 
 							}
@@ -516,7 +497,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "bang", "bang", "", "int" ],
-									"patching_rect" : [ 305.966675, 3.8, 86.316666, 38.866669 ]
+									"parameter_enable" : 0,
+									"patching_rect" : [ 305.966675000000009, 3.8, 86.316665999999998, 38.866669000000002 ]
 								}
 
 							}
@@ -529,7 +511,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "bang", "bang", "", "int" ],
-									"patching_rect" : [ 216.649994, 3.8, 86.316666, 38.866669 ]
+									"parameter_enable" : 0,
+									"patching_rect" : [ 216.649993999999992, 3.8, 86.316665999999998, 38.866669000000002 ]
 								}
 
 							}
@@ -542,7 +525,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "bang", "bang", "", "int" ],
-									"patching_rect" : [ 127.849998, 3.8, 86.316666, 37.866669 ]
+									"parameter_enable" : 0,
+									"patching_rect" : [ 127.849997999999999, 3.8, 86.316665999999998, 37.866669000000002 ]
 								}
 
 							}
@@ -559,10 +543,9 @@
 									"mode" : 1,
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 127.849998, 3.8, 86.316666, 38.866669 ],
+									"patching_rect" : [ 127.849997999999999, 3.8, 86.316665999999998, 38.866669000000002 ],
 									"proportion" : 0.39,
-									"rounded" : 2,
-									"style" : ""
+									"rounded" : 2
 								}
 
 							}
@@ -575,8 +558,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 221.316666, 6.800001, 76.983337, 22.0 ],
-									"style" : "",
+									"patching_rect" : [ 221.316665999999998, 6.800001, 76.983337000000006, 22.0 ],
 									"text" : "open",
 									"textjustification" : 1
 								}
@@ -595,7 +577,7 @@
 								"patchline" : 								{
 									"destination" : [ "obj-76", 1 ],
 									"hidden" : 1,
-									"midpoints" : [ 16.958332, 106.650002, 116.349998, 106.650002 ],
+									"midpoints" : [ 16.958331000000001, 106.650002000000001, 116.350001000000006, 106.650002000000001 ],
 									"source" : [ "obj-115", 0 ]
 								}
 
@@ -612,7 +594,7 @@
 								"patchline" : 								{
 									"destination" : [ "obj-76", 0 ],
 									"hidden" : 1,
-									"midpoints" : [ 137.350006, 106.699989, 16.958332, 106.699989 ],
+									"midpoints" : [ 137.349997999999999, 106.699989000000002, 16.958331000000001, 106.699989000000002 ],
 									"source" : [ "obj-118", 0 ]
 								}
 
@@ -679,7 +661,7 @@
 								"patchline" : 								{
 									"destination" : [ "obj-72", 0 ],
 									"hidden" : 1,
-									"midpoints" : [ 153.149994, 174.0, 16.958332, 174.0 ],
+									"midpoints" : [ 153.149993999999992, 174.0, 16.958331000000001, 174.0 ],
 									"source" : [ "obj-7", 0 ]
 								}
 
@@ -704,7 +686,7 @@
 								"patchline" : 								{
 									"destination" : [ "obj-72", 0 ],
 									"hidden" : 1,
-									"midpoints" : [ 230.816666, 174.083252, 16.958332, 174.083252 ],
+									"midpoints" : [ 230.816665999999998, 174.083251999999987, 16.958331000000001, 174.083251999999987 ],
 									"source" : [ "obj-78", 0 ]
 								}
 
@@ -713,7 +695,7 @@
 								"patchline" : 								{
 									"destination" : [ "obj-72", 0 ],
 									"hidden" : 1,
-									"midpoints" : [ 321.841675, 174.083252, 16.958332, 174.083252 ],
+									"midpoints" : [ 321.841675000000009, 174.083251999999987, 16.958331000000001, 174.083251999999987 ],
 									"source" : [ "obj-80", 0 ]
 								}
 
@@ -745,15 +727,8 @@
  ],
 		"lines" : [  ],
 		"dependency_cache" : [ 			{
-				"name" : "arduivis-main.maxpat",
-				"bootpath" : "~/Desktop/arduivis/JS",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "arduivis.js",
-				"bootpath" : "~/Desktop/arduivis/JS",
+				"bootpath" : "~/Downloads/arduivis-master/JS",
 				"patcherrelativepath" : ".",
 				"type" : "TEXT",
 				"implicit" : 1
