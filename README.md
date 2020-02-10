@@ -5,11 +5,37 @@
   <img height="255" width="253" src="https://i.ibb.co/G5NnFJG/arduivis-logo.png"/>
 </h3>
 
-
-
-
-
 <h3 align="center">a bi-directional communication paradigm for programming languages & microcontrollers</h3>
+
+Installation
+========
+- Download the repository.
+- Open Max8.
+- Go to file *Options > File Preferences*.
+  <p align="center">
+    <img width="10%" height="10%" src="https://i.ibb.co/Xp6bjBv/arduivis-pathpreferences.png"/>
+  </p>
+- Click the *plus* to add the *arduivis* repository to the filepath.
+  <p align="center">
+    <img width="10%" height="10%" src="https://i.ibb.co/fQGySBx/arduivis-plus.png"/>
+  </p>
+- Open a new Max patch.
+  <p align="center">
+    <img width="10%" height="10%" src="https://i.ibb.co/1r59pXG/arduivis-newpatcher.png"/>
+  </p>
+- Unlock it.
+  <p align="center">
+    <img width="10%" height="10%" src="https://i.ibb.co/M60JgnT/arduivis-unlock.png"/>
+  </p>
+- Click *Snippets* and find *arduivis*.
+  <p align="center">
+    <img width="40%" height="40%" src="https://i.ibb.co/mtFZL1P/arduivis-findsnippets.png"/>
+  </p>
+- Drag the snippet into the patch.
+  <p align="center">
+    <img width="80%" height="80%" src="https://i.ibb.co/9tkc65m/arduivis-bpatcher.png"/>
+  </p>
+
 
 Usage
 ========
@@ -17,39 +43,12 @@ Usage
     <img width="50%" height="50%" src="https://i.ibb.co/vdjPFc4/arduivis-demo.gif"/>
   </p>
   
-+ i (inputs) - *The number of inputs, going from Max to Arduino*
-+ o (outputs) - *The number of outputs, going from Arduino to Max*
++ ins - *The number of inputs, going from Max to Arduino*
++ outs - *The number of outputs, going from Arduino to Max*
 + create - *Create a new arduivis instance based on the number of i/o's*
 + code - *View generated Arduino code*
 + save - *Save new Arduino code*
 + clear - *Clear arduivis instance and generated code*
-
-Installation
-========
-- Download the repository and open *arduivis* folder, 
-- Take *arduivis.maxsnip* and place it in your Max8 *Snippets* folder
-
-Patch setup
-========
-1. Open a new Max8 patch. 
-2. Unlock it.
-  
-  <p align="center">
-    <img width="10%" height="10%" src="https://i.ibb.co/M60JgnT/arduivis-unlock.png"/>
-  </p>
-  
-3. Click *Snippets* and find *arduivis*.
-  
-  <p align="center">
-    <img width="40%" height="40%" src="https://i.ibb.co/mtFZL1P/arduivis-findsnippets.png"/>
-  </p>
-  
-4. Drag the snippet into the patch and it will look something like this.
-  
-  <p align="center">
-    <img width="80%" height="80%" src="https://i.ibb.co/9tkc65m/arduivis-bpatcher.png"/>
-  </p>
-
 
 what?
 ========
