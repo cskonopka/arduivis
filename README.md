@@ -7,6 +7,9 @@
 
 <h3 align="center">a bi-directional communication paradigm for programming languages & microcontrollers</h3>
 
+# Reason
+The idea revolves around using an Arduino, or similar mircocontroller with serial capability, as a communication hub. Within this hub, a user can send and/or receive data from a microcontroller using a programming language that has serial capabilities. Anything connected to the microcontroller that provides data or voltage source, is a new source of information that can for new forms of research.
+
 # Installation
 - Download the repository.
 - Open Max8.
@@ -16,7 +19,7 @@
   </p>
 - Click the *plus* to add the *arduivis* repository to the filepath.
   <p align="center">
-    <img width="20%" height="20%" src="https://i.ibb.co/fQGySBx/arduivis-plus.png"/>
+    <img width="10%" height="10%" src="https://i.ibb.co/fQGySBx/arduivis-plus.png"/>
   </p>
 - Open a new Max patch.
   <p align="center">
@@ -42,30 +45,14 @@
 + code - *View generated Arduino code*
 + save - *Save new Arduino code*
 + clear - *Clear arduivis instance and generated code*
-  
 
 # Demo
-
-
-
-what?
-========
-The idea revolves around using an Arduino, or similar mircocontroller with serial capability, as a communication hub. Within this hub, a user can send and/or receive data from a microcontroller using a programming language that has serial
-capabilities. At this point, anything connected to the microcontroller, that provides some type of data or voltage source, is a new source of information that can be used for new forms of research.
+  <p align="center">
+    <img width="50%" height="50%" src="https://i.ibb.co/vdjPFc4/arduivis-demo.gif"/>
+  </p>
 
 how?
 ========
 - The wiki connected to this respository is where all information regarding the use of arduivis can be found
 - <a href="https://vimeopro.com/cskonopka/arduivis">arduivis videos</a>
-
-why?
-========
-- Because it expands the interconnectivity potential of “Big data” in science, music & art
-- This design makes it easier to collect and interpret complex data sets by simplifying the process
-- It is a more efficient way to collect data from simultaneous sources
-- Increases research potential of unique datasets that may have been previously overlooked
-- Cuts down research/development time
-
-
-
 
