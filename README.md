@@ -7,7 +7,6 @@
 
 <h3 align="center">a bi-directional communication paradigm for programming languages & microcontrollers</h3>
 
-# Reason
 The idea revolves around using an Arduino, or similar mircocontroller with serial capability, as a communication hub. Within this hub, a user can send and/or receive data from a microcontroller using a programming language that has serial capabilities. Anything connected to the microcontroller that provides data or voltage source, is a new source of information that can for new forms of research.
 
 # Installation
@@ -50,9 +49,10 @@ The idea revolves around using an Arduino, or similar mircocontroller with seria
   <p align="center">
     <img width="50%" height="50%" src="https://i.ibb.co/vdjPFc4/arduivis-demo.gif"/>
   </p>
+ 
+The demo is an example how to use arduivis. The arduivis snippet is added to an empty patch and places at the top left of the patch. The patch requires four *inputs* and seven *outputs*. Add four to the *inputs* box and seven to the *outputs* box. Click create and it creates a new patch using based on the provided inputs and outputs. It generates Arduino code based on the parameters and press the *code* button to copy the code. Paste the code into the Arduino IDE and upload it to the microcontroller. When finished, go to the Mac patch and click *update* to refresh the menu of boards. Select the board connected to the computer and wait three seconds. Start *polling* by clicking the *toggle*, Max and the microcontroller is now connected.
 
-how?
-========
+# Resources
 - The wiki connected to this respository is where all information regarding the use of arduivis can be found
 - <a href="https://vimeopro.com/cskonopka/arduivis">arduivis videos</a>
 
