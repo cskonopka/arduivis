@@ -7,25 +7,24 @@
 
 <h3 align="center">a bi-directional communication paradigm for programming languages & microcontrollers</h3>
 
-Installation
-========
+# Installation
 - Download the repository.
 - Open Max8.
 - Go to file *Options > File Preferences*.
   <p align="center">
-    <img width="10%" height="10%" src="https://i.ibb.co/Xp6bjBv/arduivis-pathpreferences.png"/>
+    <img width="60%" height="60%" src="https://i.ibb.co/Xp6bjBv/arduivis-pathpreferences.png"/>
   </p>
 - Click the *plus* to add the *arduivis* repository to the filepath.
   <p align="center">
-    <img width="10%" height="10%" src="https://i.ibb.co/fQGySBx/arduivis-plus.png"/>
+    <img width="20%" height="20%" src="https://i.ibb.co/fQGySBx/arduivis-plus.png"/>
   </p>
 - Open a new Max patch.
   <p align="center">
-    <img width="10%" height="10%" src="https://i.ibb.co/1r59pXG/arduivis-newpatcher.png"/>
+    <img width="50%" height="50%" src="https://i.ibb.co/1r59pXG/arduivis-newpatcher.png"/>
   </p>
 - Unlock it.
   <p align="center">
-    <img width="10%" height="10%" src="https://i.ibb.co/M60JgnT/arduivis-unlock.png"/>
+    <img width="25%" height="25%" src="https://i.ibb.co/M60JgnT/arduivis-unlock.png"/>
   </p>
 - Click *Snippets* and find *arduivis*.
   <p align="center">
@@ -36,19 +35,18 @@ Installation
     <img width="80%" height="80%" src="https://i.ibb.co/9tkc65m/arduivis-bpatcher.png"/>
   </p>
 
-
-Usage
-========
-  <p align="center">
-    <img width="50%" height="50%" src="https://i.ibb.co/vdjPFc4/arduivis-demo.gif"/>
-  </p>
-  
+# Interface
 + ins - *The number of inputs, going from Max to Arduino*
 + outs - *The number of outputs, going from Arduino to Max*
 + create - *Create a new arduivis instance based on the number of i/o's*
 + code - *View generated Arduino code*
 + save - *Save new Arduino code*
 + clear - *Clear arduivis instance and generated code*
+  
+
+# Demo
+
+
 
 what?
 ========
