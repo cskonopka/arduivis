@@ -1,5 +1,5 @@
 <p align="center">
-  <img height="55%" width="55%" src="https://github.com/cskonopka/arduivis/blob/master/arduivisJSlogo.png?raw=true"/>
+  <img height="65%" width="65%" src="https://github.com/cskonopka/arduivis/blob/master/arduivisJSlogo.png?raw=true"/>
 </p> 
 
 <p align="center"><em>a bi-directional communication paradigm for programming languages & microcontrollers</em></p>
