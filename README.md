@@ -1,12 +1,10 @@
+<p align="center">
+  <img height="55%" width="55%" src="https://github.com/cskonopka/arduivis/blob/master/arduivisJSlogo.png?raw=true"/>
+</p> 
 
-<h1 align="center">arduivis</h1>
+<p align="center"><em>a bi-directional communication paradigm for programming languages & microcontrollers</em></p>
 
-<h3 align="center">
-  <img height="255" width="253" src="https://i.ibb.co/G5NnFJG/arduivis-logo.png"/>
-</h3>
-
-<h3 align="center">a bi-directional communication paradigm for programming languages & microcontrollers</h3>
-
+# Background
 The idea revolves around using an Arduino, or similar mircocontroller with serial capability, as a communication hub. Within this hub, a user can send and/or receive data from a microcontroller using a programming language that has serial capabilities. Anything connected to the microcontroller that provides data or voltage source, is a new source of information that can for new forms of research.
 
 # Installation
